@@ -15,7 +15,7 @@ module BinToBCD
     output logic [11: 0] bcd); // bcd {...,thousands,hundreds,tens,ones}
 	 
 
-  integer i;
+  integer i, shifts;
   logic done = 0;
 
 	always @(bin) 
@@ -26,10 +26,11 @@ module BinToBCD
 					bcd[i] = 0; 
 				end
 			
-			bcd[3:0] = bin;                                   		
+			bcd[3:0] = bin;
+			shifts = 0;
 			for(i = 0; i <= 8; i=i+1)
 				begin
-					if(bcd[3:0] !== 0) 
+					if(shifts < 4) 
 						begin
 							if(bcd[7:4] > 4)
                             begin
@@ -40,17 +41,13 @@ module BinToBCD
                                 bcd[11:8] = bcd[11:8] + 3;
                             end
 							bcd = bcd << 1;
+							shifts = shifts + 1;
 						end
 					else 
 						begin
 							done = 1;
 						end
 				end
-			//bcd = {bcd[14:0],bin[13-i]};	
-			
-			/*for(i = 0; i <= W+4*(w/3); i = i+1) begin                      
-				
-			end*/
 		end
 
 endmodule
