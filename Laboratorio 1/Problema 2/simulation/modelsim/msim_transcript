@@ -10,10 +10,10 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd}
+# vcom -93 -work work {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:01:24 on Mar 10,2025
-# vcom -reportprogress 300 -93 -work work C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd 
+# Start time: 21:59:15 on Mar 10,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -21,47 +21,47 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity problema2_top
 # -- Compiling architecture Structural of problema2_top
-# End time: 20:01:24 on Mar 10,2025, Elapsed time: 0:00:00
+# End time: 21:59:15 on Mar 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/XPC/Desktop/Problema 2/sumador_1bit.vhd}
+# vcom -93 -work work {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_1bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:01:24 on Mar 10,2025
-# vcom -reportprogress 300 -93 -work work C:/Users/XPC/Desktop/Problema 2/sumador_1bit.vhd 
+# Start time: 21:59:15 on Mar 10,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_1bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity sumador_1bit
 # -- Compiling architecture Behavioral of sumador_1bit
-# End time: 20:01:24 on Mar 10,2025, Elapsed time: 0:00:00
+# End time: 21:59:15 on Mar 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/XPC/Desktop/Problema 2/sumador_fpga.vhd}
+# vcom -93 -work work {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_fpga.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:01:24 on Mar 10,2025
-# vcom -reportprogress 300 -93 -work work C:/Users/XPC/Desktop/Problema 2/sumador_fpga.vhd 
+# Start time: 21:59:15 on Mar 10,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_fpga.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity sumador_fpga
 # -- Compiling architecture Structural of sumador_fpga
-# End time: 20:01:25 on Mar 10,2025, Elapsed time: 0:00:01
+# End time: 21:59:15 on Mar 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/XPC/Desktop/Problema 2/problema2_top_tb.vhd}
+# vcom -93 -work work {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top_tb.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:01:25 on Mar 10,2025
-# vcom -reportprogress 300 -93 -work work C:/Users/XPC/Desktop/Problema 2/problema2_top_tb.vhd 
+# Start time: 21:59:15 on Mar 10,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_textio
 # -- Compiling entity problema2_top_tb
 # -- Compiling architecture testbench of problema2_top_tb
-# End time: 20:01:25 on Mar 10,2025, Elapsed time: 0:00:00
+# End time: 21:59:15 on Mar 10,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  problema2_top_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" problema2_top_tb 
-# Start time: 20:01:25 on Mar 10,2025
+# Start time: 21:59:15 on Mar 10,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -76,5 +76,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 20:16:32 on Mar 10,2025, Elapsed time: 0:15:07
+# End time: 22:04:14 on Mar 10,2025, Elapsed time: 0:04:59
 # Errors: 0, Warnings: 0
