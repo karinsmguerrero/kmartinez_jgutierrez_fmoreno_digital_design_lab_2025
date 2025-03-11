@@ -1,5 +1,5 @@
 /*Diseñe un decodificador que permita convertir un numero de 4 bits en binario a su respec-
-tiva representaci´on en BCD (binary-coded decimal ), mediante modelo de comportamiento
+tiva representacion en BCD (binary-coded decimal ), mediante modelo de comportamiento
 en SystemVerilog. El diseño debe contemplar las tablas de verdad. No se permite el uso
 de case para convertir el numero a BCD.*/
 

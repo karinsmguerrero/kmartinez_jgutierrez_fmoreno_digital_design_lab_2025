@@ -61,4 +61,6 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE BinToBCD_tb.sv -section_id BinToBCD_tb
+set_global_assignment -name SYSTEMVERILOG_FILE seven_segment_driver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE main.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
