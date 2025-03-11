@@ -1,10 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////////
-//          bin2bcd_test.v: Test  circuit for  the binary to BCD circuit          //
-//                          Using DE2-115 Development board / Cyclone IV          //
-//                                                                                //
-// Ameer M.S. Abdelhadi (ameer@ece.ubc.ca; ameer.abdelhadi@gmail.com), Sept. 2012 //
-////////////////////////////////////////////////////////////////////////////////////
-
 module BinToBCD_tb();
 
 	logic [3:0] bin;
