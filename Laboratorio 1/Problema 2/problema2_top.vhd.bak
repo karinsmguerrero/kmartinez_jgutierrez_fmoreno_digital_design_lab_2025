@@ -1,0 +1,56 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity problema2_top is
+    Port (
+        SW    : in  STD_LOGIC_VECTOR(8 downto 0); -- 4 bits para A, 4 bits para B, 1 bit para Cin
+        HEX0  : out STD_LOGIC_VECTOR(6 downto 0); -- Display de 7 segmentos (resultado)
+        HEX1  : out STD_LOGIC_VECTOR(6 downto 0)  -- Display para el acarreo
+    );
+end problema2_top;
+
+architecture Structural of problema2_top is
+    component sumador_fpga
+        Port ( A    : in  STD_LOGIC_VECTOR(3 downto 0);
+               B    : in  STD_LOGIC_VECTOR(3 downto 0);
+               Cin  : in  STD_LOGIC;
+               S    : out STD_LOGIC_VECTOR(3 downto 0);
+               Cout : out STD_LOGIC);
+    end component;
+
+    signal A, B, S: STD_LOGIC_VECTOR(3 downto 0);
+    signal Cin, Cout: STD_LOGIC;
+
+begin
+    -- Conectar los switches a los operandos
+    A    <= SW(3 downto 0);
+    B    <= SW(7 downto 4);
+    Cin  <= SW(8);
+
+    -- Instanciar el sumador de 4 bits
+    U0: sumador_fpga port map(A, B, Cin, S, Cout);
+
+    -- Convertir el resultado a display de 7 segmentos en hexadecimal
+    with S select
+        HEX0 <= "1000000" when "0000",  -- 0
+                "1111001" when "0001",  -- 1
+                "0100100" when "0010",  -- 2
+                "0110000" when "0011",  -- 3
+                "0011001" when "0100",  -- 4
+                "0010010" when "0101",  -- 5
+                "0000010" when "0110",  -- 6
+                "1111000" when "0111",  -- 7
+                "0000000" when "1000",  -- 8
+                "0010000" when "1001",  -- 9
+                "0001000" when "1010",  -- A
+                "0000011" when "1011",  -- B
+                "1000110" when "1100",  -- C
+                "0100001" when "1101",  -- D
+                "0000110" when "1110",  -- E
+                "0001110" when others;  -- F
+
+    -- Mostrar el acarreo en otro display (0 o 1)
+    HEX1 <= "1000000" when Cout = '0' else 
+            "1111001"; -- 0 o 1 en 7 segmentos
+end Structural;
