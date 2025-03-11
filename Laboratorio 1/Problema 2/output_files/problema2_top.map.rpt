@@ -1,5 +1,5 @@
 Analysis & Synthesis report for problema2_top
-Mon Mar 10 21:03:07 2025
+Mon Mar 10 21:30:07 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Mar 10 21:03:07 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 10 21:30:07 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; problema2_top                               ;
 ; Top-level Entity Name           ; problema2_top                               ;
@@ -165,15 +165,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
-; problema2_top.vhd                ; yes             ; User VHDL File  ; C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd ;         ;
-; sumador_1bit.vhd                 ; yes             ; User VHDL File  ; C:/Users/XPC/Desktop/Problema 2/sumador_1bit.vhd  ;         ;
-; sumador_fpga.vhd                 ; yes             ; User VHDL File  ; C:/Users/XPC/Desktop/Problema 2/sumador_fpga.vhd  ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; problema2_top.vhd                ; yes             ; User VHDL File  ; C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd ;         ;
+; sumador_1bit.vhd                 ; yes             ; User VHDL File  ; C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_1bit.vhd  ;         ;
+; sumador_fpga.vhd                 ; yes             ; User VHDL File  ; C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_fpga.vhd  ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------+
@@ -267,26 +267,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Mar 10 21:02:58 2025
+    Info: Processing started: Mon Mar 10 21:30:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema_2 -c problema2_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file problema2_top.vhd
-    Info (12022): Found design unit 1: problema2_top-Structural File: C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd Line: 13
-    Info (12023): Found entity 1: problema2_top File: C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd Line: 5
+    Info (12022): Found design unit 1: problema2_top-Structural File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd Line: 13
+    Info (12023): Found entity 1: problema2_top File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file sumador_1bit.vhd
-    Info (12022): Found design unit 1: sumador_1bit-Behavioral File: C:/Users/XPC/Desktop/Problema 2/sumador_1bit.vhd Line: 12
-    Info (12023): Found entity 1: sumador_1bit File: C:/Users/XPC/Desktop/Problema 2/sumador_1bit.vhd Line: 4
+    Info (12022): Found design unit 1: sumador_1bit-Behavioral File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_1bit.vhd Line: 12
+    Info (12023): Found entity 1: sumador_1bit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file sumador_fpga.vhd
-    Info (12022): Found design unit 1: sumador_fpga-Structural File: C:/Users/XPC/Desktop/Problema 2/sumador_fpga.vhd Line: 12
-    Info (12023): Found entity 1: sumador_fpga File: C:/Users/XPC/Desktop/Problema 2/sumador_fpga.vhd Line: 4
+    Info (12022): Found design unit 1: sumador_fpga-Structural File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_fpga.vhd Line: 12
+    Info (12023): Found entity 1: sumador_fpga File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_fpga.vhd Line: 4
 Info (12127): Elaborating entity "problema2_top" for the top level hierarchy
-Info (12128): Elaborating entity "sumador_fpga" for hierarchy "sumador_fpga:U0" File: C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd Line: 32
-Info (12128): Elaborating entity "sumador_1bit" for hierarchy "sumador_fpga:U0|sumador_1bit:U0" File: C:/Users/XPC/Desktop/Problema 2/sumador_fpga.vhd Line: 24
+Info (12128): Elaborating entity "sumador_fpga" for hierarchy "sumador_fpga:U0" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd Line: 32
+Info (12128): Elaborating entity "sumador_1bit" for hierarchy "sumador_fpga:U0|sumador_1bit:U0" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/sumador_fpga.vhd Line: 24
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd Line: 9
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd Line: 9
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/XPC/Desktop/Problema 2/problema2_top.vhd Line: 9
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd Line: 9
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd Line: 9
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio 1/Problema 2/problema2_top.vhd Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -296,8 +296,8 @@ Info (21057): Implemented 36 device resources after synthesis - the final resour
     Info (21061): Implemented 13 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Mon Mar 10 21:03:07 2025
-    Info: Elapsed time: 00:00:09
+    Info: Processing ended: Mon Mar 10 21:30:07 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:15
 
 
