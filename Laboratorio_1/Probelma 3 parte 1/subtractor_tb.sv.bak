@@ -1,0 +1,33 @@
+module subtractor_tb;
+    
+    parameter N = 6;
+    
+    logic clk, rst, dec_btn;
+    logic [N-1:0] count;
+    
+    // Instancia del restador de N bits
+    subtractor #(N) uut (
+        .clk(clk),
+        .rst(rst),
+        .dec_btn(dec_btn),
+        .count(count)
+    );
+
+    // Generador de reloj
+    always #5 clk = ~clk;
+
+    initial begin
+        clk = 0;
+        rst = 0;
+        dec_btn = 1;  // Inactivo
+
+        #10 rst = 1;   // Liberar reset
+        #10 dec_btn = 0; // Pulsar botón
+        #10 dec_btn = 1;
+        #10 dec_btn = 0;
+        #10 dec_btn = 1;
+        
+        $stop;
+    end
+
+endmodule

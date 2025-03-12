@@ -1,0 +1,110 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/XPC/Desktop/Probelma 3 parte 1/simulation/modelsim
+vseven_seg_decoder
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1741720003
+!i10b 1
+!s100 ]6WPPSAm7zEB?hL4X0SHk2
+I1lkRc1YnPffj19`nH2REY0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 seven_seg_decoder_sv_unit
+S1
+R0
+w1741713304
+8C:/Users/XPC/Desktop/Probelma 3 parte 1/seven_seg_decoder.sv
+FC:/Users/XPC/Desktop/Probelma 3 parte 1/seven_seg_decoder.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1741720003.000000
+!s107 C:/Users/XPC/Desktop/Probelma 3 parte 1/seven_seg_decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1|C:/Users/XPC/Desktop/Probelma 3 parte 1/seven_seg_decoder.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1}
+Z8 tCvgOpt 0
+vsubtractor
+R1
+R2
+!i10b 1
+!s100 _HZ_5Q6kQ3T9j@:7onXWZ2
+I`:5G[V>BaZIG4CD77BhGG1
+R3
+!s105 subtractor_sv_unit
+S1
+R0
+w1741714747
+8C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor.sv
+FC:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1|C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor.sv|
+!i113 1
+R6
+R7
+R8
+vsubtractor_tb
+R1
+!s110 1741720004
+!i10b 1
+!s100 0HHk[HUCSkik`T8V2i89@1
+IQ1?ezo8@mVh^mIXARzngl1
+R3
+!s105 subtractor_tb_sv_unit
+S1
+R0
+w1741715355
+8C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv
+FC:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1|C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv|
+!i113 1
+R6
+R7
+R8
+vtop
+R1
+R2
+!i10b 1
+!s100 PR`M_TfWojdD;aGm7ME6e1
+IZ=^aO?:_F7]zYDRRBoPN?2
+R3
+!s105 top_sv_unit
+S1
+R0
+w1741713991
+8C:/Users/XPC/Desktop/Probelma 3 parte 1/top.sv
+FC:/Users/XPC/Desktop/Probelma 3 parte 1/top.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/XPC/Desktop/Probelma 3 parte 1/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1|C:/Users/XPC/Desktop/Probelma 3 parte 1/top.sv|
+!i113 1
+R6
+R7
+R8

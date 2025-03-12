@@ -1,0 +1,84 @@
+|top
+clk => clk.IN1
+rst => rst.IN1
+dec_btn => dec_btn.IN1
+init[0] => init[0].IN1
+init[1] => init[1].IN1
+init[2] => init[2].IN1
+init[3] => init[3].IN1
+init[4] => init[4].IN1
+init[5] => init[5].IN1
+hex1[0] << seven_seg_decoder:decoder2.seg
+hex1[1] << seven_seg_decoder:decoder2.seg
+hex1[2] << seven_seg_decoder:decoder2.seg
+hex1[3] << seven_seg_decoder:decoder2.seg
+hex1[4] << seven_seg_decoder:decoder2.seg
+hex1[5] << seven_seg_decoder:decoder2.seg
+hex1[6] << seven_seg_decoder:decoder2.seg
+hex2[0] << seven_seg_decoder:decoder1.seg
+hex2[1] << seven_seg_decoder:decoder1.seg
+hex2[2] << seven_seg_decoder:decoder1.seg
+hex2[3] << seven_seg_decoder:decoder1.seg
+hex2[4] << seven_seg_decoder:decoder1.seg
+hex2[5] << seven_seg_decoder:decoder1.seg
+hex2[6] << seven_seg_decoder:decoder1.seg
+
+
+|top|subtractor:uut
+clk => dec_btn_prev.CLK
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+clk => count[4]~reg0.CLK
+clk => count[5]~reg0.CLK
+rst => count.OUTPUTSELECT
+rst => count.OUTPUTSELECT
+rst => count.OUTPUTSELECT
+rst => count.OUTPUTSELECT
+rst => count.OUTPUTSELECT
+rst => count.OUTPUTSELECT
+dec_btn => dec_btn_prev.DATAIN
+dec_btn => always0.IN1
+init[0] => count.DATAB
+init[1] => count.DATAB
+init[2] => count.DATAB
+init[3] => count.DATAB
+init[4] => count.DATAB
+init[5] => count.DATAB
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seven_seg_decoder:decoder1
+bin[0] => Decoder0.IN3
+bin[1] => Decoder0.IN2
+bin[2] => Decoder0.IN1
+bin[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seven_seg_decoder:decoder2
+bin[0] => Decoder0.IN3
+bin[1] => Decoder0.IN2
+bin[2] => Decoder0.IN1
+bin[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
