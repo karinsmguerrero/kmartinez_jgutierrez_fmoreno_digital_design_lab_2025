@@ -1,0 +1,15 @@
+module subtractor #(parameter N = 6) (
+    input logic clk,
+    input logic rst,         // Reset activo en bajo
+    input logic dec_btn,     // Botón de decremento activo en bajo
+    output logic [N-1:0] count
+);
+
+    always_ff @(posedge clk) begin
+        if (!rst)
+            count <= '1;   // Se inicializa en el valor máximo (todo en 1s)
+        else if (!dec_btn)
+            count <= count - 1; // Decrementa cuando el botón se presiona
+    end
+
+endmodule

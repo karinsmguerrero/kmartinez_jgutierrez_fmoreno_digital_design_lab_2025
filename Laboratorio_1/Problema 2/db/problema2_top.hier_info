@@ -1,0 +1,99 @@
+|problema2_top
+SW[0] => sumador_fpga:U0.A[0]
+SW[1] => sumador_fpga:U0.A[1]
+SW[2] => sumador_fpga:U0.A[2]
+SW[3] => sumador_fpga:U0.A[3]
+SW[4] => sumador_fpga:U0.B[0]
+SW[5] => sumador_fpga:U0.B[1]
+SW[6] => sumador_fpga:U0.B[2]
+SW[7] => sumador_fpga:U0.B[3]
+SW[8] => sumador_fpga:U0.Cin
+HEX0[0] << Mux6.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] << Mux5.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] << Mux4.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[0] << sumador_fpga:U0.Cout
+HEX1[1] << <GND>
+HEX1[2] << <GND>
+HEX1[3] << sumador_fpga:U0.Cout
+HEX1[4] << sumador_fpga:U0.Cout
+HEX1[5] << sumador_fpga:U0.Cout
+HEX1[6] << <VCC>
+
+
+|problema2_top|sumador_fpga:U0
+A[0] => sumador_1bit:U0.A
+A[1] => sumador_1bit:U1.A
+A[2] => sumador_1bit:U2.A
+A[3] => sumador_1bit:U3.A
+B[0] => sumador_1bit:U0.B
+B[1] => sumador_1bit:U1.B
+B[2] => sumador_1bit:U2.B
+B[3] => sumador_1bit:U3.B
+Cin => sumador_1bit:U0.Cin
+S[0] <= sumador_1bit:U0.S
+S[1] <= sumador_1bit:U1.S
+S[2] <= sumador_1bit:U2.S
+S[3] <= sumador_1bit:U3.S
+Cout <= sumador_1bit:U3.Cout
+
+
+|problema2_top|sumador_fpga:U0|sumador_1bit:U0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema2_top|sumador_fpga:U0|sumador_1bit:U1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema2_top|sumador_fpga:U0|sumador_1bit:U2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|problema2_top|sumador_fpga:U0|sumador_1bit:U3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
