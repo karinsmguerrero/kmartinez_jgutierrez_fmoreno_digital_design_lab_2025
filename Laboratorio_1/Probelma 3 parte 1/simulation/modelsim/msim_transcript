@@ -1,0 +1,109 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do top_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Probelma\ 3\ parte\ 1 {C:/Users/XPC/Desktop/Probelma 3 parte 1/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:06:43 on Mar 11,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1" C:/Users/XPC/Desktop/Probelma 3 parte 1/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:06:43 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Probelma\ 3\ parte\ 1 {C:/Users/XPC/Desktop/Probelma 3 parte 1/seven_seg_decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:06:43 on Mar 11,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1" C:/Users/XPC/Desktop/Probelma 3 parte 1/seven_seg_decoder.sv 
+# -- Compiling module seven_seg_decoder
+# 
+# Top level modules:
+# 	seven_seg_decoder
+# End time: 13:06:43 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Probelma\ 3\ parte\ 1 {C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:06:43 on Mar 11,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1" C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor.sv 
+# -- Compiling module subtractor
+# 
+# Top level modules:
+# 	subtractor
+# End time: 13:06:43 on Mar 11,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Probelma\ 3\ parte\ 1 {C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:06:43 on Mar 11,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Probelma 3 parte 1" C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv 
+# -- Compiling module subtractor_tb
+# 
+# Top level modules:
+# 	subtractor_tb
+# End time: 13:06:44 on Mar 11,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  subtractor_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" subtractor_tb 
+# Start time: 13:06:44 on Mar 11,2025
+# Loading sv_std.std
+# Loading work.subtractor_tb
+# Loading work.subtractor
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: ERROR en N=2: 10
+#    Time: 40 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 33
+# ** Error: ERROR en N=2: 01
+#    Time: 60 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 33
+# ** Error: ERROR en N=2: 00
+#    Time: 80 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 33
+# ** Error: ERROR en N=2: 11
+#    Time: 100 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 33
+# ** Error: ERROR en N=4: 1100
+#    Time: 140 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 42
+# ** Error: ERROR en N=4: 1011
+#    Time: 160 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 42
+# ** Error: ERROR en N=4: 1010
+#    Time: 180 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 42
+# ** Error: ERROR en N=4: 1001
+#    Time: 200 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 42
+# ** Error: ERROR en N=4: 1000
+#    Time: 220 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 42
+# ** Error: ERROR en N=4: 0111
+#    Time: 240 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 42
+# ** Error: ERROR en N=6: 101001
+#    Time: 280 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 51
+# ** Error: ERROR en N=6: 101000
+#    Time: 300 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 51
+# ** Error: ERROR en N=6: 100111
+#    Time: 320 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 51
+# ** Error: ERROR en N=6: 100110
+#    Time: 340 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 51
+# ** Error: ERROR en N=6: 100101
+#    Time: 360 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 51
+# ** Error: ERROR en N=6: 100100
+#    Time: 380 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 51
+# ** Error: ERROR en N=6: 100011
+#    Time: 400 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 51
+# ** Error: ERROR en N=6: 100010
+#    Time: 420 ps  Scope: subtractor_tb File: C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv Line: 51
+# ✅ Test completado con éxito para N=2, N=4 y N=6.
+# ** Note: $stop    : C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv(55)
+#    Time: 420 ps  Iteration: 0  Instance: /subtractor_tb
+# Break in Module subtractor_tb at C:/Users/XPC/Desktop/Probelma 3 parte 1/subtractor_tb.sv line 55
+# End time: 13:07:18 on Mar 11,2025, Elapsed time: 0:00:34
+# Errors: 18, Warnings: 0

@@ -1,0 +1,32 @@
+module top (
+    input logic clk,         // Reloj de la FPGA (50MHz)
+    input logic rst,         // Switch de reset (activo en bajo)
+    input logic dec_btn,     // Botón para decrementar (activo en bajo)
+    input logic [5:0] init,  // Switches para establecer el valor inicial
+    output logic [6:0] hex1, // Display HEX1
+    output logic [6:0] hex2  // Display HEX2
+);
+
+    logic [5:0] count;
+    
+    // Instancia del restador de 6 bits
+    subtractor #(6) uut (
+        .clk(clk),
+        .rst(rst),
+        .dec_btn(dec_btn),
+        .init(init),   // Ahora pasa el valor de los switches
+        .count(count)
+    );
+
+    // Instancia del decodificador para los displays de 7 segmentos
+    seven_seg_decoder decoder1 (
+        .bin(count[3:0]), // 4 bits menos significativos
+        .seg(hex2)
+    );
+
+    seven_seg_decoder decoder2 (
+        .bin({2'b00, count[5:4]}), // 2 bits superiores
+        .seg(hex1)
+    );
+
+endmodule
