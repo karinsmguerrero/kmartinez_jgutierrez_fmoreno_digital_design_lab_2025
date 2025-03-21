@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "D[0]",
+					"strict" : false
+				},
+				{
+					"name" : "D[1]",
+					"strict" : false
+				},
+				{
+					"name" : "D[2]",
+					"strict" : false
+				},
+				{
+					"name" : "D[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Cout",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[0]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[1]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[2]",
+					"strict" : false
+				},
+				{
+					"name" : "quotient[3]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[0]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[1]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[2]",
+					"strict" : false
+				},
+				{
+					"name" : "remainder[3]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[0]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[2]",
+					"strict" : false
+				},
+				{
+					"name" : "divisor[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dividend[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dividend[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dividend[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dividend[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Cin",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
