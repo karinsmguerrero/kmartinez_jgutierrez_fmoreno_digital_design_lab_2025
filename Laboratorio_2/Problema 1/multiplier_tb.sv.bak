@@ -1,0 +1,19 @@
+module multiplier_tb();
+
+	logic [3:0] a,b;
+	logic [7:0] result;
+
+	multiplier dut(result, a, b);
+
+	initial begin  
+		a = 4'b0101;
+		b = 4'b0010;
+		$display("Resultado: %b", result);
+		#40
+		//assert (bcd[11:4] == 8'b00000000) $display ("Passed");
+		//else $error("Failed: 0");
+		
+
+		
+	end
+endmodule
