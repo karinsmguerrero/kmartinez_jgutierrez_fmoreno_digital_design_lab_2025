@@ -1,0 +1,3 @@
+module Suma(input logic a, b, output logic c);
+
+endmodule 
