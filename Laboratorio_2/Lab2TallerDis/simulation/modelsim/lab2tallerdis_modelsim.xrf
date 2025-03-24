@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/fmoreno/Desktop/Lab2TallerDis/lab2tallerdis.sv
+source_file = 1, C:/Users/fmoreno/Desktop/Lab2TallerDis/lab2tallerdis_tb.sv
+source_file = 1, C:/Users/fmoreno/Desktop/Lab2TallerDis/db/lab2tallerdis.cbx.xml
+design_name = lab2tallerdis
+instance = comp, \c~output , c~output, lab2tallerdis, 1
+instance = comp, \a~input , a~input, lab2tallerdis, 1
+instance = comp, \b~input , b~input, lab2tallerdis, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, lab2tallerdis, 1

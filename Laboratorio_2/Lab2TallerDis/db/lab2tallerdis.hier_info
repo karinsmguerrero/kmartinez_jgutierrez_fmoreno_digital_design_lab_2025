@@ -1,0 +1,6 @@
+|lab2tallerdis
+a => ~NO_FANOUT~
+b => ~NO_FANOUT~
+c <= <GND>
+
+
