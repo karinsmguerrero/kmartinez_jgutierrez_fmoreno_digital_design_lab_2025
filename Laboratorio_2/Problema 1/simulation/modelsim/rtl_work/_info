@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/simulation/modelsim
 vand_nbit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1742869140
+Z2 !s110 1742919172
 !i10b 1
 !s100 j@8`JX2e7Ao0BNR<RdRN]0
 Im:GF^UQBR?dGW4OjOJidJ1
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1742869140.000000
+Z6 !s108 1742919172.000000
 !s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv|
 !i113 1
@@ -126,7 +126,7 @@ R5
 r1
 !s85 0
 31
-!s108 1742869139.000000
+!s108 1742919171.000000
 !s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv|
 !i113 1
@@ -185,15 +185,15 @@ R8
 R9
 vtb_top_module
 R1
-R2
+!s110 1742919173
 !i10b 1
-!s100 ZeolEoQ>aDl]=F4H@E:TF0
-Ik_S^dJFOL`AZ<8W;Y>Kmz1
+!s100 XL0LERM15?X_0EG;djFdP0
+Il>7onL9a@5o@BnHomo2ZW1
 R3
 !s105 tb_top_module_sv_unit
 S1
 R0
-w1742869132
+w1742869169
 8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv
 FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv
 L0 1
@@ -201,7 +201,7 @@ R5
 r1
 !s85 0
 31
-R6
+!s108 1742919173.000000
 !s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv|
 !i113 1
