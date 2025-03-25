@@ -13,7 +13,6 @@ vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelen
 vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/xor_nbit.sv}
 vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv}
 vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv}
-vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv}
 
 vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv}
 

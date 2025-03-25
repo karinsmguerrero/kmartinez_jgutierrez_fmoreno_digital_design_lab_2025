@@ -1,6 +1,6 @@
 module tb_top_module;
     parameter N = 4;
-    logic [N-1:0] A, B, D, quotient, remainder, and_out, or_out, xor_out, shift_left_out, shift_right_out;
+    logic [N-1:0] A, B, D, quotient, remainder, mod_out, and_out, or_out, xor_out, shift_left_out, shift_right_out;
     logic Cin, Cout;
     logic [$clog2(N):0] shift_amount;
 
@@ -14,6 +14,7 @@ module tb_top_module;
         .Cout(Cout), 
         .quotient(quotient), 
         .remainder(remainder),
+        .mod_out(mod_out),
         .and_out(and_out), 
         .or_out(or_out), 
         .xor_out(xor_out), 
@@ -26,10 +27,11 @@ module tb_top_module;
         $display(" Testbench para Top Module de 4 Bits ");
         $display("===============================================");
 
-        // Test 1 - Restador y División
+        // Test 1 - Resta, División y Módulo
         A = 4'b1001; B = 4'b0011; Cin = 0; shift_amount = 2; #10;
         $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b", A, B, Cin, D, Cout);
-        $display("Dividend=%b, Divisor=%b -> División: Quotient=%b, Remainder=%b", A, B, quotient, remainder);
+        $display("Division: cociente=%b, resioduo=%b", quotient, remainder);
+        $display("Modulo: %b", mod_out);
         $display("AND: %b", and_out);
         $display("OR: %b", or_out);
         $display("XOR: %b", xor_out);
@@ -37,10 +39,11 @@ module tb_top_module;
         $display("Shift Right (%d): %b", shift_amount, shift_right_out);
         $display("------------------------------------------------");
 
-        // Test 2 - Restador y División
+        // Test 2 - Resta, División y Módulo
         A = 4'b0110; B = 4'b0101; Cin = 0; shift_amount = 1; #10;
         $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b", A, B, Cin, D, Cout);
-        $display("Dividend=%b, Divisor=%b -> División: Quotient=%b, Remainder=%b", A, B, quotient, remainder);
+        $display("Divisionn: cociente=%b, resioduo=%b", quotient, remainder);
+        $display("Modulo: %b", mod_out);
         $display("AND: %b", and_out);
         $display("OR: %b", or_out);
         $display("XOR: %b", xor_out);
@@ -48,9 +51,10 @@ module tb_top_module;
         $display("Shift Right (%d): %b", shift_amount, shift_right_out);
         $display("------------------------------------------------");
 
-        // Test 3 - División por 0
+        // Test 3 - División y módulo por 0
         A = 4'b1010; B = 4'b0000; #10;
-        $display("Dividend=%b, Divisor=%b -> División por 0: Quotient=%b, Remainder=%b", A, B, quotient, remainder);
+        $display("Division por 0: cociente=%b, resioduo=%b", quotient, remainder);
+        $display("Módulo por 0: %b", mod_out);
         $display("------------------------------------------------");
 
         $display("\nTest completo.");

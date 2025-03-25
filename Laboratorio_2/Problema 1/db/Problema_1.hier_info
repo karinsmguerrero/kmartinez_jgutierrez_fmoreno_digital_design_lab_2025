@@ -1,12 +1,12 @@
 |top_module
-A[0] => A[0].IN7
-A[1] => A[1].IN7
-A[2] => A[2].IN7
-A[3] => A[3].IN7
-B[0] => B[0].IN5
-B[1] => B[1].IN5
-B[2] => B[2].IN5
-B[3] => B[3].IN5
+A[0] => A[0].IN8
+A[1] => A[1].IN8
+A[2] => A[2].IN8
+A[3] => A[3].IN8
+B[0] => B[0].IN6
+B[1] => B[1].IN6
+B[2] => B[2].IN6
+B[3] => B[3].IN6
 Cin => Cin.IN1
 shift_amount[0] => shift_amount[0].IN2
 shift_amount[1] => shift_amount[1].IN2
@@ -23,6 +23,10 @@ remainder[0] << divisor_nbit:u_divisor.remainder
 remainder[1] << divisor_nbit:u_divisor.remainder
 remainder[2] << divisor_nbit:u_divisor.remainder
 remainder[3] << divisor_nbit:u_divisor.remainder
+mod_out[0] << modulo_nbit:u_modulo.remainder
+mod_out[1] << modulo_nbit:u_modulo.remainder
+mod_out[2] << modulo_nbit:u_modulo.remainder
+mod_out[3] << modulo_nbit:u_modulo.remainder
 Cout << restador_nbit:u_restador.Cout
 and_out[0] << and_nbit:u_and.Y
 and_out[1] << and_nbit:u_and.Y
@@ -88,6 +92,25 @@ quotient[0] <= quotient.DB_MAX_OUTPUT_PORT_TYPE
 quotient[1] <= quotient.DB_MAX_OUTPUT_PORT_TYPE
 quotient[2] <= quotient.DB_MAX_OUTPUT_PORT_TYPE
 quotient[3] <= quotient.DB_MAX_OUTPUT_PORT_TYPE
+remainder[0] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
+remainder[1] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
+remainder[2] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
+remainder[3] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|modulo_nbit:u_modulo
+dividend[0] => Mod0.IN3
+dividend[1] => Mod0.IN2
+dividend[2] => Mod0.IN1
+dividend[3] => Mod0.IN0
+divisor[0] => Mod0.IN7
+divisor[0] => Equal0.IN31
+divisor[1] => Mod0.IN6
+divisor[1] => Equal0.IN30
+divisor[2] => Mod0.IN5
+divisor[2] => Equal0.IN29
+divisor[3] => Mod0.IN4
+divisor[3] => Equal0.IN28
 remainder[0] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 remainder[1] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 remainder[2] <= remainder.DB_MAX_OUTPUT_PORT_TYPE

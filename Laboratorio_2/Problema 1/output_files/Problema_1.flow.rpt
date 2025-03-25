@@ -1,5 +1,5 @@
 Flow report for Problema_1
-Mon Mar 24 18:12:53 2025
+Mon Mar 24 19:16:58 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Mon Mar 24 18:12:53 2025       ;
+; Flow Status                 ; Successful - Mon Mar 24 19:16:58 2025       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Problema_1                                  ;
 ; Top-level Entity Name       ; top_module                                  ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/24/2025 18:12:46 ;
+; Start date & time ; 03/24/2025 19:16:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Problema_1          ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 185410952706643.174286156622168        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 185410952706643.174286541108968        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_top_module  ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_top_module                          ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
