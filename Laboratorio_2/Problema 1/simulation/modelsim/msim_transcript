@@ -10,33 +10,66 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:51 on Mar 24,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv 
+# -- Compiling module restador_nbit
+# 
+# Top level modules:
+# 	restador_nbit
+# End time: 21:35:51 on Mar 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:51 on Mar 24,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv 
+# -- Compiling module top_module
+# 
+# Top level modules:
+# 	top_module
+# End time: 21:35:51 on Mar 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:35:51 on Mar 24,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv 
+# -- Compiling module divisor_nbit
+# 
+# Top level modules:
+# 	divisor_nbit
+# End time: 21:35:51 on Mar 24,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:57:58 on Mar 24,2025
+# Start time: 21:35:51 on Mar 24,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier.sv 
 # -- Compiling module multiplier
 # 
 # Top level modules:
 # 	multiplier
-# End time: 19:57:58 on Mar 24,2025, Elapsed time: 0:00:00
+# End time: 21:35:51 on Mar 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:57:58 on Mar 24,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_tb.sv 
-# -- Compiling module multiplier_tb
+# Start time: 21:35:51 on Mar 24,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv 
+# -- Compiling module tb_top_module
 # 
 # Top level modules:
-# 	multiplier_tb
-# End time: 19:57:58 on Mar 24,2025, Elapsed time: 0:00:00
+# 	tb_top_module
+# End time: 21:35:51 on Mar 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  multiplier_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" multiplier_tb 
-# Start time: 19:57:59 on Mar 24,2025
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_top_module
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_top_module 
+# Start time: 21:35:51 on Mar 24,2025
 # Loading sv_std.std
-# Loading work.multiplier_tb
+# Loading work.tb_top_module
+# Loading work.top_module
+# Loading work.restador_nbit
+# Loading work.divisor_nbit
 # Loading work.multiplier
 # 
 # add wave *
@@ -45,11 +78,14 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Passed
-# Passed
-# Passed
-# Passed
+# ===============================================
+#  Testbench para Top Module de 4 Bits 
+# ===============================================
+# A=0101, B=0010, -> Multiplicación: resultado=1010, overflow=0
+# A=1111, B=1111, -> Multiplicación: resultado=0001, overflow=1
+# 
+# Test completo.
 # Break key hit
-# Break in Module multiplier_tb at C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_tb.sv line 11
-# End time: 19:58:37 on Mar 24,2025, Elapsed time: 0:00:38
+# Simulation stop requested.
+# End time: 21:36:22 on Mar 24,2025, Elapsed time: 0:00:31
 # Errors: 0, Warnings: 0

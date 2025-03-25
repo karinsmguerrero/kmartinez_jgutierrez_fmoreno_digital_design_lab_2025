@@ -4,36 +4,44 @@ module multiplier
 	input  logic clk,rst,
 	input  logic [N-1:0] A, 
 	input  logic [N-1:0] B, 
-	output logic [N*2 -1: 0] result,
+	output logic [N-1:0] result,
 	output logic overflow
 );
 
 integer i;
+logic [N*2: 0] S;
 
 always@(posedge clk or posedge rst)
 	begin
 		if (rst)
 			begin
 				result=0;
+				S=0;
 				overflow=0;
 			end
 		else 
 			begin
-				result[N*2 -1:N] = 0;
-				result[N-1:0] = B;
+				S[N*2 -1:N] = 0;
+				S[N-1:0] = B;
 				for (i=0;i<N;i=i+1)
 					begin
-						if(result[0]==1'b1)
+						if(S[0]==1'b1)
 							begin
-								result[N*2 -1: N]=result[N*2 -1:N] + A;
+								S[N*2: N]=S[N*2 -1:N] + A;
 								
 							end
-						result = result >> 1;
+						S = S >> 1;
 					end
-				if(result[N*2 -1:N] === 0)
-					overflow = 0;
+				if(S[N*2 -1:N] === 0)
+					begin
+						overflow = 0;
+						result = S[N-1:0];
+					end
 				else
-					overflow = 1;
+					begin
+						overflow = 1;
+						result = S[N-1:0];
+					end
 			end
 	end
 endmodule
