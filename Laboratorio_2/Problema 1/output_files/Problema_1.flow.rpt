@@ -1,5 +1,5 @@
 Flow report for Problema_1
-Mon Mar 24 21:27:12 2025
+Mon Mar 24 21:49:43 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Mon Mar 24 21:27:12 2025       ;
+; Flow Status                 ; Successful - Mon Mar 24 21:49:43 2025       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Problema_1                                  ;
 ; Top-level Entity Name       ; top_module                                  ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/24/2025 21:27:05 ;
+; Start date & time ; 03/24/2025 21:49:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Problema_1          ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 18691165529652.174287322508624         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 18691165529652.174287457617648         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_top_module  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; multiplier_tb  ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_top_module                          ; --            ; --          ; eda_simulation ;
@@ -104,8 +104,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:07     ; 1.0                     ; 4773 MB             ; 00:00:15                           ;
-; Total                  ; 00:00:07     ; --                      ; --                  ; 00:00:15                           ;
+; Analysis & Elaboration ; 00:00:07     ; 1.0                     ; 4777 MB             ; 00:00:16                           ;
+; Total                  ; 00:00:07     ; --                      ; --                  ; 00:00:16                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -9,6 +9,12 @@ vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Lab
 vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv}
 vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv}
 vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv}
+vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv}
 
 vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv}
 
