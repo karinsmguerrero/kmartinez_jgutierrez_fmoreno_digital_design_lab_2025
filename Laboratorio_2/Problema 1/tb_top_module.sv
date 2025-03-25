@@ -1,20 +1,24 @@
 module tb_top_module;
-    logic [3:0] A, B, dividend, divisor;
-    logic Cin;
-    logic [3:0] D, quotient, remainder;
-    logic Cout;
+    parameter N = 4;
+    logic [N-1:0] A, B, D, quotient, remainder, and_out, or_out, xor_out, shift_left_out, shift_right_out;
+    logic Cin, Cout;
+    logic [$clog2(N):0] shift_amount;
 
-    // Instancia del módulo top-level
-    top_module uut (
-        .A(A),
-        .B(B),
-        .dividend(dividend),
-        .divisor(divisor),
-        .Cin(Cin),
-        .D(D),
-        .Cout(Cout),
-        .quotient(quotient),
-        .remainder(remainder)
+    // Instancia del top_module
+    top_module #(.N(N)) uut (
+        .A(A), 
+        .B(B), 
+        .Cin(Cin), 
+        .shift_amount(shift_amount),
+        .D(D), 
+        .Cout(Cout), 
+        .quotient(quotient), 
+        .remainder(remainder),
+        .and_out(and_out), 
+        .or_out(or_out), 
+        .xor_out(xor_out), 
+        .shift_left_out(shift_left_out),
+        .shift_right_out(shift_right_out)
     );
 
     initial begin
@@ -22,25 +26,32 @@ module tb_top_module;
         $display(" Testbench para Top Module de 4 Bits ");
         $display("===============================================");
 
-        // Test para la operación de resta
-        A = 4'b1001; B = 4'b0011; Cin = 0; #10;
+        // Test 1 - Restador y División
+        A = 4'b1001; B = 4'b0011; Cin = 0; shift_amount = 2; #10;
         $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b", A, B, Cin, D, Cout);
+        $display("Dividend=%b, Divisor=%b -> División: Quotient=%b, Remainder=%b", A, B, quotient, remainder);
+        $display("AND: %b", and_out);
+        $display("OR: %b", or_out);
+        $display("XOR: %b", xor_out);
+        $display("Shift Left (%d): %b", shift_amount, shift_left_out);
+        $display("Shift Right (%d): %b", shift_amount, shift_right_out);
+        $display("------------------------------------------------");
 
-        // Test para la operación de división
-        dividend = 4'b1010; divisor = 4'b0011; #10;
-        $display("Dividend=%b, Divisor=%b -> División: Quotient=%b, Remainder=%b", dividend, divisor, quotient, remainder);
-
-        // Otro conjunto de pruebas para la resta
-        A = 4'b0110; B = 4'b0101; Cin = 0; #10;
+        // Test 2 - Restador y División
+        A = 4'b0110; B = 4'b0101; Cin = 0; shift_amount = 1; #10;
         $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b", A, B, Cin, D, Cout);
+        $display("Dividend=%b, Divisor=%b -> División: Quotient=%b, Remainder=%b", A, B, quotient, remainder);
+        $display("AND: %b", and_out);
+        $display("OR: %b", or_out);
+        $display("XOR: %b", xor_out);
+        $display("Shift Left (%d): %b", shift_amount, shift_left_out);
+        $display("Shift Right (%d): %b", shift_amount, shift_right_out);
+        $display("------------------------------------------------");
 
-        // Otro conjunto de pruebas para la división
-        dividend = 4'b1100; divisor = 4'b0011; #10;
-        $display("Dividend=%b, Divisor=%b -> División: Quotient=%b, Remainder=%b", dividend, divisor, quotient, remainder);
-
-        // Caso de división por 0
-        dividend = 4'b1010; divisor = 4'b0000; #10;
-        $display("Dividend=%b, Divisor=%b -> División por 0: Quotient=%b, Remainder=%b", dividend, divisor, quotient, remainder);
+        // Test 3 - División por 0
+        A = 4'b1010; B = 4'b0000; #10;
+        $display("Dividend=%b, Divisor=%b -> División por 0: Quotient=%b, Remainder=%b", A, B, quotient, remainder);
+        $display("------------------------------------------------");
 
         $display("\nTest completo.");
         $finish;
