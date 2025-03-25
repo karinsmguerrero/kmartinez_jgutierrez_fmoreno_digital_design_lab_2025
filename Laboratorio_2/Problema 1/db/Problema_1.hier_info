@@ -1,4 +1,5 @@
 |multiplier
+clk => overflow~reg0.CLK
 clk => result[0]~reg0.CLK
 clk => result[1]~reg0.CLK
 clk => result[2]~reg0.CLK
@@ -7,8 +8,7 @@ clk => result[4]~reg0.CLK
 clk => result[5]~reg0.CLK
 clk => result[6]~reg0.CLK
 clk => result[7]~reg0.CLK
-clk => result[8]~reg0.CLK
-clk => result[9]~reg0.CLK
+rst => overflow~reg0.ACLR
 rst => result[0]~reg0.ACLR
 rst => result[1]~reg0.ACLR
 rst => result[2]~reg0.ACLR
@@ -17,8 +17,6 @@ rst => result[4]~reg0.ACLR
 rst => result[5]~reg0.ACLR
 rst => result[6]~reg0.ACLR
 rst => result[7]~reg0.ACLR
-rst => result[8]~reg0.ACLR
-rst => result[9]~reg0.ACLR
 A[0] => result.DATAB
 A[0] => Add0.IN8
 A[0] => Add1.IN8
@@ -43,13 +41,10 @@ B[1] => result.OUTPUTSELECT
 B[1] => result.OUTPUTSELECT
 B[1] => result.OUTPUTSELECT
 B[1] => result.OUTPUTSELECT
-B[1] => result.OUTPUTSELECT
 B[2] => result.OUTPUTSELECT
 B[2] => result.OUTPUTSELECT
 B[2] => result.OUTPUTSELECT
 B[2] => result.OUTPUTSELECT
-B[2] => result.OUTPUTSELECT
-B[3] => result.OUTPUTSELECT
 B[3] => result.OUTPUTSELECT
 B[3] => result.OUTPUTSELECT
 B[3] => result.OUTPUTSELECT
@@ -62,7 +57,6 @@ result[4] << result[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 result[5] << result[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 result[6] << result[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 result[7] << result[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-result[8] << result[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-result[9] << result[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+overflow << overflow~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
