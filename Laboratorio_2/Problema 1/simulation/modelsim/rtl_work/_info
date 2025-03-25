@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/simulation/modelsim
 vand_nbit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1742929773
+Z2 !s110 1742930148
 !i10b 1
 !s100 j@8`JX2e7Ao0BNR<RdRN]0
 Im:GF^UQBR?dGW4OjOJidJ1
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1742929773.000000
+Z6 !s108 1742930148.000000
 !s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv|
 !i113 1
@@ -60,7 +60,7 @@ R8
 R9
 vmodulo_nbit
 R1
-Z10 !s110 1742929774
+R2
 !i10b 1
 !s100 oCkPCbkBnU3?n>:R<LU`E2
 IN;JTP^7ad7Ak]]8QMlngC3
@@ -76,7 +76,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1742929774.000000
+R6
 !s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv|
 !i113 1
@@ -160,7 +160,7 @@ R8
 R9
 vshift_left_nbit
 R1
-R10
+R2
 !i10b 1
 !s100 hZ<n;Xi<Bh9Rf3iZGTZc43
 IgW0C2^DcJg1@a6SDf=WgJ0
@@ -176,7 +176,7 @@ R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv|
 !i113 1
@@ -185,7 +185,7 @@ R8
 R9
 vshift_right_nbit
 R1
-R10
+R2
 !i10b 1
 !s100 fJIeONCB1[W[zH9kHcI[a3
 I:;KE0O4NEi[]AA^16aRf32
@@ -201,24 +201,49 @@ R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv|
 !i113 1
 R7
 R8
 R9
+vsumador_parametrizable
+R1
+R2
+!i10b 1
+!s100 Q@SGkM29`5WQHAG<f0hJ33
+IYgQK536HWT2;^1ZDF5W>Y1
+R3
+!s105 sumador_parametrizable_sv_unit
+S1
+R0
+w1742929953
+8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv
+FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
+!i113 1
+R7
+R8
+R9
 vtb_top_module
 R1
-R10
+R2
 !i10b 1
-!s100 E08ofKBKGJecB>ifO9B==2
-IE8WVVUQazc]Je4lidMXCU0
+!s100 Z?HVG3B2z=7hV5P^7XM^G2
+I`m7VZ@6:AW`3JEIlhAF`l2
 R3
 !s105 tb_top_module_sv_unit
 S1
 R0
-w1742929756
+w1742930134
 8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv
 FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv
 L0 1
@@ -226,7 +251,7 @@ R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv|
 !i113 1
@@ -237,13 +262,13 @@ vtop_module
 R1
 R2
 !i10b 1
-!s100 i7]C[m6CnT7^Z0XO@@4M_3
-ICChP]YKB?6Q>PQ4XeFG>70
+!s100 @NgojH[0I?T2FVWbc=T]L2
+Ik4hH8<>jnUC5`U8ejjgd_3
 R3
 !s105 top_module_sv_unit
 S1
 R0
-w1742929761
+w1742929980
 8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv
 FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv
 L0 1

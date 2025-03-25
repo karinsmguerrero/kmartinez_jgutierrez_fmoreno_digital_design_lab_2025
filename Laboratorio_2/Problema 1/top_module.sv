@@ -2,7 +2,7 @@ module top_module #(parameter N = 4) (
     input logic [N-1:0] A, B, 
     input logic Cin,  
     input logic [$clog2(N):0] shift_amount,
-	 input logic clk, rst,
+    input logic clk, rst,
     output logic [N-1:0] D, quotient, remainder, mod_out,  
     output logic Cout_rest, overflow_mutli, 
     output logic Z_rest, N_rest, V_rest, C_rest,  // Flags de la resta
@@ -13,7 +13,7 @@ module top_module #(parameter N = 4) (
     output logic Z_xor, N_xor,                    // Flags XOR
     output logic Z_shl, N_shl,                    // Flags Shift Left
     output logic Z_shr, N_shr,                    // Flags Shift Right
-    output logic [N-1:0] and_out, or_out, xor_out, shift_left_out, shift_right_out, mult_out
+    output logic [N-1:0] and_out, or_out, xor_out, shift_left_out, shift_right_out, mult_out, sum_out, carry_out_sum, overflow_sum
 );
 
     // Instancias de los módulos
@@ -56,14 +56,20 @@ module top_module #(parameter N = 4) (
         .A(A), .shift_amount(shift_amount), .Y(shift_right_out),
         .Z(Z_shr), .neg(N_shr)
     );
-	 
-	 multiplier #(.N(4)) mult_inst(
-	 	.clk(clk),
-		.rst(rst),
-		.A(A), 
-		.B(B),
-		.result(mult_out),
-		.overflow_mutli(overflow_mutli)
-	 );
+
+    // Instancia del sumador parametrizable
+    sumador_parametrizable #(.WIDTH(N)) u_sumador (
+        .A(A), .B(B), .Cin(Cin), 
+        .S(sum_out), .carry_out(carry_out_sum), .overflow_suma(overflow_sum)
+    );
+    
+    multiplier #(.N(4)) mult_inst(
+        .clk(clk),
+        .rst(rst),
+        .A(A), 
+        .B(B),
+        .result(mult_out),
+        .overflow_mutli(overflow_mutli)
+    );
 
 endmodule

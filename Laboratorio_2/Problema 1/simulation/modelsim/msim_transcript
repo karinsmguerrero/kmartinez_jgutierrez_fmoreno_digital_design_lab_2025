@@ -12,119 +12,129 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:33 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv 
 # -- Compiling module restador_nbit
 # 
 # Top level modules:
 # 	restador_nbit
-# End time: 13:09:33 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:33 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv 
 # -- Compiling module top_module
 # 
 # Top level modules:
 # 	top_module
-# End time: 13:09:33 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/divisor_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:33 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/divisor_nbit.sv 
 # -- Compiling module divisor_nbit
 # 
 # Top level modules:
 # 	divisor_nbit
-# End time: 13:09:33 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/multiplier.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:33 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/multiplier.sv 
 # -- Compiling module multiplier
 # 
 # Top level modules:
 # 	multiplier
-# End time: 13:09:33 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:33 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv 
 # -- Compiling module and_nbit
 # 
 # Top level modules:
 # 	and_nbit
-# End time: 13:09:33 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/or_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:33 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/or_nbit.sv 
 # -- Compiling module or_nbit
 # 
 # Top level modules:
 # 	or_nbit
-# End time: 13:09:33 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/xor_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:33 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/xor_nbit.sv 
 # -- Compiling module xor_nbit
 # 
 # Top level modules:
 # 	xor_nbit
-# End time: 13:09:33 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:34 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv 
 # -- Compiling module shift_right_nbit
 # 
 # Top level modules:
 # 	shift_right_nbit
-# End time: 13:09:34 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:34 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv 
 # -- Compiling module shift_left_nbit
 # 
 # Top level modules:
 # 	shift_left_nbit
-# End time: 13:09:34 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:34 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv 
 # -- Compiling module modulo_nbit
 # 
 # Top level modules:
 # 	modulo_nbit
-# End time: 13:09:34 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:15:48 on Mar 25,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv 
+# -- Compiling module sumador_parametrizable
+# 
+# Top level modules:
+# 	sumador_parametrizable
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema\ 1 {C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:09:34 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1" C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv 
 # -- Compiling module tb_top_module
 # 
 # Top level modules:
 # 	tb_top_module
-# End time: 13:09:34 on Mar 25,2025, Elapsed time: 0:00:00
+# End time: 13:15:48 on Mar 25,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_top_module
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_top_module 
-# Start time: 13:09:34 on Mar 25,2025
+# Start time: 13:15:48 on Mar 25,2025
 # Loading sv_std.std
 # Loading work.tb_top_module
 # Loading work.top_module
@@ -136,7 +146,16 @@
 # Loading work.xor_nbit
 # Loading work.shift_left_nbit
 # Loading work.shift_right_nbit
+# Loading work.sumador_parametrizable
 # Loading work.multiplier
+# ** Warning: (vsim-3015) C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv(16): [PCDPC] - Port size (4) does not match connection size (1) for port 'carry_out_sum'. The port definition is at: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv
+# ** Warning: (vsim-3015) C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv(16): [PCDPC] - Port size (4) does not match connection size (1) for port 'overflow_sum'. The port definition is at: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv
+# ** Warning: (vsim-3015) C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv(61): [PCDPC] - Port size (1) does not match connection size (4) for port 'carry_out'. The port definition is at: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut/u_sumador File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv
+# ** Warning: (vsim-3015) C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv(61): [PCDPC] - Port size (1) does not match connection size (4) for port 'overflow_suma'. The port definition is at: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut/u_sumador File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv
 # 
 # add wave *
 # view structure
@@ -155,15 +174,17 @@
 # XOR: 1010 | Flags: Z=0, N=1
 # Shift Left (2): 0100 | Flags: Z=0, N=0
 # Shift Right (2): 0010 | Flags: Z=0, N=0
+# Suma: 1100 | Carry: 0, Overflow: 0
 # ------------------------------------------------
-# A=0110, B=0101, Cin=0 -> Resta: D=0001, Cout=x | Flags: Z=0, N=0, V=0, C=1
-# Division: cociente=0001, residuo=0001 | Flags: Z=0, N=0
-# Modulo: 0001 | Flags: Z=0, N=0
-# AND: 0100 | Flags: Z=0, N=0
-# OR: 0111 | Flags: Z=0, N=0
-# XOR: 0011 | Flags: Z=0, N=0
-# Shift Left (1): 1100 | Flags: Z=0, N=1
-# Shift Right (1): 0011 | Flags: Z=0, N=0
+# A=1001, B=1001, Cin=0 -> Resta: D=0000, Cout=x | Flags: Z=1, N=0, V=0, C=1
+# Division: cociente=0001, residuo=0000 | Flags: Z=0, N=0
+# Modulo: 0000 | Flags: Z=1, N=0
+# AND: 1001 | Flags: Z=0, N=1
+# OR: 1001 | Flags: Z=0, N=1
+# XOR: 0000 | Flags: Z=1, N=0
+# Shift Left (1): 0010 | Flags: Z=0, N=0
+# Shift Right (1): 0100 | Flags: Z=0, N=0
+# Suma: 0010 | Carry: 1, Overflow: 1
 # ------------------------------------------------
 # Division por 0: cociente=0000, residuo=0000
 # Módulo por 0: 0000
