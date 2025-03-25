@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at multiplier.sv(5): object "A" differs only in case from object "a" in the same scope File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier.sv Line: 5
+Info (10281): Verilog HDL Declaration information at multiplier.sv(6): object "B" differs only in case from object "b" in the same scope File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier.sv Line: 6
