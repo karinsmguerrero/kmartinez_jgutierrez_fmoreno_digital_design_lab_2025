@@ -4,7 +4,7 @@ module top_module #(parameter N = 4) (
     input logic [$clog2(N):0] shift_amount,
 	 input logic clk, rst,
     output logic [N-1:0] D, quotient, remainder, mod_out,  
-    output logic Cout, overflow, 
+    output logic Cout_rest, overflow_mutli, 
     output logic Z_rest, N_rest, V_rest, C_rest,  // Flags de la resta
     output logic Z_div, N_div,                    // Flags de la división
     output logic Z_mod, N_mod,                    // Flags del módulo
@@ -18,7 +18,7 @@ module top_module #(parameter N = 4) (
 
     // Instancias de los módulos
     restador_nbit #(.N(N)) u_restador (
-        .A(A), .B(B), .Cin(Cin), .D(D), .Cout(C_rest), 
+        .A(A), .B(B), .Cin(Cin), .D(D), .Cout_rest(C_rest), 
         .Z(Z_rest), .neg(N_rest), .V(V_rest)
     );
 
@@ -63,7 +63,7 @@ module top_module #(parameter N = 4) (
 		.A(A), 
 		.B(B),
 		.result(mult_out),
-		.overflow(overflow)
+		.overflow_mutli(overflow_mutli)
 	 );
 
 endmodule

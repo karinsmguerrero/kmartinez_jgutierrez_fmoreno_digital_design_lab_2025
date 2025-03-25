@@ -5,7 +5,7 @@ module multiplier
 	input  logic [N-1:0] A, 
 	input  logic [N-1:0] B, 
 	output logic [N-1:0] result,
-	output logic overflow
+	output logic overflow_mutli
 );
 
 integer i;
@@ -17,7 +17,7 @@ always@(posedge clk or posedge rst)
 			begin
 				result=0;
 				S=0;
-				overflow=0;
+				overflow_mutli=0;
 			end
 		else 
 			begin
@@ -34,12 +34,12 @@ always@(posedge clk or posedge rst)
 					end
 				if(S[N*2 -1:N] === 0)
 					begin
-						overflow = 0;
+						overflow_mutli = 0;
 						result = S[N-1:0];
 					end
 				else
 					begin
-						overflow = 1;
+						overflow_mutli = 1;
 						result = S[N-1:0];
 					end
 			end

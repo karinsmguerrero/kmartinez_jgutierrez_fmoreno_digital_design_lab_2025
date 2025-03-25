@@ -1,7 +1,7 @@
 module tb_top_module;
     parameter N = 4;
     logic [N-1:0] A, B, D, quotient, remainder, mod_out, and_out, or_out, xor_out, shift_left_out, shift_right_out, mult_out;
-    logic Cin, Cout, overflow, rst, clk;
+    logic Cin, Cout_rest, overflow_mutli, rst, clk;
     logic [$clog2(N):0] shift_amount;
     logic Z_rest, N_rest, V_rest, C_rest;
     logic Z_div, N_div;
@@ -19,7 +19,7 @@ module tb_top_module;
         .Cin(Cin), 
         .shift_amount(shift_amount),
         .D(D), 
-        .Cout(Cout), 
+        .Cout_rest(Cout_rest), 
         .quotient(quotient), 
         .remainder(remainder),
         .mod_out(mod_out),
@@ -37,7 +37,7 @@ module tb_top_module;
         .shift_left_out(shift_left_out),
         .shift_right_out(shift_right_out),
 		  .mult_out(mult_out),
-		  .overflow(overflow),
+		  .overflow_mutli(overflow_mutli),
 		  .clk(clk),
 		  .rst(rst)
     );
@@ -52,7 +52,7 @@ module tb_top_module;
 
         // Test 1 - Resta, División y Módulo
         A = 4'b1001; B = 4'b0011; Cin = 0; shift_amount = 2; #10;
-        $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b | Flags: Z=%b, N=%b, V=%b, C=%b", A, B, Cin, D, Cout, Z_rest, N_rest, V_rest, C_rest);
+        $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b | Flags: Z=%b, N=%b, V=%b, C=%b", A, B, Cin, D, Cout_rest, Z_rest, N_rest, V_rest, C_rest);
         $display("Division: cociente=%b, residuo=%b | Flags: Z=%b, N=%b", quotient, remainder, Z_div, N_div);
         $display("Modulo: %b | Flags: Z=%b, N=%b", mod_out, Z_mod, N_mod);
         $display("AND: %b | Flags: Z=%b, N=%b", and_out, Z_and, N_and);
@@ -64,7 +64,7 @@ module tb_top_module;
 
         // Test 2 - Otra combinación de valores
         A = 4'b0110; B = 4'b0101; Cin = 0; shift_amount = 1; #10;
-        $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b | Flags: Z=%b, N=%b, V=%b, C=%b", A, B, Cin, D, Cout, Z_rest, N_rest, V_rest, C_rest);
+        $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b | Flags: Z=%b, N=%b, V=%b, C=%b", A, B, Cin, D, Cout_rest, Z_rest, N_rest, V_rest, C_rest);
         $display("Division: cociente=%b, residuo=%b | Flags: Z=%b, N=%b", quotient, remainder, Z_div, N_div);
         $display("Modulo: %b | Flags: Z=%b, N=%b", mod_out, Z_mod, N_mod);
         $display("AND: %b | Flags: Z=%b, N=%b", and_out, Z_and, N_and);
@@ -89,7 +89,7 @@ module tb_top_module;
 			A = 4'b0101;
 			B = 4'b0010;
 			#50;
-			assert (mult_out[3:0] == 4'b1010) $display ("A=%b, B=%b, -> Multiplicación: resultado=%b, overflow=%b", A, B, mult_out, overflow);
+			assert (mult_out[3:0] == 4'b1010) $display ("A=%b, B=%b, -> Multiplicación: resultado=%b, overflow=%b", A, B, mult_out, overflow_mutli);
 			else $error("Multiplicación fallida: 1");
 			rst = 1;
 			#5;
@@ -98,7 +98,7 @@ module tb_top_module;
 			A = 4'b1111;
 			B = 4'b1111;
 			#50;
-			assert (mult_out[3:0] == 4'b0001) $display ("A=%b, B=%b, -> Multiplicación: resultado=%b, overflow=%b", A, B, mult_out, overflow);
+			assert (mult_out[3:0] == 4'b0001) $display ("A=%b, B=%b, -> Multiplicación: resultado=%b, overflow=%b", A, B, mult_out, overflow_mutli);
 			else $error("Multiplicación fallida: 2");
 			rst = 1;
 			#5;

@@ -3,7 +3,7 @@ module restador_nbit #(parameter N = 4) (
     input  logic [N-1:0] B,     // Sustraendo
     input  logic Cin,           // Acarreo de entrada
     output logic [N-1:0] D,     // Diferencia
-    output logic Cout,          // Acarreo de salida
+    output logic Cout_rest,          // Acarreo de salida
     output logic Z, neg, V        // Flags Zero, Negativo y Overflow
 );
 
@@ -11,7 +11,7 @@ module restador_nbit #(parameter N = 4) (
     assign B_complement = ~B + 1; // Complemento a 2 de B
 
     // Operación de resta con acarreo
-    assign {Cout, D} = A + B_complement + Cin;
+    assign {Cout_rest, D} = A + B_complement + Cin;
 
     // Calcular flags
     assign Z = (D == 0);                   // Flag de cero
