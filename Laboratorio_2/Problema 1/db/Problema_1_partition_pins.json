@@ -52,7 +52,91 @@
 					"strict" : false
 				},
 				{
-					"name" : "Cout",
+					"name" : "mod_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mod_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mod_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mod_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Z_rest",
+					"strict" : false
+				},
+				{
+					"name" : "N_rest",
+					"strict" : false
+				},
+				{
+					"name" : "V_rest",
+					"strict" : false
+				},
+				{
+					"name" : "C_rest",
+					"strict" : false
+				},
+				{
+					"name" : "Z_div",
+					"strict" : false
+				},
+				{
+					"name" : "N_div",
+					"strict" : false
+				},
+				{
+					"name" : "Z_mod",
+					"strict" : false
+				},
+				{
+					"name" : "N_mod",
+					"strict" : false
+				},
+				{
+					"name" : "Z_and",
+					"strict" : false
+				},
+				{
+					"name" : "N_and",
+					"strict" : false
+				},
+				{
+					"name" : "Z_or",
+					"strict" : false
+				},
+				{
+					"name" : "N_or",
+					"strict" : false
+				},
+				{
+					"name" : "Z_xor",
+					"strict" : false
+				},
+				{
+					"name" : "N_xor",
+					"strict" : false
+				},
+				{
+					"name" : "Z_shl",
+					"strict" : false
+				},
+				{
+					"name" : "N_shl",
+					"strict" : false
+				},
+				{
+					"name" : "Z_shr",
+					"strict" : false
+				},
+				{
+					"name" : "N_shr",
 					"strict" : false
 				},
 				{

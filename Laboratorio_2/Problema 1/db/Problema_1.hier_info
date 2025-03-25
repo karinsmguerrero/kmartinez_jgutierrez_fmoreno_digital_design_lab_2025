@@ -27,7 +27,25 @@ mod_out[0] << modulo_nbit:u_modulo.remainder
 mod_out[1] << modulo_nbit:u_modulo.remainder
 mod_out[2] << modulo_nbit:u_modulo.remainder
 mod_out[3] << modulo_nbit:u_modulo.remainder
-Cout << restador_nbit:u_restador.Cout
+Cout << <GND>
+Z_rest << restador_nbit:u_restador.Z
+N_rest << restador_nbit:u_restador.neg
+V_rest << restador_nbit:u_restador.V
+C_rest << restador_nbit:u_restador.Cout
+Z_div << divisor_nbit:u_divisor.Z
+N_div << divisor_nbit:u_divisor.neg
+Z_mod << modulo_nbit:u_modulo.Z
+N_mod << modulo_nbit:u_modulo.neg
+Z_and << and_nbit:u_and.Z
+N_and << and_nbit:u_and.neg
+Z_or << or_nbit:u_or.Z
+N_or << or_nbit:u_or.neg
+Z_xor << xor_nbit:u_xor.Z
+N_xor << xor_nbit:u_xor.neg
+Z_shl << shift_left_nbit:u_shift_left.Z
+N_shl << shift_left_nbit:u_shift_left.neg
+Z_shr << shift_right_nbit:u_shift_right.Z
+N_shr << shift_right_nbit:u_shift_right.neg
 and_out[0] << and_nbit:u_and.Y
 and_out[1] << and_nbit:u_and.Y
 and_out[2] << and_nbit:u_and.Y
@@ -55,9 +73,12 @@ A[0] => Add1.IN4
 A[1] => Add1.IN3
 A[2] => Add1.IN2
 A[3] => Add1.IN1
+A[3] => V.IN0
+A[3] => V.IN1
 B[0] => Add0.IN8
 B[1] => Add0.IN7
 B[2] => Add0.IN6
+B[3] => V.IN1
 B[3] => Add0.IN5
 Cin => Add2.IN10
 D[0] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
@@ -65,6 +86,9 @@ D[1] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
 D[2] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
 D[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+neg <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|divisor_nbit:u_divisor
@@ -96,6 +120,8 @@ remainder[0] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 remainder[1] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 remainder[2] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 remainder[3] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+neg <= quotient.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|modulo_nbit:u_modulo
@@ -115,6 +141,8 @@ remainder[0] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 remainder[1] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 remainder[2] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 remainder[3] <= remainder.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+neg <= remainder.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|and_nbit:u_and
@@ -130,6 +158,8 @@ Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+neg <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|or_nbit:u_or
@@ -145,6 +175,8 @@ Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+neg <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|xor_nbit:u_xor
@@ -160,6 +192,8 @@ Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+neg <= Y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|shift_left_nbit:u_shift_left
@@ -174,6 +208,8 @@ Y[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
 Y[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
 Y[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
 Y[3] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+neg <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_module|shift_right_nbit:u_shift_right
@@ -188,5 +224,7 @@ Y[0] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 Y[1] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 Y[2] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 Y[3] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+neg <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 
 
