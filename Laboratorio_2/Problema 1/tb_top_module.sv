@@ -1,7 +1,7 @@
 module tb_top_module;
     parameter N = 4;
-    logic [N-1:0] A, B, D, quotient, remainder, mod_out, and_out, or_out, xor_out, shift_left_out, shift_right_out;
-    logic Cin, Cout;
+    logic [N-1:0] A, B, D, quotient, remainder, mod_out, and_out, or_out, xor_out, shift_left_out, shift_right_out, mult_out;
+    logic Cin, Cout, overflow, rst, clk;
     logic [$clog2(N):0] shift_amount;
     logic Z_rest, N_rest, V_rest, C_rest;
     logic Z_div, N_div;
@@ -35,10 +35,17 @@ module tb_top_module;
         .or_out(or_out), 
         .xor_out(xor_out), 
         .shift_left_out(shift_left_out),
-        .shift_right_out(shift_right_out)
+        .shift_right_out(shift_right_out),
+		  .mult_out(mult_out),
+		  .overflow(overflow),
+		  .clk(clk),
+		  .rst(rst)
     );
+	 
+	 // Generador de reloj
+	always #5 clk = ~clk;
 
-    initial begin
+	initial begin
         $display("===============================================");
         $display(" Testbench para Top Module de 4 Bits ");
         $display("===============================================");
@@ -73,7 +80,31 @@ module tb_top_module;
         $display("Módulo por 0: %b", mod_out);
         $display("------------------------------------------------");
 
+        //Pruebas para la multiplicación
+		  	clk = 0;
+			rst = 1;
+			#5;
+			
+			rst = 0; 
+			A = 4'b0101;
+			B = 4'b0010;
+			#50;
+			assert (mult_out[3:0] == 4'b1010) $display ("A=%b, B=%b, -> Multiplicación: resultado=%b, overflow=%b", A, B, mult_out, overflow);
+			else $error("Multiplicación fallida: 1");
+			rst = 1;
+			#5;
+			
+			rst = 0;																																																											
+			A = 4'b1111;
+			B = 4'b1111;
+			#50;
+			assert (mult_out[3:0] == 4'b0001) $display ("A=%b, B=%b, -> Multiplicación: resultado=%b, overflow=%b", A, B, mult_out, overflow);
+			else $error("Multiplicación fallida: 2");
+			rst = 1;
+			#5;
         $display("\nTest completo.");
-        $finish;
+		  
+		  
+        //$finish;
     end
 endmodule

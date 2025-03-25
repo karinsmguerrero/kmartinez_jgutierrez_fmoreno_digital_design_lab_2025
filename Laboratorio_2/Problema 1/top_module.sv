@@ -2,8 +2,9 @@ module top_module #(parameter N = 4) (
     input logic [N-1:0] A, B, 
     input logic Cin,  
     input logic [$clog2(N):0] shift_amount,
+	 input logic clk, rst,
     output logic [N-1:0] D, quotient, remainder, mod_out,  
-    output logic Cout,  
+    output logic Cout, overflow, 
     output logic Z_rest, N_rest, V_rest, C_rest,  // Flags de la resta
     output logic Z_div, N_div,                    // Flags de la división
     output logic Z_mod, N_mod,                    // Flags del módulo
@@ -12,7 +13,7 @@ module top_module #(parameter N = 4) (
     output logic Z_xor, N_xor,                    // Flags XOR
     output logic Z_shl, N_shl,                    // Flags Shift Left
     output logic Z_shr, N_shr,                    // Flags Shift Right
-    output logic [N-1:0] and_out, or_out, xor_out, shift_left_out, shift_right_out
+    output logic [N-1:0] and_out, or_out, xor_out, shift_left_out, shift_right_out, mult_out
 );
 
     // Instancias de los módulos
@@ -55,5 +56,14 @@ module top_module #(parameter N = 4) (
         .A(A), .shift_amount(shift_amount), .Y(shift_right_out),
         .Z(Z_shr), .neg(N_shr)
     );
+	 
+	 multiplier #(.N(4)) mult_inst(
+	 	.clk(clk),
+		.rst(rst),
+		.A(A), 
+		.B(B),
+		.result(mult_out),
+		.overflow(overflow)
+	 );
 
 endmodule
