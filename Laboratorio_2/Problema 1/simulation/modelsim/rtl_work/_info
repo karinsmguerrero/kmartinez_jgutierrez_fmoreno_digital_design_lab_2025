@@ -7,128 +7,128 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/simulation/modelsim
+Z0 dC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/simulation/modelsim
 vand_nbit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1742930148
+Z2 !s110 1743032415
 !i10b 1
 !s100 j@8`JX2e7Ao0BNR<RdRN]0
-Im:GF^UQBR?dGW4OjOJidJ1
+I5`;O8O>@eXS7=Qc?LN9=D0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 and_nbit_sv_unit
 S1
 R0
-Z4 w1742920534
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv
+Z4 w1742873982
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv
 L0 1
 Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1742930148.000000
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv|
+Z6 !s108 1743032415.000000
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1}
+Z8 !s92 -sv -work work {+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1}
 Z9 tCvgOpt 0
 vdivisor_nbit
 R1
 R2
 !i10b 1
 !s100 `Rkj:d?_N2ei34P`Zdnhl1
-IeYRIX[?QToA4=<WJcLLSL3
+I3JkF=7PfkzA79IgHc`8L52
 R3
 !s105 divisor_nbit_sv_unit
 S1
 R0
 R4
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/divisor_nbit.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/divisor_nbit.sv
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/divisor_nbit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/divisor_nbit.sv|
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv|
 !i113 1
 R7
 R8
 R9
 vmodulo_nbit
 R1
-R2
+Z10 !s110 1743032416
 !i10b 1
 !s100 oCkPCbkBnU3?n>:R<LU`E2
-IN;JTP^7ad7Ak]]8QMlngC3
+ILLfPdbb6oQ8FmEoJ1[M2g1
 R3
 !s105 modulo_nbit_sv_unit
 S1
 R0
 R4
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv|
+Z11 !s108 1743032416.000000
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv|
 !i113 1
 R7
 R8
 R9
-vmultiplier
+vmultiplier_nbit
 R1
 R2
 !i10b 1
-!s100 5<[BBCj=ZRV`Z;J_MaRzW2
-IfeaA`K7hhiP2Wmi?n2Lb82
+!s100 e^`MSGW1bM>XMad5c=>a=0
+IJ;1gSJ@gDfLKC:VEb5?Zd2
 R3
-!s105 multiplier_sv_unit
+!s105 multiplier_nbit_sv_unit
 S1
 R0
-w1742929762
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/multiplier.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/multiplier.sv
+w1743032359
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/multiplier.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/multiplier.sv|
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv|
 !i113 1
 R7
 R8
 R9
 vor_nbit
 R1
-R2
+R10
 !i10b 1
 !s100 90n=EFhgPH0idcQb5oN_O2
-I_43olmIiDik73<RPPHekD2
+Ii>`=biEffEb0o:K6BHoTB1
 R3
 !s105 or_nbit_sv_unit
 S1
 R0
 R4
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/or_nbit.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/or_nbit.sv
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/or_nbit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/or_nbit.sv|
+R11
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv|
 !i113 1
 R7
 R8
@@ -138,122 +138,122 @@ R1
 R2
 !i10b 1
 !s100 38CIjdDLHnjGMA1i>cT0N3
-I1>[l:f0=zklMW1=V0faTB0
+Ikl942o298RhI`iFTf]Qn]3
 R3
 !s105 restador_nbit_sv_unit
 S1
 R0
-w1742929662
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv
+Z12 w1742940569
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv|
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv|
 !i113 1
 R7
 R8
 R9
 vshift_left_nbit
 R1
-R2
+R10
 !i10b 1
 !s100 hZ<n;Xi<Bh9Rf3iZGTZc43
-IgW0C2^DcJg1@a6SDf=WgJ0
+IGZTfk_R;08j<NNIhOdD6N3
 R3
 !s105 shift_left_nbit_sv_unit
 S1
 R0
 R4
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv|
+R11
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv|
 !i113 1
 R7
 R8
 R9
 vshift_right_nbit
 R1
-R2
+R10
 !i10b 1
 !s100 fJIeONCB1[W[zH9kHcI[a3
-I:;KE0O4NEi[]AA^16aRf32
+I7E8j:gPf3H>44:@6ZiZ@_3
 R3
 !s105 shift_right_nbit_sv_unit
 S1
 R0
 R4
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv|
+R11
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv|
 !i113 1
 R7
 R8
 R9
 vsumador_parametrizable
 R1
-R2
+R10
 !i10b 1
 !s100 Q@SGkM29`5WQHAG<f0hJ33
-IYgQK536HWT2;^1ZDF5W>Y1
+I?3`B1VVTeUT0>U@boZOIR2
 R3
 !s105 sumador_parametrizable_sv_unit
 S1
 R0
-w1742929953
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv
+R12
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
+R11
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
 !i113 1
 R7
 R8
 R9
 vtb_top_module
 R1
-R2
+R10
 !i10b 1
-!s100 Z?HVG3B2z=7hV5P^7XM^G2
-I`m7VZ@6:AW`3JEIlhAF`l2
+!s100 >0CQ7Aa4oa29AM@l62^hL1
+IoQi[;ViiM7S[<<DmzAUiC2
 R3
 !s105 tb_top_module_sv_unit
 S1
 R0
-w1742930134
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv
+w1743030508
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv|
+R11
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv|
 !i113 1
 R7
 R8
@@ -262,48 +262,48 @@ vtop_module
 R1
 R2
 !i10b 1
-!s100 @NgojH[0I?T2FVWbc=T]L2
-Ik4hH8<>jnUC5`U8ejjgd_3
+!s100 [5QKYY4;6G[CEYQJ>]`V>3
+Ic5SUimL[coeJf4S?CoAJ_2
 R3
 !s105 top_module_sv_unit
 S1
 R0
-w1742929980
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv
+w1743025265
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv|
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv|
 !i113 1
 R7
 R8
 R9
 vxor_nbit
 R1
-R2
+R10
 !i10b 1
 !s100 QT;W69eE>87_?f2U=B6iG1
-I3C12zz^^^ZVCj=M@?=a[33
+IMKFCBz^zldOK<DRk:jSgQ0
 R3
 !s105 xor_nbit_sv_unit
 S1
 R0
 R4
-8C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/xor_nbit.sv
-FC:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/xor_nbit.sv
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/xor_nbit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1|C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/xor_nbit.sv|
+R11
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv|
 !i113 1
 R7
 R8

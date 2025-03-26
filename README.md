@@ -13,6 +13,12 @@
         1: resta
         2: multiplicación
         3: división
+        4: módulo
+        5: and
+        6: or
+        7: xor
+        8: shift left
+        9: shift right
 
 ### 4. Indicadores de 7 segmentos
     Cada par de siete segmentos representa:

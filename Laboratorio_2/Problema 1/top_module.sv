@@ -69,7 +69,9 @@ module top_module #(parameter N = 4) (
         .A(A), 
         .B(B),
         .result(mult_out),
-        .overflow_mutli(overflow_mutli)
+        .overflow(overflow_mutli),
+		  .negative(),
+		  .zero()
     );
 
 endmodule

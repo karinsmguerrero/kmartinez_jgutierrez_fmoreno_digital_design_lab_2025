@@ -171,8 +171,9 @@ always@(posedge CLOCK_50 or negedge KEY[0])
 					zero = Z_add;
 					negative = 0;
 					overflow = V_add;
-					seg_0 = addition[3:0];
-					seg_1 = 4'b1111;
+					result = addition[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = 4'b1111;
 					seg_3 = 4'b1111;
 				end
@@ -181,8 +182,9 @@ always@(posedge CLOCK_50 or negedge KEY[0])
 					zero = Z_rest;
 					negative = N_rest;
 					overflow = V_rest;
-					seg_0 = substraction[3:0];
-					seg_1 = 4'b1111;
+					result = substraction[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = 4'b1111;
 					seg_3 = 4'b1111;
 				end
@@ -202,8 +204,9 @@ always@(posedge CLOCK_50 or negedge KEY[0])
 					zero = Z_div;
 					negative = N_div;
 					overflow = 0; 
-					seg_0 = division[3:0];
-					seg_1 = 4'b1111;
+					result = division[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = remainder[3:0];
 					seg_3 = 4'b0000;
 				end
@@ -212,8 +215,9 @@ always@(posedge CLOCK_50 or negedge KEY[0])
 					zero = Z_mod;
 					negative = 0;
 					overflow = 0;
-					seg_0 = mod_out[3:0];
-					seg_1 = 4'b1111;
+					result = mod_out[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = 4'b1111;
 					seg_3 = 4'b1111;
 				end
@@ -222,8 +226,9 @@ always@(posedge CLOCK_50 or negedge KEY[0])
 					zero = Z_and;
 					negative = N_and;
 					overflow = 0;
-					seg_0 = and_out[3:0];
-					seg_1 = 4'b1111;
+					result = and_out[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = 4'b1111;
 					seg_3 = 4'b1111;
 				end
@@ -232,8 +237,9 @@ always@(posedge CLOCK_50 or negedge KEY[0])
 					zero = Z_or;
 					negative = N_or;
 					overflow = 0;
-					seg_0 = or_out[3:0];
-					seg_1 = 4'b1111;
+					result = or_out[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = 4'b1111;
 					seg_3 = 4'b1111;
 				end
@@ -242,38 +248,31 @@ always@(posedge CLOCK_50 or negedge KEY[0])
 					zero = Z_xor;
 					negative = N_xor;
 					overflow = 0;
-					seg_0 = xor_out[3:0];
-					seg_1 = 4'b1111;
+					result = xor_out[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = 4'b1111;
 					seg_3 = 4'b1111;
 				end
 			4'b1000:	begin
 					carry_out = 0;
-					zero = Z_or;
-					negative = N_or;
+					zero = Z_shl;
+					negative = N_shl;
 					overflow = 0;
-					seg_0 = or_out[3:0];
-					seg_1 = 4'b1111;
+					result = shift_left_out[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = 4'b1111;
 					seg_3 = 4'b1111;
 				end
 			4'b1001:	begin
 					carry_out = 0;
-					zero = Z_shl;
-					negative = N_shl;
-					overflow = 0;
-					seg_0 = shift_left_out[3:0];
-					seg_1 = 4'b1111;
-					seg_2 = 4'b1111;
-					seg_3 = 4'b1111;
-				end
-			4'b1010:	begin
-					carry_out = 0;
 					zero = Z_shr;
 					negative = N_shr;
 					overflow = 0;
-					seg_0 = shift_right_out[3:0];
-					seg_1 = 4'b1111;
+					result = shift_right_out[3:0];
+					seg_0 = bcd_res[7:4];
+					seg_1 = bcd_res[11:8];
 					seg_2 = 4'b1111;
 					seg_3 = 4'b1111;
 				end

@@ -54,59 +54,58 @@ module tb_top_module;
         $display("===============================================");
 
         // Test 1 - Resta, División y Módulo
-        A = 4'b1001; B = 4'b0011; Cin = 0; shift_amount = 2; #10;
-        $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b | Flags: Z=%b, N=%b, V=%b, C=%b", A, B, Cin, D, Cout_rest, Z_rest, N_rest, V_rest, C_rest);
+        A = 4'b0101; B = 4'b0011; Cin = 0; shift_amount = 2; #10;
+        /*$display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b | Flags: Z=%b, N=%b, V=%b, C=%b", A, B, Cin, D, Cout_rest, Z_rest, N_rest, V_rest, C_rest);
         $display("Division: cociente=%b, residuo=%b | Flags: Z=%b, N=%b", quotient, remainder, Z_div, N_div);
         $display("Modulo: %b | Flags: Z=%b, N=%b", mod_out, Z_mod, N_mod);
         $display("AND: %b | Flags: Z=%b, N=%b", and_out, Z_and, N_and);
         $display("OR: %b | Flags: Z=%b, N=%b", or_out, Z_or, N_or);
-        $display("XOR: %b | Flags: Z=%b, N=%b", xor_out, Z_xor, N_xor);
+        $display("XOR: %b | Flags: Z=%b, N=%b", xor_out, Z_xor, N_xor);*/
         $display("Shift Left (%d): %b | Flags: Z=%b, N=%b", shift_amount, shift_left_out, Z_shl, N_shl);
         $display("Shift Right (%d): %b | Flags: Z=%b, N=%b", shift_amount, shift_right_out, Z_shr, N_shr);
-        $display("Suma: %b | Carry: %b, Overflow: %b", sum_out, carry_out_sum, overflow_sum);
+        //$display("Suma: %b | Carry: %b, Overflow: %b", sum_out, carry_out_sum, overflow_sum);
         $display("------------------------------------------------");
 
         // Test 2 - Otra combinación de valores
-        A = 4'b1001; B = 4'b1001; Cin = 0; shift_amount = 1; #10;
-        $display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b | Flags: Z=%b, N=%b, V=%b, C=%b", A, B, Cin, D, Cout_rest, Z_rest, N_rest, V_rest, C_rest);
+        A = 4'b0101; B = 4'b1001; Cin = 0; shift_amount = 1; #10;
+        /*$display("A=%b, B=%b, Cin=%b -> Resta: D=%b, Cout=%b | Flags: Z=%b, N=%b, V=%b, C=%b", A, B, Cin, D, Cout_rest, Z_rest, N_rest, V_rest, C_rest);
         $display("Division: cociente=%b, residuo=%b | Flags: Z=%b, N=%b", quotient, remainder, Z_div, N_div);
         $display("Modulo: %b | Flags: Z=%b, N=%b", mod_out, Z_mod, N_mod);
         $display("AND: %b | Flags: Z=%b, N=%b", and_out, Z_and, N_and);
         $display("OR: %b | Flags: Z=%b, N=%b", or_out, Z_or, N_or);
-        $display("XOR: %b | Flags: Z=%b, N=%b", xor_out, Z_xor, N_xor);
+        $display("XOR: %b | Flags: Z=%b, N=%b", xor_out, Z_xor, N_xor);*/
         $display("Shift Left (%d): %b | Flags: Z=%b, N=%b", shift_amount, shift_left_out, Z_shl, N_shl);
         $display("Shift Right (%d): %b | Flags: Z=%b, N=%b", shift_amount, shift_right_out, Z_shr, N_shr);
-        $display("Suma: %b | Carry: %b, Overflow: %b", sum_out, carry_out_sum, overflow_sum);
+        //$display("Suma: %b | Carry: %b, Overflow: %b", sum_out, carry_out_sum, overflow_sum);
         $display("------------------------------------------------");
 
         // Test 3 - División y módulo por 0
-        A = 4'b1010; B = 4'b0000; #10;
+        /*A = 4'b1010; B = 4'b0000; #10;
         $display("Division por 0: cociente=%b, residuo=%b", quotient, remainder);
         $display("Módulo por 0: %b", mod_out);
-        $display("------------------------------------------------");
-
-        //Pruebas para la multiplicación
-        clk = 0;
-        rst = 1;
-        #5;
-
-        rst = 0; 
-        A = 4'b0101;
-        B = 4'b0010;
-        #50;
-        assert (mult_out[3:0] == 4'b1010) $display ("A=%b, B=%b, -> Multiplicación: resultado=%b, overflow=%b", A, B, mult_out, overflow_mutli);
-        else $error("Multiplicación fallida: 1");
-        rst = 1;
-        #5;
-
-        rst = 0;																																																											
-        A = 4'b1111;
-        B = 4'b1111;
-        #50;
-        assert (mult_out[3:0] == 4'b0001) $display ("A=%b, B=%b, -> Multiplicación: resultado=%b, overflow=%b", A, B, mult_out, overflow_mutli);
-        else $error("Multiplicación fallida: 2");
-        rst = 1;
-        #5;
+        $display("------------------------------------------------");*/
+		  
+			//Test multiplicación
+		  	clk = 0;
+			rst = 1;
+			#5;
+			
+			rst = 0;
+			A = 4'b0101;
+			B = 4'b0010;
+			#50;
+			assert (mult_out[3:0] == 4'b1010) $display ("Passed");
+			else $error("Failed: 1");
+			rst = 1;
+			#5;
+			
+			rst = 0;
+			A = 4'b1011;
+			B = 4'b0010;
+			#50;
+			assert (mult_out[3:0] == 4'b0110) $display ("Passed");
+			else $error("Failed: 2");
+			rst = 1;
         
         $display("\nTest completo.");
     end

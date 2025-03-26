@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema_1
-Wed Mar 26 11:24:31 2025
+Wed Mar 26 17:44:37 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 26 11:24:31 2025       ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 26 17:44:37 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Problema_1                                  ;
 ; Top-level Entity Name           ; main                                        ;
@@ -221,14 +221,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 108         ;
+; Estimate of Logic utilization (ALMs needed) ; 103         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 186         ;
-;     -- 7 input functions                    ; 13          ;
-;     -- 6 input functions                    ; 17          ;
+; Combinational ALUT usage for logic          ; 179         ;
+;     -- 7 input functions                    ; 5           ;
+;     -- 6 input functions                    ; 21          ;
 ;     -- 5 input functions                    ; 33          ;
-;     -- 4 input functions                    ; 58          ;
-;     -- <=3 input functions                  ; 65          ;
+;     -- 4 input functions                    ; 50          ;
+;     -- <=3 input functions                  ; 70          ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 6           ;
 ;                                             ;             ;
@@ -236,10 +236,10 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; SW[7]~input ;
-; Maximum fan-out                             ; 38          ;
-; Total fan-out                               ; 886         ;
-; Average fan-out                             ; 2.72        ;
+; Maximum fan-out node                        ; SW[5]~input ;
+; Maximum fan-out                             ; 36          ;
+; Total fan-out                               ; 836         ;
+; Average fan-out                             ; 2.62        ;
 +---------------------------------------------+-------------+
 
 
@@ -248,28 +248,26 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name            ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |main                                     ; 186 (60)            ; 6 (0)                     ; 0                 ; 0          ; 67   ; 0            ; |main                                                                                                                        ; main                   ; work         ;
-;    |BinToBCD:res_converter|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|BinToBCD:res_converter                                                                                                 ; BinToBCD               ; work         ;
+; |main                                     ; 179 (57)            ; 6 (0)                     ; 0                 ; 0          ; 67   ; 0            ; |main                                                                                                                        ; main                   ; work         ;
 ;    |and_nbit:u_and|                       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|and_nbit:u_and                                                                                                         ; and_nbit               ; work         ;
-;    |divisor_nbit:u_divisor|               ; 24 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|divisor_nbit:u_divisor                                                                                                 ; divisor_nbit           ; work         ;
+;    |divisor_nbit:u_divisor|               ; 25 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|divisor_nbit:u_divisor                                                                                                 ; divisor_nbit           ; work         ;
 ;       |lpm_divide:Div0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|divisor_nbit:u_divisor|lpm_divide:Div0                                                                                 ; lpm_divide             ; work         ;
 ;          |lpm_divide_1am:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|divisor_nbit:u_divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am         ; work         ;
 ;             |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|divisor_nbit:u_divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh    ; work         ;
 ;                |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|divisor_nbit:u_divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse          ; work         ;
-;    |modulo_nbit:u_modulo|                 ; 30 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo                                                                                                   ; modulo_nbit            ; work         ;
-;       |lpm_divide:Mod0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo|lpm_divide:Mod0                                                                                   ; lpm_divide             ; work         ;
-;          |lpm_divide_42m:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                     ; lpm_divide_42m         ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                         ; sign_div_unsign_7kh    ; work         ;
-;                |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider   ; alt_u_div_kse          ; work         ;
+;    |modulo_nbit:u_modulo|                 ; 30 (4)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo                                                                                                   ; modulo_nbit            ; work         ;
+;       |lpm_divide:Mod0|                   ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo|lpm_divide:Mod0                                                                                   ; lpm_divide             ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                     ; lpm_divide_42m         ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                         ; sign_div_unsign_7kh    ; work         ;
+;                |alt_u_div_kse:divider|    ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|modulo_nbit:u_modulo|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider   ; alt_u_div_kse          ; work         ;
 ;    |multiplier_nbit:mult_inst|            ; 23 (23)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |main|multiplier_nbit:mult_inst                                                                                              ; multiplier_nbit        ; work         ;
-;    |or_nbit:u_or|                         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|or_nbit:u_or                                                                                                           ; or_nbit                ; work         ;
+;    |or_nbit:u_or|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|or_nbit:u_or                                                                                                           ; or_nbit                ; work         ;
 ;    |restador_nbit:u_restador|             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|restador_nbit:u_restador                                                                                               ; restador_nbit          ; work         ;
-;    |seven_segment_driver:seg0|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|seven_segment_driver:seg0                                                                                              ; seven_segment_driver   ; work         ;
+;    |seven_segment_driver:seg0|            ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|seven_segment_driver:seg0                                                                                              ; seven_segment_driver   ; work         ;
 ;    |seven_segment_driver:seg1|            ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|seven_segment_driver:seg1                                                                                              ; seven_segment_driver   ; work         ;
 ;    |seven_segment_driver:seg2|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|seven_segment_driver:seg2                                                                                              ; seven_segment_driver   ; work         ;
 ;    |seven_segment_driver:seg4|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|seven_segment_driver:seg4                                                                                              ; seven_segment_driver   ; work         ;
-;    |seven_segment_driver:seg5|            ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|seven_segment_driver:seg5                                                                                              ; seven_segment_driver   ; work         ;
-;    |shift_left_nbit:u_shift_left|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|shift_left_nbit:u_shift_left                                                                                           ; shift_left_nbit        ; work         ;
+;    |shift_left_nbit:u_shift_left|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|shift_left_nbit:u_shift_left                                                                                           ; shift_left_nbit        ; work         ;
 ;    |shift_right_nbit:u_shift_right|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|shift_right_nbit:u_shift_right                                                                                         ; shift_right_nbit       ; work         ;
 ;    |sumador_parametrizable:u_sumador|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|sumador_parametrizable:u_sumador                                                                                       ; sumador_parametrizable ; work         ;
 ;    |xor_nbit:u_xor|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|xor_nbit:u_xor                                                                                                         ; xor_nbit               ; work         ;
@@ -286,10 +284,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; counter[2]                                         ; KEY[0]              ; yes                    ;
 ; counter[3]                                         ; KEY[0]              ; yes                    ;
 ; counter[1]                                         ; KEY[0]              ; yes                    ;
-; result[0]                                          ; Decoder0            ; yes                    ;
-; result[1]                                          ; Decoder0            ; yes                    ;
-; result[3]                                          ; Decoder0            ; yes                    ;
-; result[2]                                          ; Decoder0            ; yes                    ;
+; result[0]                                          ; WideOr3             ; yes                    ;
+; result[1]                                          ; WideOr3             ; yes                    ;
+; result[3]                                          ; WideOr3             ; yes                    ;
+; result[2]                                          ; WideOr3             ; yes                    ;
 ; Number of user-specified and inferred latches = 8  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -327,13 +325,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|seg_0[3]                                   ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|seg_4[3]                                   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main|shift_right_nbit:u_shift_right|ShiftRight0 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |main|shift_right_nbit:u_shift_right|ShiftRight0 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|shift_left_nbit:u_shift_left|ShiftLeft0    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|shift_left_nbit:u_shift_left|ShiftLeft0    ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|Mux0                                       ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 16 LEs               ; 6 LEs                  ; No         ; |main|Mux5                                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |main|shift_left_nbit:u_shift_left|ShiftLeft0    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main|shift_right_nbit:u_shift_right|ShiftRight0 ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|Mux4                                       ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |main|Mux7                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
@@ -545,7 +542,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 6                           ;
 ;     CLR               ; 6                           ;
-; arriav_lcell_comb     ; 194                         ;
+; arriav_lcell_comb     ; 186                         ;
 ;     arith             ; 32                          ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 1                           ;
@@ -553,24 +550,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 7                           ;
 ;         4 data inputs ; 2                           ;
 ;         5 data inputs ; 11                          ;
-;     extend            ; 13                          ;
-;         7 data inputs ; 13                          ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
 ;     normal            ; 131                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 6                           ;
+;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 11                          ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 50                          ;
+;         3 data inputs ; 28                          ;
+;         4 data inputs ; 42                          ;
 ;         5 data inputs ; 22                          ;
-;         6 data inputs ; 17                          ;
+;         6 data inputs ; 21                          ;
 ;     shared            ; 18                          ;
 ;         0 data inputs ; 6                           ;
 ;         2 data inputs ; 6                           ;
 ;         4 data inputs ; 6                           ;
 ; boundary_port         ; 67                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.50                       ;
-; Average LUT depth     ; 7.17                        ;
+; Max LUT depth         ; 11.50                       ;
+; Average LUT depth     ; 6.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -589,7 +586,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Mar 26 11:24:23 2025
+    Info: Processing started: Wed Mar 26 17:44:29 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema_1 -c Problema_1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -680,6 +677,14 @@ Info (12133): Instantiated megafunction "modulo_nbit:u_modulo|lpm_divide:Mod0" w
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
     Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/db/lpm_divide_42m.tdf Line: 24
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch result[0] has unsafe behavior File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal counter[2] File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 162
+Warning (13012): Latch result[1] has unsafe behavior File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal counter[3] File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 162
+Warning (13012): Latch result[3] has unsafe behavior File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal counter[3] File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 162
+Warning (13012): Latch result[2] has unsafe behavior File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal counter[3] File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 162
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
     Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
@@ -690,6 +695,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 16
     Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
     Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
     Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -699,14 +705,14 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 6
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 6
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 9
-Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 249 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 189 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4871 megabytes
-    Info: Processing ended: Wed Mar 26 11:24:31 2025
+    Info (21061): Implemented 182 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4895 megabytes
+    Info: Processing ended: Wed Mar 26 17:44:37 2025
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Total CPU time (on all processors): 00:00:16
 
 
