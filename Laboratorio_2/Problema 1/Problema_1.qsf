@@ -241,4 +241,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE modulo_nbit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sumador_parametrizable.sv
 set_global_assignment -name SYSTEMVERILOG_FILE seven_segment_driver.sv
 set_global_assignment -name SYSTEMVERILOG_FILE main.sv
+set_global_assignment -name SYSTEMVERILOG_FILE BinToBCD.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

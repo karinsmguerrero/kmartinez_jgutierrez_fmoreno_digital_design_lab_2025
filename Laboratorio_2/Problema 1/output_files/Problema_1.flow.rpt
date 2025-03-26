@@ -1,5 +1,5 @@
 Flow report for Problema_1
-Tue Mar 25 23:55:18 2025
+Wed Mar 26 11:25:17 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Mar 25 23:55:18 2025       ;
+; Flow Status                     ; Successful - Wed Mar 26 11:25:17 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Problema_1                                  ;
 ; Top-level Entity Name           ; main                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 84 / 41,910 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 108 / 41,910 ( < 1 % )                      ;
 ; Total registers                 ; 6                                           ;
 ; Total pins                      ; 67 / 499 ( 13 % )                           ;
 ; Total virtual pins              ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/25/2025 23:54:26 ;
+; Start date & time ; 03/26/2025 11:24:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Problema_1          ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 18691165529652.174296846608480         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 18691165529652.174300986319536         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_top_module  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; multiplier_tb  ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_top_module                          ; --            ; --          ; eda_simulation ;
@@ -109,12 +109,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4880 MB             ; 00:00:16                           ;
-; Fitter               ; 00:00:31     ; 1.0                     ; 7326 MB             ; 00:01:43                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4834 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 5237 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4746 MB             ; 00:00:01                           ;
-; Total                ; 00:00:49     ; --                      ; --                  ; 00:02:10                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4871 MB             ; 00:00:16                           ;
+; Fitter               ; 00:00:32     ; 1.0                     ; 7339 MB             ; 00:01:55                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4838 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.3                     ; 5239 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4745 MB             ; 00:00:01                           ;
+; Total                ; 00:00:50     ; --                      ; --                  ; 00:02:22                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
