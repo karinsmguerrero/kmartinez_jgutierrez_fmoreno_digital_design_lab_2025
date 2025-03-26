@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Problema_1
-Tue Mar 25 13:15:43 2025
+Analysis & Synthesis report for Problema_1
+Tue Mar 25 23:54:34 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,22 +7,27 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |top_module
-  5. Parameter Settings for User Entity Instance: restador_nbit:u_restador
-  6. Parameter Settings for User Entity Instance: divisor_nbit:u_divisor
-  7. Parameter Settings for User Entity Instance: modulo_nbit:u_modulo
-  8. Parameter Settings for User Entity Instance: and_nbit:u_and
-  9. Parameter Settings for User Entity Instance: or_nbit:u_or
- 10. Parameter Settings for User Entity Instance: xor_nbit:u_xor
- 11. Parameter Settings for User Entity Instance: shift_left_nbit:u_shift_left
- 12. Parameter Settings for User Entity Instance: shift_right_nbit:u_shift_right
- 13. Parameter Settings for User Entity Instance: sumador_parametrizable:u_sumador
- 14. Parameter Settings for User Entity Instance: multiplier:mult_inst
- 15. Analysis & Elaboration Settings
- 16. Port Connectivity Checks: "sumador_parametrizable:u_sumador"
- 17. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |main
+ 13. Parameter Settings for User Entity Instance: multiplier_nbit:mult_inst
+ 14. Parameter Settings for User Entity Instance: restador_nbit:u_restador
+ 15. Port Connectivity Checks: "seven_segment_driver:seg5"
+ 16. Port Connectivity Checks: "seven_segment_driver:seg4"
+ 17. Port Connectivity Checks: "seven_segment_driver:seg3"
+ 18. Port Connectivity Checks: "seven_segment_driver:seg2"
+ 19. Port Connectivity Checks: "seven_segment_driver:seg1"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -45,157 +50,36 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Mar 25 13:15:43 2025       ;
-; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                 ; Problema_1                                  ;
-; Top-level Entity Name         ; top_module                                  ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |top_module ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; N              ; 4     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: restador_nbit:u_restador ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; N              ; 4     ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divisor_nbit:u_divisor ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; N              ; 4     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: modulo_nbit:u_modulo ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; N              ; 4     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: and_nbit:u_and ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; N              ; 4     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: or_nbit:u_or ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; N              ; 4     ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: xor_nbit:u_xor ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; N              ; 4     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shift_left_nbit:u_shift_left ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 4     ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shift_right_nbit:u_shift_right ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 4     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sumador_parametrizable:u_sumador ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: multiplier:mult_inst ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; N              ; 4     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Mar 25 23:54:34 2025       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; Problema_1                                  ;
+; Top-level Entity Name           ; main                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 6                                           ;
+; Total pins                      ; 67                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; top_module         ; Problema_1         ;
+; Top-level entity name                                                           ; main               ; Problema_1         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -276,72 +160,408 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "sumador_parametrizable:u_sumador"                                                                                                                                              ;
-+---------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                                                                                                               ;
-+---------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; carry_out     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (4 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
-; overflow_suma ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (4 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
-+---------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+; multiplier_nbit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv      ;         ;
+; restador_nbit.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv        ;         ;
+; seven_segment_driver.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/seven_segment_driver.sv ;         ;
+; main.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv                 ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 85     ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 150    ;
+;     -- 7 input functions                    ; 2      ;
+;     -- 6 input functions                    ; 17     ;
+;     -- 5 input functions                    ; 5      ;
+;     -- 4 input functions                    ; 16     ;
+;     -- <=3 input functions                  ; 110    ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 6      ;
+;                                             ;        ;
+; I/O pins                                    ; 67     ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; Add0~9 ;
+; Maximum fan-out                             ; 32     ;
+; Total fan-out                               ; 569    ;
+; Average fan-out                             ; 1.96   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name          ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+----------------------+--------------+
+; |main                          ; 150 (114)           ; 6 (0)                     ; 0                 ; 0          ; 67   ; 0            ; |main                           ; main                 ; work         ;
+;    |multiplier_nbit:mult_inst| ; 24 (24)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |main|multiplier_nbit:mult_inst ; multiplier_nbit      ; work         ;
+;    |restador_nbit:u_restador|  ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|restador_nbit:u_restador  ; restador_nbit        ; work         ;
+;    |seven_segment_driver:seg0| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|seven_segment_driver:seg0 ; seven_segment_driver ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; counter[0]                                          ; KEY[0]              ; yes                    ;
+; counter[2]                                          ; KEY[0]              ; yes                    ;
+; counter[3]                                          ; KEY[0]              ; yes                    ;
+; counter[4]                                          ; KEY[0]              ; yes                    ;
+; counter[5]                                          ; KEY[0]              ; yes                    ;
+; counter[6]                                          ; KEY[0]              ; yes                    ;
+; counter[7]                                          ; KEY[0]              ; yes                    ;
+; counter[8]                                          ; KEY[0]              ; yes                    ;
+; counter[9]                                          ; KEY[0]              ; yes                    ;
+; counter[10]                                         ; KEY[0]              ; yes                    ;
+; counter[11]                                         ; KEY[0]              ; yes                    ;
+; counter[12]                                         ; KEY[0]              ; yes                    ;
+; counter[13]                                         ; KEY[0]              ; yes                    ;
+; counter[14]                                         ; KEY[0]              ; yes                    ;
+; counter[15]                                         ; KEY[0]              ; yes                    ;
+; counter[16]                                         ; KEY[0]              ; yes                    ;
+; counter[17]                                         ; KEY[0]              ; yes                    ;
+; counter[18]                                         ; KEY[0]              ; yes                    ;
+; counter[19]                                         ; KEY[0]              ; yes                    ;
+; counter[20]                                         ; KEY[0]              ; yes                    ;
+; counter[21]                                         ; KEY[0]              ; yes                    ;
+; counter[22]                                         ; KEY[0]              ; yes                    ;
+; counter[23]                                         ; KEY[0]              ; yes                    ;
+; counter[24]                                         ; KEY[0]              ; yes                    ;
+; counter[25]                                         ; KEY[0]              ; yes                    ;
+; counter[26]                                         ; KEY[0]              ; yes                    ;
+; counter[27]                                         ; KEY[0]              ; yes                    ;
+; counter[28]                                         ; KEY[0]              ; yes                    ;
+; counter[29]                                         ; KEY[0]              ; yes                    ;
+; counter[30]                                         ; KEY[0]              ; yes                    ;
+; counter[31]                                         ; KEY[0]              ; yes                    ;
+; counter[1]                                          ; KEY[0]              ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++---------------------------------------+-------------------------------------------------+
+; Register name                         ; Reason for Removal                              ;
++---------------------------------------+-------------------------------------------------+
+; multiplier_nbit:mult_inst|S[8]        ; Stuck at GND due to stuck port data_in          ;
+; multiplier_nbit:mult_inst|negative    ; Stuck at GND due to stuck port data_in          ;
+; multiplier_nbit:mult_inst|overflow    ; Merged with multiplier_nbit:mult_inst|carry_out ;
+; Total Number of Removed Registers = 3 ;                                                 ;
++---------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 6     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|Selector6            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |main ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplier_nbit:mult_inst ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: restador_nbit:u_restador ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "seven_segment_driver:seg5" ;
++---------+-------+----------+--------------------------+
+; Port    ; Type  ; Severity ; Details                  ;
++---------+-------+----------+--------------------------+
+; data_in ; Input ; Info     ; Stuck at VCC             ;
++---------+-------+----------+--------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "seven_segment_driver:seg4" ;
++---------+-------+----------+--------------------------+
+; Port    ; Type  ; Severity ; Details                  ;
++---------+-------+----------+--------------------------+
+; data_in ; Input ; Info     ; Stuck at VCC             ;
++---------+-------+----------+--------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "seven_segment_driver:seg3" ;
++---------+-------+----------+--------------------------+
+; Port    ; Type  ; Severity ; Details                  ;
++---------+-------+----------+--------------------------+
+; data_in ; Input ; Info     ; Stuck at VCC             ;
++---------+-------+----------+--------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "seven_segment_driver:seg2" ;
++---------+-------+----------+--------------------------+
+; Port    ; Type  ; Severity ; Details                  ;
++---------+-------+----------+--------------------------+
+; data_in ; Input ; Info     ; Stuck at VCC             ;
++---------+-------+----------+--------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "seven_segment_driver:seg1" ;
++---------+-------+----------+--------------------------+
+; Port    ; Type  ; Severity ; Details                  ;
++---------+-------+----------+--------------------------+
+; data_in ; Input ; Info     ; Stuck at VCC             ;
++---------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 6                           ;
+;     CLR               ; 6                           ;
+; arriav_lcell_comb     ; 153                         ;
+;     arith             ; 52                          ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 33                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 5                           ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 99                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 35                          ;
+;         4 data inputs ; 14                          ;
+;         6 data inputs ; 17                          ;
+; boundary_port         ; 67                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.41                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 25 13:15:37 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema_1 -c Problema_1 --analysis_and_elaboration
+    Info: Processing started: Tue Mar 25 23:54:25 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema_1 -c Problema_1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier_nbit_tb.sv
+    Info (12023): Found entity 1: multiplier_nbit_tb File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier_nbit.sv
+    Info (12023): Found entity 1: multiplier_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file restador_1bit.sv
-    Info (12023): Found entity 1: restador_1bit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_1bit.sv Line: 1
+    Info (12023): Found entity 1: restador_1bit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_1bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file restador_nbit.sv
-    Info (12023): Found entity 1: restador_nbit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv Line: 1
+    Info (12023): Found entity 1: restador_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top_module.sv
-    Info (12023): Found entity 1: top_module File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 1
+    Info (12023): Found entity 1: top_module File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_top_module.sv
-    Info (12023): Found entity 1: tb_top_module File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/tb_top_module.sv Line: 1
+    Info (12023): Found entity 1: tb_top_module File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divisor_nbit.sv
-    Info (12023): Found entity 1: divisor_nbit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/divisor_nbit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file multiplier.sv
-    Info (12023): Found entity 1: multiplier File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/multiplier.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file multiplier_tb.sv
-    Info (12023): Found entity 1: multiplier_tb File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/multiplier_tb.sv Line: 1
+    Info (12023): Found entity 1: divisor_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and_nbit.sv
-    Info (12023): Found entity 1: and_nbit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/and_nbit.sv Line: 1
+    Info (12023): Found entity 1: and_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file or_nbit.sv
-    Info (12023): Found entity 1: or_nbit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/or_nbit.sv Line: 1
+    Info (12023): Found entity 1: or_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file xor_nbit.sv
-    Info (12023): Found entity 1: xor_nbit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/xor_nbit.sv Line: 1
+    Info (12023): Found entity 1: xor_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shift_right_nbit.sv
-    Info (12023): Found entity 1: shift_right_nbit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_right_nbit.sv Line: 1
+    Info (12023): Found entity 1: shift_right_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shift_left_nbit.sv
-    Info (12023): Found entity 1: shift_left_nbit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/shift_left_nbit.sv Line: 1
+    Info (12023): Found entity 1: shift_left_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo_nbit.sv
-    Info (12023): Found entity 1: modulo_nbit File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/modulo_nbit.sv Line: 1
+    Info (12023): Found entity 1: modulo_nbit File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sumador_parametrizable.sv
-    Info (12023): Found entity 1: sumador_parametrizable File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/sumador_parametrizable.sv Line: 1
-Info (12127): Elaborating entity "top_module" for the top level hierarchy
-Warning (10034): Output port "Cout_rest" at top_module.sv(7) has no driver File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 7
-Info (12128): Elaborating entity "restador_nbit" for hierarchy "restador_nbit:u_restador" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at restador_nbit.sv(11): truncated value with size 32 to match size of target (4) File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/restador_nbit.sv Line: 11
-Info (12128): Elaborating entity "divisor_nbit" for hierarchy "divisor_nbit:u_divisor" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 28
-Info (12128): Elaborating entity "modulo_nbit" for hierarchy "modulo_nbit:u_modulo" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 33
-Info (12128): Elaborating entity "and_nbit" for hierarchy "and_nbit:u_and" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 38
-Info (12128): Elaborating entity "or_nbit" for hierarchy "or_nbit:u_or" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 43
-Info (12128): Elaborating entity "xor_nbit" for hierarchy "xor_nbit:u_xor" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 48
-Info (12128): Elaborating entity "shift_left_nbit" for hierarchy "shift_left_nbit:u_shift_left" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 53
-Info (12128): Elaborating entity "shift_right_nbit" for hierarchy "shift_right_nbit:u_shift_right" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 58
-Info (12128): Elaborating entity "sumador_parametrizable" for hierarchy "sumador_parametrizable:u_sumador" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 64
-Info (12128): Elaborating entity "multiplier" for hierarchy "multiplier:mult_inst" File: C:/Users/XPC/Desktop/Lab/kmartinez_jgutierrez_fmelendez_digital_design_lab_2025/Laboratorio_2/Problema 1/top_module.sv Line: 73
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Tue Mar 25 13:15:43 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+    Info (12023): Found entity 1: sumador_parametrizable File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file seven_segment_driver.sv
+    Info (12023): Found entity 1: seven_segment_driver File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/seven_segment_driver.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file main.sv
+    Info (12023): Found entity 1: main File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 1
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10762): Verilog HDL Case Statement warning at main.sv(85): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 85
+Warning (10240): Verilog HDL Always Construct warning at main.sv(76): inferring latch(es) for variable "counter", which holds its previous value in one or more paths through the always construct File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 76
+Warning (10034): Output port "LEDR[9..4]" at main.sv(12) has no driver File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
+Info (10041): Inferred latch for "counter[0]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[1]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[2]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[3]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[4]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[5]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[6]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[7]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[8]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[9]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[10]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[11]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[12]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[13]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[14]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[15]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[16]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[17]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[18]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[19]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[20]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[21]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[22]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[23]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[24]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[25]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[26]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[27]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[28]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[29]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[30]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (10041): Inferred latch for "counter[31]" at main.sv(78) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 78
+Info (12128): Elaborating entity "multiplier_nbit" for hierarchy "multiplier_nbit:mult_inst" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 45
+Info (12128): Elaborating entity "restador_nbit" for hierarchy "restador_nbit:u_restador" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at restador_nbit.sv(11): truncated value with size 32 to match size of target (4) File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv Line: 11
+Info (12128): Elaborating entity "seven_segment_driver" for hierarchy "seven_segment_driver:seg0" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 68
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 12
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 16
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 16
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 16
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 16
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 16
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 16
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 16
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 17
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 17
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 17
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 17
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 17
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 17
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 17
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 18
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 19
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 19
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 19
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 19
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 19
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 19
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 19
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 21
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 6
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 6
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 6
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/main.sv Line: 9
+Info (21057): Implemented 220 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 153 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4880 megabytes
+    Info: Processing ended: Tue Mar 25 23:54:34 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:16
 
 

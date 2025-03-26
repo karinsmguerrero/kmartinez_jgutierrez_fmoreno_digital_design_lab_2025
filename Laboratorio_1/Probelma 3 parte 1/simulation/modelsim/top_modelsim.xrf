@@ -1,9 +1,9 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/fmoreno/Downloads/Probelma 3 parte 1/top.sv
-source_file = 1, C:/Users/fmoreno/Downloads/Probelma 3 parte 1/seven_seg_decoder.sv
-source_file = 1, C:/Users/fmoreno/Downloads/Probelma 3 parte 1/subtractor_tb.sv
-source_file = 1, C:/Users/fmoreno/Downloads/Probelma 3 parte 1/subtractor.sv
-source_file = 1, C:/Users/fmoreno/Downloads/Probelma 3 parte 1/db/top.cbx.xml
+source_file = 1, C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_1/Probelma 3 parte 1/top.sv
+source_file = 1, C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_1/Probelma 3 parte 1/seven_seg_decoder.sv
+source_file = 1, C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_1/Probelma 3 parte 1/subtractor_tb.sv
+source_file = 1, C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_1/Probelma 3 parte 1/subtractor.sv
+source_file = 1, C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_1/Probelma 3 parte 1/db/top.cbx.xml
 design_name = top
 instance = comp, \hex1[0]~output , hex1[0]~output, top, 1
 instance = comp, \hex1[1]~output , hex1[1]~output, top, 1
