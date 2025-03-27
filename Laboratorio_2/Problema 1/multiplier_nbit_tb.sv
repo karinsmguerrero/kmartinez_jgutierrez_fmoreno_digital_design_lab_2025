@@ -1,10 +1,10 @@
 module multiplier_nbit_tb;
-	logic clk, rst, overflow;
+	logic clk, rst, overflow, zero, negative;
 	logic [3:0] A;
 	logic [3:0] B;
 	logic [3:0] result;
 
-	multiplier_nbit dut(clk, rst, A, B, result, overflow);
+	multiplier_nbit dut(clk, rst, A, B, result, overflow, zero, carry_out, negative);
 
 
 	// Generador de reloj

@@ -8,31 +8,56 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/simulation/modelsim
-vand_nbit
+valu
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1743032415
+Z2 !s110 1743114735
 !i10b 1
-!s100 j@8`JX2e7Ao0BNR<RdRN]0
-I5`;O8O>@eXS7=Qc?LN9=D0
+!s100 E:m3fR0@^>DN01PDRTKZS0
+IAO4@8UGf3>a1__@MV;S?O0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 and_nbit_sv_unit
+!s105 alu_sv_unit
 S1
 R0
-Z4 w1742873982
-8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv
-FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv
+w1743111379
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
 L0 1
-Z5 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1743032415.000000
+Z5 !s108 1743114735.000000
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1}
+Z8 tCvgOpt 0
+vand_nbit
+R1
+R2
+!i10b 1
+!s100 j@8`JX2e7Ao0BNR<RdRN]0
+I5`;O8O>@eXS7=Qc?LN9=D0
+R3
+!s105 and_nbit_sv_unit
+S1
+R0
+Z9 w1742873982
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1}
-Z9 tCvgOpt 0
+R6
+R7
+R8
 vdivisor_nbit
 R1
 R2
@@ -43,24 +68,49 @@ R3
 !s105 divisor_nbit_sv_unit
 S1
 R0
-R4
+R9
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv|
 !i113 1
+R6
 R7
 R8
-R9
+vfrecuency_tb
+R1
+Z10 !s110 1743114736
+!i10b 1
+!s100 T9TcZD2Un<=@Wio6<^=bG3
+I3eeTZHTDWn5kXKAPmfMaF2
+R3
+!s105 frecuency_tb_sv_unit
+S1
+R0
+w1743114713
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z11 !s108 1743114736.000000
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv|
+!i113 1
+R6
+R7
+R8
 vmodulo_nbit
 R1
-Z10 !s110 1743032416
+R10
 !i10b 1
 !s100 oCkPCbkBnU3?n>:R<LU`E2
 ILLfPdbb6oQ8FmEoJ1[M2g1
@@ -68,21 +118,21 @@ R3
 !s105 modulo_nbit_sv_unit
 S1
 R0
-R4
+R9
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-Z11 !s108 1743032416.000000
+R11
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv|
 !i113 1
+R6
 R7
 R8
-R9
 vmultiplier_nbit
 R1
 R2
@@ -97,20 +147,20 @@ w1743032359
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv|
 !i113 1
+R6
 R7
 R8
-R9
 vor_nbit
 R1
-R10
+R2
 !i10b 1
 !s100 90n=EFhgPH0idcQb5oN_O2
 Ii>`=biEffEb0o:K6BHoTB1
@@ -118,21 +168,21 @@ R3
 !s105 or_nbit_sv_unit
 S1
 R0
-R4
+R9
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv|
 !i113 1
+R6
 R7
 R8
-R9
 vrestador_nbit
 R1
 R2
@@ -147,17 +197,17 @@ Z12 w1742940569
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv|
 !i113 1
+R6
 R7
 R8
-R9
 vshift_left_nbit
 R1
 R10
@@ -168,11 +218,11 @@ R3
 !s105 shift_left_nbit_sv_unit
 S1
 R0
-R4
+R9
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
@@ -180,9 +230,9 @@ R11
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv|
 !i113 1
+R6
 R7
 R8
-R9
 vshift_right_nbit
 R1
 R10
@@ -193,21 +243,21 @@ R3
 !s105 shift_right_nbit_sv_unit
 S1
 R0
-R4
+R9
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv|
 !i113 1
+R6
 R7
 R8
-R9
 vsumador_parametrizable
 R1
 R10
@@ -222,7 +272,7 @@ R12
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
@@ -230,62 +280,12 @@ R11
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
 !i113 1
-R7
-R8
-R9
-vtb_top_module
-R1
-R10
-!i10b 1
-!s100 >0CQ7Aa4oa29AM@l62^hL1
-IoQi[;ViiM7S[<<DmzAUiC2
-R3
-!s105 tb_top_module_sv_unit
-S1
-R0
-w1743030508
-8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv
-FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv
-L0 1
-R5
-r1
-!s85 0
-31
-R11
-!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv|
-!i113 1
-R7
-R8
-R9
-vtop_module
-R1
-R2
-!i10b 1
-!s100 [5QKYY4;6G[CEYQJ>]`V>3
-Ic5SUimL[coeJf4S?CoAJ_2
-R3
-!s105 top_module_sv_unit
-S1
-R0
-w1743025265
-8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv
-FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv
-L0 1
-R5
-r1
-!s85 0
-31
 R6
-!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv|
-!i113 1
 R7
 R8
-R9
 vxor_nbit
 R1
-R10
+R2
 !i10b 1
 !s100 QT;W69eE>87_?f2U=B6iG1
 IMKFCBz^zldOK<DRk:jSgQ0
@@ -293,18 +293,18 @@ R3
 !s105 xor_nbit_sv_unit
 S1
 R0
-R4
+R9
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv|
 !i113 1
+R6
 R7
 R8
-R9

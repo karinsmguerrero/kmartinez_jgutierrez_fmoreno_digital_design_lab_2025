@@ -154,7 +154,7 @@ BinToBCD op_converter(counter, bcd_op);
 BinToBCD res_converter(result, bcd_res);
 
 //--------- OPERATION SELECTION -----------
-always@(posedge CLOCK_50 or negedge KEY[0])
+always@(posedge CLOCK_50)
 	begin
 		seg_4 = bcd_op[7:4];
 		seg_5 = bcd_op[11:8];

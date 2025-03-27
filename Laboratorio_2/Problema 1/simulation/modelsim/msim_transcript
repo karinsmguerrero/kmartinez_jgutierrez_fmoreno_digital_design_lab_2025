@@ -10,134 +10,134 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:32:15 on Mar 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 16:32:15 on Mar 27,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:15 on Mar 26,2025
+# Start time: 16:32:15 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv 
 # -- Compiling module multiplier_nbit
 # 
 # Top level modules:
 # 	multiplier_nbit
-# End time: 17:40:15 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:15 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:15 on Mar 26,2025
+# Start time: 16:32:15 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv 
 # -- Compiling module restador_nbit
 # 
 # Top level modules:
 # 	restador_nbit
-# End time: 17:40:15 on Mar 26,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:15 on Mar 26,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv 
-# -- Compiling module top_module
-# 
-# Top level modules:
-# 	top_module
-# End time: 17:40:15 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:15 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:15 on Mar 26,2025
+# Start time: 16:32:15 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/divisor_nbit.sv 
 # -- Compiling module divisor_nbit
 # 
 # Top level modules:
 # 	divisor_nbit
-# End time: 17:40:15 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:15 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:15 on Mar 26,2025
+# Start time: 16:32:15 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/and_nbit.sv 
 # -- Compiling module and_nbit
 # 
 # Top level modules:
 # 	and_nbit
-# End time: 17:40:15 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:15 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:16 on Mar 26,2025
+# Start time: 16:32:15 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/or_nbit.sv 
 # -- Compiling module or_nbit
 # 
 # Top level modules:
 # 	or_nbit
-# End time: 17:40:16 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:15 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:16 on Mar 26,2025
+# Start time: 16:32:15 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/xor_nbit.sv 
 # -- Compiling module xor_nbit
 # 
 # Top level modules:
 # 	xor_nbit
-# End time: 17:40:16 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:15 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:16 on Mar 26,2025
+# Start time: 16:32:15 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_right_nbit.sv 
 # -- Compiling module shift_right_nbit
 # 
 # Top level modules:
 # 	shift_right_nbit
-# End time: 17:40:16 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:16 on Mar 27,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:16 on Mar 26,2025
+# Start time: 16:32:16 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv 
 # -- Compiling module shift_left_nbit
 # 
 # Top level modules:
 # 	shift_left_nbit
-# End time: 17:40:16 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:16 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:16 on Mar 26,2025
+# Start time: 16:32:16 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv 
 # -- Compiling module modulo_nbit
 # 
 # Top level modules:
 # 	modulo_nbit
-# End time: 17:40:16 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:16 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:16 on Mar 26,2025
+# Start time: 16:32:16 on Mar 27,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv 
 # -- Compiling module sumador_parametrizable
 # 
 # Top level modules:
 # 	sumador_parametrizable
-# End time: 17:40:16 on Mar 26,2025, Elapsed time: 0:00:00
+# End time: 16:32:16 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv}
+# vlog -sv -work work +incdir+C:/Users/USER/Documents/TEC/2025/I\ semestre/TDD/Laboratorios/Laboratorio_2/Problema\ 1 {C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:40:16 on Mar 26,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv 
-# -- Compiling module tb_top_module
+# Start time: 16:32:16 on Mar 27,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1" C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv 
+# -- Compiling module frecuency_tb
 # 
 # Top level modules:
-# 	tb_top_module
-# End time: 17:40:16 on Mar 26,2025, Elapsed time: 0:00:00
+# 	frecuency_tb
+# End time: 16:32:16 on Mar 27,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_top_module
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_top_module 
-# Start time: 17:40:17 on Mar 26,2025
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  frecuency_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" frecuency_tb 
+# Start time: 16:32:16 on Mar 27,2025
 # Loading sv_std.std
-# Loading work.tb_top_module
-# Loading work.top_module
+# Loading work.frecuency_tb
+# Loading work.alu
 # Loading work.restador_nbit
 # Loading work.divisor_nbit
 # Loading work.modulo_nbit
@@ -148,43 +148,113 @@
 # Loading work.shift_right_nbit
 # Loading work.sumador_parametrizable
 # Loading work.multiplier_nbit
-# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv(16): [PCDPC] - Port size (4) does not match connection size (1) for port 'carry_out_sum'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv(16).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv
-# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/tb_top_module.sv(16): [PCDPC] - Port size (4) does not match connection size (1) for port 'overflow_sum'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv(16).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv
-# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv(61): [PCDPC] - Port size (1) does not match connection size (4) for port 'carry_out'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv(7).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut/u_sumador File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
-# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv(61): [PCDPC] - Port size (1) does not match connection size (4) for port 'overflow_suma'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv(8).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut/u_sumador File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
-# ** Warning: (vsim-3017) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv(66): [TFMPC] - Too few port connections. Expected 9, found 8.
-#    Time: 0 ps  Iteration: 0  Instance: /tb_top_module/uut/mult_inst File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv
-# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/top_module.sv(66): [TFMPC] - Missing connection for port 'carry_out'.
+# ** Warning: (vsim-3017) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Too few port connections. Expected 42, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_2 File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'shift_amount'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'quotient'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'remainder'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'mod_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'Z_div'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'N_div'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'Z_mod'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'N_mod'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'Z_and'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'N_and'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'Z_or'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'N_or'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'Z_xor'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'N_xor'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'Z_shl'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'N_shl'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'Z_shr'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'N_shr'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'Z_mult'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'N_mult'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'C_mult'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'V_mult'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'and_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'or_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'xor_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'shift_left_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'shift_right_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'mult_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'sum_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'carry_out_sum'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10): [TFMPC] - Missing connection for port 'overflow_sum'.
+# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv(62): [PCDPC] - Port size (1) does not match connection size (2) for port 'carry_out'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_2/u_sumador File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
+# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv(62): [PCDPC] - Port size (1) does not match connection size (2) for port 'overflow_suma'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_2/u_sumador File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
+# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv(67): [PCDPC] - Port size (4) does not match connection size (2) for port 'A'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_2/mult_inst File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv
+# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv(67): [PCDPC] - Port size (4) does not match connection size (2) for port 'B'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_2/mult_inst File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv
+# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv(67): [PCDPC] - Port size (4) does not match connection size (2) for port 'result'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_2/mult_inst File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/multiplier_nbit.sv
+# ** Warning: (vsim-3017) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Too few port connections. Expected 42, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_4 File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
+# ** Warning: (vsim-3839) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): Variable '/frecuency_tb/Cout_rest', driven via a port connection, is multiply driven. See C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_4 File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
+# ** Warning: (vsim-3839) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): Variable '/frecuency_tb/Z_rest', driven via a port connection, is multiply driven. See C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_4 File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
+# ** Warning: (vsim-3839) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): Variable '/frecuency_tb/N_rest', driven via a port connection, is multiply driven. See C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_4 File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
+# ** Warning: (vsim-3839) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): Variable '/frecuency_tb/V_rest', driven via a port connection, is multiply driven. See C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_4 File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
+# ** Warning: (vsim-3839) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): Variable '/frecuency_tb/C_rest', driven via a port connection, is multiply driven. See C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_4 File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'shift_amount'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'quotient'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'remainder'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'mod_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'Z_div'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'N_div'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'Z_mod'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'N_mod'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'Z_and'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'N_and'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'Z_or'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'N_or'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'Z_xor'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'N_xor'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'Z_shl'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'N_shl'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'Z_shr'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'N_shr'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'Z_mult'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'N_mult'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'C_mult'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'V_mult'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'and_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'or_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'xor_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'shift_left_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'shift_right_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'mult_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'sum_out'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'carry_out_sum'.
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv(25): [TFMPC] - Missing connection for port 'overflow_sum'.
+# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv(62): [PCDPC] - Port size (1) does not match connection size (4) for port 'carry_out'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_4/u_sumador File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
+# ** Warning: (vsim-3015) C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv(62): [PCDPC] - Port size (1) does not match connection size (4) for port 'overflow_suma'. The port definition is at: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /frecuency_tb/alu_4/u_sumador File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: XPC  Hostname: PCKOKI  ProcessID: 23300
-#           Attempting to use alternate WLF file "./wlftijxytn".
+#           Attempting to use alternate WLF file "./wlftv2gh6y".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftijxytn
+#           Using alternate file: ./wlftv2gh6y
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ===============================================
-#  Testbench para Top Module de 4 Bits 
-# ===============================================
-# Shift Left (2): 0100 | Flags: Z=0, N=0
-# Shift Right (2): 0001 | Flags: Z=0, N=0
+# A=11, B=10, Cin=0 -> Resta: D=01, Cout=x | Flags: Z=0, N=0, V=0, C=1
 # ------------------------------------------------
-# Shift Left (1): 1010 | Flags: Z=0, N=1
-# Shift Right (1): 0010 | Flags: Z=0, N=0
+# A=0011, B=0010, Cin=0 -> Resta: D=0001, Cout=x | Flags: Z=0, N=0, V=0, C=1
 # ------------------------------------------------
-# Passed
-# Passed
-# 
-# Test completo.
 # Break key hit
 # Simulation stop requested.
-# End time: 17:40:52 on Mar 26,2025, Elapsed time: 0:00:35
-# Errors: 0, Warnings: 8
+# End time: 16:40:40 on Mar 27,2025, Elapsed time: 0:08:24
+# Errors: 0, Warnings: 78
