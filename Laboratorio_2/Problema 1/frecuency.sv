@@ -1,6 +1,6 @@
 module frecuency(
-	input logic Cin, Cout_rest,
-   input logic Z_rest, N_rest, V_rest, C_rest,
+   input logic Z_flag, N_flag, V_flag, C_flag,
+	input logic rst, clk_2, clk_4, clk_8, clk_16, clk_32,
 
 	// ------- ALU 2 bits -----------
 	input logic [1:0] A_2, B_2,
@@ -22,45 +22,40 @@ module frecuency(
 	alu #(.N(2)) alu_2 (
 	  .A(A_2), 
 	  .B(B_2), 
-	  .D(D_2),
-	  .Cin(Cin),  
-	  .Cout_rest(Cout_rest), 
-	  .Z_rest(Z_rest), .N_rest(N_rest), .V_rest(V_rest), .C_rest(C_rest)
+	  .mult_out(D_2), 
+	  .Z_mult(Z_flag), .N_mult(N_flag), .V_mult(V_flag), .C_mult(C_flag),
+	  .rst(rst), .clk(clk_2)
 	);
 		 
 	alu #(.N(4)) alu_4 (
 	  .A(A_4), 
 	  .B(B_4), 
-	  .D(D_4), 
-	  .Cin(Cin),
-	  .Cout_rest(Cout_rest),
-	  .Z_rest(Z_rest), .N_rest(N_rest), .V_rest(V_rest), .C_rest(C_rest)
+	  .mult_out(D_4), 
+	  .Z_mult(Z_flag), .N_mult(N_flag), .V_mult(V_flag), .C_mult(C_flag),
+	  .rst(rst), .clk(clk_4)
 	);
 
 	alu #(.N(8)) alu_8 (
 	  .A(A_8), 
 	  .B(B_8), 
-	  .D(D_8), 
-	  .Cin(Cin),
-	  .Cout_rest(Cout_rest),
-	  .Z_rest(Z_rest), .N_rest(N_rest), .V_rest(V_rest), .C_rest(C_rest)
+	  .mult_out(D_8), 
+	  .Z_mult(Z_flag), .N_mult(N_flag), .V_mult(V_flag), .C_mult(C_flag),
+	  .rst(rst), .clk(clk_8)
 	);
 
 	alu #(.N(16)) alu_16 (
 	  .A(A_16), 
 	  .B(B_16), 
-	  .D(D_16), 
-	  .Cin(Cin),
-	  .Cout_rest(Cout_rest),
-	  .Z_rest(Z_rest), .N_rest(N_rest), .V_rest(V_rest), .C_rest(C_rest)
+	  .mult_out(D_16), 
+	  .Z_mult(Z_flag), .N_mult(N_flag), .V_mult(V_flag), .C_mult(C_flag),
+	  .rst(rst), .clk(clk_16)
 	);
 
 	alu #(.N(32)) alu_32 (
 	  .A(A_32), 
 	  .B(B_32), 
-	  .D(D_32), 
-	  .Cin(Cin),
-	  .Cout_rest(Cout_rest),
-	  .Z_rest(Z_rest), .N_rest(N_rest), .V_rest(V_rest), .C_rest(C_rest)
+	  .mult_out(D_32), 
+	  .Z_mult(Z_flag), .N_mult(N_flag), .V_mult(V_flag), .C_mult(C_flag),
+	  .rst(rst), .clk(clk_32)
 	);
 endmodule

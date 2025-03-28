@@ -149,6 +149,7 @@ seven_segment_driver seg5(seg_5, HEX5);
 logic [3:0] counter = 0;
 logic [3:0] result = 0;
 logic [11:0] bcd_op, bcd_res;
+logic sel_btn_prev;
 
 BinToBCD op_converter(counter, bcd_op);
 BinToBCD res_converter(result, bcd_res);
@@ -159,12 +160,14 @@ always@(posedge CLOCK_50)
 		seg_4 = bcd_op[7:4];
 		seg_5 = bcd_op[11:8];
 
-		if(!KEY[0])
+		//if(!KEY[0])
+		if (sel_btn_prev && !KEY[0]) // Detecta flanco de bajada (1 → 0)
 			 begin
 				counter = counter + 1;
 				if(counter > 9)
 					counter = 0;
 			 end
+		sel_btn_prev <= KEY[0];
 		case(counter)
 			4'b0000:	begin
 					carry_out = C_add;

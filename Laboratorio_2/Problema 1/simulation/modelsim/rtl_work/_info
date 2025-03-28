@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/simulation/modelsim
 valu
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1743114735
+Z2 !s110 1743124001
 !i10b 1
 !s100 E:m3fR0@^>DN01PDRTKZS0
 IAO4@8UGf3>a1__@MV;S?O0
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1743114735.000000
+Z5 !s108 1743124001.000000
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/alu.sv|
 !i113 1
@@ -83,17 +83,42 @@ R5
 R6
 R7
 R8
+vfrecuency
+R1
+Z10 !s110 1743124002
+!i10b 1
+!s100 zBD62iiJJz7Hn?_=IS1OI0
+ICbhFWLO2FS>>G_`i8>gBz1
+R3
+!s105 frecuency_sv_unit
+S1
+R0
+w1743123207
+8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency.sv
+FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency.sv|
+!i113 1
+R6
+R7
+R8
 vfrecuency_tb
 R1
-Z10 !s110 1743114736
+R10
 !i10b 1
-!s100 T9TcZD2Un<=@Wio6<^=bG3
-I3eeTZHTDWn5kXKAPmfMaF2
+!s100 E:ONYPSNgz4MV=AS`[@LQ0
+I9@2Q5UCE?kBHd7oY_CDbD1
 R3
 !s105 frecuency_tb_sv_unit
 S1
 R0
-w1743114713
+w1743123980
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv
 L0 1
@@ -101,7 +126,7 @@ R4
 r1
 !s85 0
 31
-Z11 !s108 1743114736.000000
+!s108 1743124002.000000
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/frecuency_tb.sv|
 !i113 1
@@ -110,7 +135,7 @@ R7
 R8
 vmodulo_nbit
 R1
-R10
+R2
 !i10b 1
 !s100 oCkPCbkBnU3?n>:R<LU`E2
 ILLfPdbb6oQ8FmEoJ1[M2g1
@@ -126,7 +151,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/modulo_nbit.sv|
 !i113 1
@@ -193,7 +218,7 @@ R3
 !s105 restador_nbit_sv_unit
 S1
 R0
-Z12 w1742940569
+Z11 w1742940569
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/restador_nbit.sv
 L0 1
@@ -210,7 +235,7 @@ R7
 R8
 vshift_left_nbit
 R1
-R10
+R2
 !i10b 1
 !s100 hZ<n;Xi<Bh9Rf3iZGTZc43
 IGZTfk_R;08j<NNIhOdD6N3
@@ -226,7 +251,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/shift_left_nbit.sv|
 !i113 1
@@ -235,7 +260,7 @@ R7
 R8
 vshift_right_nbit
 R1
-R10
+R2
 !i10b 1
 !s100 fJIeONCB1[W[zH9kHcI[a3
 I7E8j:gPf3H>44:@6ZiZ@_3
@@ -260,7 +285,7 @@ R7
 R8
 vsumador_parametrizable
 R1
-R10
+R2
 !i10b 1
 !s100 Q@SGkM29`5WQHAG<f0hJ33
 I?3`B1VVTeUT0>U@boZOIR2
@@ -268,7 +293,7 @@ R3
 !s105 sumador_parametrizable_sv_unit
 S1
 R0
-R12
+R11
 8C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
 FC:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv
 L0 1
@@ -276,7 +301,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1|C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_2/Problema 1/sumador_parametrizable.sv|
 !i113 1
