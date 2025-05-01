@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at vga_driver.sv(3): object "VGA_HS" differs only in case from object "vga_HS" in the same scope File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_3/vga_driver.sv Line: 3
-Info (10281): Verilog HDL Declaration information at vga_driver.sv(4): object "VGA_VS" differs only in case from object "vga_VS" in the same scope File: C:/Users/USER/Documents/TEC/2025/I semestre/TDD/Laboratorios/Laboratorio_3/vga_driver.sv Line: 4
