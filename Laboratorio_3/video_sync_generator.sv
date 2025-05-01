@@ -1,92 +1,98 @@
-module video_sync_generator
+module video_sync_generator(
+	input logic reset,
+	input logic vga_clk,
+	output logic blank_n,
+	output logic HS,
+	output logic VS
+);
+                            
 
-	(
-		input wire clk, reset,
-		output wire hsync, vsync, video_on, p_tick,
-		output wire [9:0] x, y
-	);
-	
-	// constant declarations for VGA sync parameters
-	localparam H_DISPLAY       = 640; // horizontal display area
-	localparam H_L_BORDER      =  48; // horizontal left border
-	localparam H_R_BORDER      =  16; // horizontal right border
-	localparam H_RETRACE       =  96; // horizontal retrace
-	localparam H_MAX           = H_DISPLAY + H_L_BORDER + H_R_BORDER + H_RETRACE - 1;
-	localparam START_H_RETRACE = H_DISPLAY + H_R_BORDER;
-	localparam END_H_RETRACE   = H_DISPLAY + H_R_BORDER + H_RETRACE - 1;
-	
-	localparam V_DISPLAY       = 480; // vertical display area
-	localparam V_T_BORDER      =  10; // vertical top border
-	localparam V_B_BORDER      =  33; // vertical bottom border
-	localparam V_RETRACE       =   2; // vertical retrace
-	localparam V_MAX           = V_DISPLAY + V_T_BORDER + V_B_BORDER + V_RETRACE - 1;
-   localparam START_V_RETRACE = V_DISPLAY + V_B_BORDER;
-	localparam END_V_RETRACE   = V_DISPLAY + V_B_BORDER + V_RETRACE - 1;
-	
-	// mod-2 counter to generate 25 MHz pixel tick
-	reg pixel_reg;
-	wire pixel_next, pixel_tick;
-	
-	always @(posedge clk)
-		pixel_reg <= pixel_next;
-	
-	assign pixel_next = ~pixel_reg; // next state is complement of current
-	
-	assign pixel_tick = (pixel_reg == 0); // assert tick half of the time
-	
-	// registers to keep track of current pixel location
-	reg [9:0] h_count_reg, h_count_next, v_count_reg, v_count_next;
-	
-	// register to keep track of vsync and hsync signal states
-	reg vsync_reg, hsync_reg;
-	wire vsync_next, hsync_next;
- 
-	// infer registers
-	always @(posedge clk, posedge reset)
-		if(reset)
-		    begin
-                    v_count_reg <= 0;
-                    h_count_reg <= 0;
-                    vsync_reg   <= 0;
-                    hsync_reg   <= 0;
-	            end
-		else
-		    begin
-                    v_count_reg <= v_count_next;
-                    h_count_reg <= h_count_next;
-                    vsync_reg   <= vsync_next;
-                    hsync_reg   <= hsync_next;
-	            end
-			
-	// next-state logic of horizontal vertical sync counters
-	always @*
-		begin
-		h_count_next = pixel_tick ? 
-		               h_count_reg == H_MAX ? 0 : h_count_reg + 1
-			       : h_count_reg;
-		
-		v_count_next = pixel_tick && h_count_reg == H_MAX ? 
-		               (v_count_reg == V_MAX ? 0 : v_count_reg + 1) 
-			       : v_count_reg;
-		end
-		
-        // hsync and vsync are active low signals
-        // hsync signal asserted during horizontal retrace
-        assign hsync_next = h_count_reg >= START_H_RETRACE 
-                            && h_count_reg <= END_H_RETRACE;
-   
-        // vsync signal asserted during vertical retrace
-        assign vsync_next = v_count_reg >= START_V_RETRACE 
-                            && v_count_reg <= END_V_RETRACE;
+///////////////////
+/*
+--VGA Timing
+--Horizontal :
+--                ______________                 _____________
+--               |              |               |
+--_______________|  VIDEO       |_______________|  VIDEO (next line)
 
-        // video only on when pixels are in both horizontal and vertical display region
-        assign video_on = (h_count_reg < H_DISPLAY) 
-                           && (v_count_reg < V_DISPLAY);
+--___________   _____________________   ______________________
+--           |_|                     |_|
+--            B <-C-><----D----><-E->
+--           <------------A--------->
+--The Unit used below are pixels;  
+--  B->Sync_cycle                   :H_sync_cycle
+--  C->Back_porch                   :hori_back
+--  D->Visable Area
+--  E->Front porch                  :hori_front
+--  A->horizontal line total length :hori_line
+--Vertical :
+--               ______________                 _____________
+--              |              |               |          
+--______________|  VIDEO       |_______________|  VIDEO (next frame)
+--
+--__________   _____________________   ______________________
+--          |_|                     |_|
+--           P <-Q-><----R----><-S->
+--          <-----------O---------->
+--The Unit used below are horizontal lines;  
+--  P->Sync_cycle                   :V_sync_cycle
+--  Q->Back_porch                   :vert_back
+--  R->Visable Area
+--  S->Front porch                  :vert_front
+--  O->vertical line total length :vert_line
+*////////////////////////////////////////////
+////////////////////////                          
+	//parameter
+	parameter hori_line  = 800;                           
+	parameter hori_back  = 144;
+	parameter hori_front = 16;
+	parameter vert_line  = 525;
+	parameter vert_back  = 34;
+	parameter vert_front = 11;
+	parameter H_sync_cycle = 96;
+	parameter V_sync_cycle = 2;
 
-        // output signals
-        assign hsync  = hsync_reg;
-        assign vsync  = vsync_reg;
-        assign x      = h_count_reg;
-        assign y      = v_count_reg;
-        assign p_tick = pixel_tick;
+
+	logic [10:0] h_cnt;
+	logic [9:0]  v_cnt;
+	logic cHD,cVD,cDEN,hori_valid,vert_valid;
+
+	always@(negedge vga_clk,posedge reset)
+	begin
+	  if (reset)
+	  begin
+		  h_cnt<=11'd0;
+		  v_cnt<=10'd0;
+	  end
+		 else
+		 begin
+			if (h_cnt==hori_line-1)
+				begin 
+					h_cnt<=11'd0;
+					if (v_cnt==vert_line-1)
+						v_cnt<=10'd0;
+					else
+						v_cnt<=v_cnt+1;
+				end
+			else
+				h_cnt<=h_cnt+1;
+		 end
+	end
+	assign cHD = (h_cnt<H_sync_cycle)?1'b0:1'b1;
+	assign cVD = (v_cnt<V_sync_cycle)?1'b0:1'b1;
+
+	assign hori_valid = (h_cnt<(hori_line-hori_front)&& h_cnt>=hori_back)?1'b1:1'b0;
+	assign vert_valid = (v_cnt<(vert_line-vert_front)&& v_cnt>=vert_back)?1'b1:1'b0;
+
+	assign cDEN = hori_valid && vert_valid;
+
+	always@(negedge vga_clk)
+	begin
+	  HS<=cHD;
+	  VS<=cVD;
+	  blank_n<=cDEN;
+	end
+
 endmodule
+
+
