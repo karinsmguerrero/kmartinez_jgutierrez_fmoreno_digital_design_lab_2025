@@ -48,199 +48,45 @@ module vga_driver(
 	counter #(10) counter_x(.clk(clk25MHz), .enable(1), .reset(reset), .max(x_max), .done(done), .q(x));
 	counter #(10) counter_y(.clk(clk25MHz), .enable(done), .reset(reset), .max(y_max), .done(), .q(y));
 	
-	parameter imgSize = 24300;   // image data : 90 * 90 *3 bytes
-	reg [7 : 0]   total_memory [0 : imgSize-1];// memory to store  8-bit data image
-	initial begin
-		$readmemh("./img/tile.hex",total_memory,0,imgSize-1);
-	end			
+	localparam MEMFILELOC = "assets/ImageMemoryFile/MemoryFile.mem";
+	parameter IMAGE_WIDTH = 90;
+   parameter IMAGE_HEIGHT = 90;
 
-	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// pattern generate
-		always @ (posedge clk25MHz)
+	(* RAM_STYLE="BLOCK" *)
+	//    [23:0] [0:8099]
+	logic [23:0]REGMEM[0:(2**$clog2(IMAGE_HEIGHT*IMAGE_WIDTH))-1];
+
+	initial 
+			//$readmemh("hex_memory_file.mem", memory_array, [start_address], [end_address])
+			  $readmemh(MEMFILELOC, REGMEM, 0,  IMAGE_WIDTH*IMAGE_HEIGHT);
+			  
+	logic [23:0] outputData;
+	logic [7:0] RVal, BVal, GVal;
+	logic [(2**$clog2(IMAGE_HEIGHT*IMAGE_WIDTH))-1:0] address;
+	
+	always @ (posedge clk25MHz)
 		begin
-			////////////////////////////////////////////////////////////////////////////////////// SECTION 1
-			if (y < 135)
-				begin              
-					r_red <= 8'hFF;    // white
-					r_blue <= 8'hFF;
-					r_green <= 8'hFF;
-				end  // if (y < 135)
-			////////////////////////////////////////////////////////////////////////////////////// END SECTION 1
-			
-			////////////////////////////////////////////////////////////////////////////////////// SECTION 2
-			else if (y >= 135 && y < 205)
-				begin 
-					if (x < 324)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // if (x < 324)
-					else if (x >= 324 && x < 604)
-						begin 
-							r_red <= 8'hFF;    // yellow
-							r_blue <= 8'h00;
-							r_green <= 8'hFF;
-						end  // else if (x >= 324 && x < 604)
-					else if (x >= 604)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // else if (x >= 604)
-					end  // else if (y >= 135 && y < 205)
-			////////////////////////////////////////////////////////////////////////////////////// END SECTION 2
-			
-			////////////////////////////////////////////////////////////////////////////////////// SECTION 3
-			else if (y >= 205 && y < 217)
-				begin 
-					if (x < 324)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // if (x < 324)
-					else if (x >= 324 && x < 371)
-						begin 
-							r_red <= 8'hFF;    // yellow
-							r_blue <= 8'h00;
-							r_green <= 8'hFF;
-						end  // else if (x >= 324 && x < 371)
-					else if (x >= 371 && x < 383)
-						begin 
-							r_red <= 8'h00;    // black
-							r_blue <= 8'h00;
-							r_green <= 8'h00;
-						end  // else if (x >= 371 && x < 383)
-					else if (x >= 383 && x < 545)
-						begin 
-							r_red <= 8'hFF;    // yellow
-							r_blue <= 8'h00;
-							r_green <= 8'hFF;
-						end  // else if (x >= 383 && x < 545)
-					else if (x >= 545 && x < 557)
-						begin 
-							r_red <= 8'h00;    // black
-							r_blue <= 8'h00;
-							r_green <= 8'h00;
-						end  // else if (x >= 545 && x < 557)
-					else if (x >= 557 && x < 604)
-						begin 
-							r_red <= 8'hFF;    // yellow
-							r_blue <= 8'h00;
-							r_green <= 8'hFF;
-						end  // else if (x >= 557 && x < 604)
-					else if (x >= 604)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // else if (x >= 604)
-				end  // else if (y >= 205 && y < 217)
-			////////////////////////////////////////////////////////////////////////////////////// END SECTION 3
-			
-			////////////////////////////////////////////////////////////////////////////////////// SECTION 4
-			else if (y >= 217 && y < 305)
-				begin
-					if (x < 324)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // if (x < 324)
-					else if (x >= 324 && x < 604)
-						begin 
-							r_red <= 8'hFF;    // yellow
-							r_blue <= 8'h00;
-							r_green <= 8'hFF;
-						end  // else if (x >= 324 && x < 604)
-					else if (x >= 604)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // else if (x >= 604)	
-				end  // else if (y >= 217 && y < 305)
-			////////////////////////////////////////////////////////////////////////////////////// END SECTION 4
-			
-			////////////////////////////////////////////////////////////////////////////////////// SECTION 5
-			else if (y >= 305 && y < 310)
-				begin
-					if (x < 324)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // if (x < 324)
-					else if (x >= 324 && x < 371)
-						begin 
-							r_red <= 8'hFF;    // yellow
-							r_blue <= 8'h00;
-							r_green <= 8'hFF;
-						end  // else if (x >= 324 && x < 371)
-					else if (x >= 371 && x < 557)
-						begin 
-							r_red <= 8'h00;    // black
-							r_blue <= 8'h00;
-							r_green <= 8'h00;
-						end  // else if (x >= 371 && x < 557)
-					else if (x >= 557 && x < 604)
-						begin 
-							r_red <= 8'hFF;    // yellow
-							r_blue <= 8'h00;
-							r_green <= 8'hFF;
-						end  // else if (x >= 557 && x < 604)
-					else if (x >= 604)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // else if (x >= 604)	
-				end  // else if (y >= 217 && y < 305)
-			////////////////////////////////////////////////////////////////////////////////////// END SECTION 5
-			
-			////////////////////////////////////////////////////////////////////////////////////// SECTION 6
-			else if (y >= 305 && y < 414)
-				begin
-					if (x < 324)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // if (x < 324)
-					else if (x >= 324 && x < 604)
-						begin 
-							r_red <= 8'hFF;    // yellow
-							r_blue <= 8'h00;
-							r_green <= 8'hFF;
-						end  // else if (x >= 324 && x < 604)
-					else if (x >= 604)
-						begin 
-							r_red <= 8'hFF;    // white
-							r_blue <= 8'hFF;
-							r_green <= 8'hFF;
-						end  // else if (x >= 604)	
-				end  // else if (y >= 305 && y < 414)
-			////////////////////////////////////////////////////////////////////////////////////// END SECTION 6
-			
-			////////////////////////////////////////////////////////////////////////////////////// SECTION 7
-			else if (y <= 414)
-				begin              
-					r_red <= 8'hFF;    // white
-					r_blue <= 8'hFF;
-					r_green <= 8'hFF;
-				end  // if (y >= 414)
-			////////////////////////////////////////////////////////////////////////////////////// END SECTION 7
-		end  // always
-						
-	// end pattern generate
+			address <= (y * IMAGE_WIDTH) + x;
+			outputData <= REGMEM[address];
+			RVal <= outputData[23:16];
+			GVal <= outputData[15:8];
+			BVal <= outputData[7:0];
+		end
+          
+	parameter hori_back  = 144;
+	parameter vert_back  = 34;
 
+	assign VGA_R = ((x<(IMAGE_WIDTH + hori_back)) & (y< (IMAGE_HEIGHT + vert_back)))  ? RVal : 8'hFF;
+	assign VGA_G = ((x<(IMAGE_WIDTH + hori_back)) & (y< (IMAGE_HEIGHT + vert_back)))  ? GVal : 8'hFF;
+	assign VGA_B = ((x<(IMAGE_WIDTH + hori_back)) & (y< (IMAGE_HEIGHT + vert_back)))  ? BVal : 8'hFF;
+	
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// color output assignments
 	// only output the colors if the counters are within the adressable video time constraints
-	assign VGA_R = (x > 144 && x <= 783 && y > 35 && y <= 514) ? r_red : 8'hFF;
-	assign VGA_B = (x > 144 && x <= 783 && y > 35 && y <= 514) ? r_blue : 8'hFF;
-	assign VGA_G = (x > 144 && x <= 783 && y > 35 && y <= 514) ? r_green : 8'hFF;
+	//assign VGA_R = (x > 144 && x <= 783 && y > 35 && y <= 514) ? pixelOutR : 8'hFF;
+	//assign VGA_G = (x > 144 && x <= 783 && y > 35 && y <= 514) ? pixelOutG : 8'hFF;
+	//assign VGA_B = (x > 144 && x <= 783 && y > 35 && y <= 514) ? pixelOutB : 8'hFF;
+
 	// end color output assignments
 	
 endmodule  // VGA_image_gen
