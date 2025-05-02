@@ -48,37 +48,58 @@ module vga_driver(
 	counter #(10) counter_x(.clk(clk25MHz), .enable(1), .reset(reset), .max(x_max), .done(done), .q(x));
 	counter #(10) counter_y(.clk(clk25MHz), .enable(done), .reset(reset), .max(y_max), .done(), .q(y));
 	
-	localparam MEMFILELOC = "assets/ImageMemoryFile/MemoryFile.mem";
 	parameter IMAGE_WIDTH = 90;
    parameter IMAGE_HEIGHT = 90;
+	
 
-	(* RAM_STYLE="BLOCK" *)
-	//    [23:0] [0:8099]
-	logic [23:0]REGMEM[0:(2**$clog2(IMAGE_HEIGHT*IMAGE_WIDTH))-1];
-
-	initial 
-			//$readmemh("hex_memory_file.mem", memory_array, [start_address], [end_address])
-			  $readmemh(MEMFILELOC, REGMEM, 0,  IMAGE_WIDTH*IMAGE_HEIGHT);
-			  
+	logic [23:0] memory [0:8099];
+	sprite_tile tile(.mem(memory));
+	
 	logic [23:0] outputData;
 	logic [7:0] RVal, BVal, GVal;
-	logic [(2**$clog2(IMAGE_HEIGHT*IMAGE_WIDTH))-1:0] address;
+	logic [$clog2(IMAGE_HEIGHT*IMAGE_WIDTH)-1:0] address;
 	
 	always @ (posedge clk25MHz)
 		begin
-			address <= (y * IMAGE_WIDTH) + x;
-			outputData <= REGMEM[address];
-			RVal <= outputData[23:16];
-			GVal <= outputData[15:8];
-			BVal <= outputData[7:0];
+			if(x > hori_back && x < IMAGE_WIDTH*1 + hori_back)
+				begin
+					address <= (y * (IMAGE_WIDTH - 1)) + x;
+					outputData <= memory[address];
+					RVal <= outputData[23:16];
+					GVal <= outputData[15:8];
+					BVal <= outputData[7:0];
+				end
+			else if (x > hori_back + IMAGE_WIDTH*1 && x < IMAGE_WIDTH*2 + hori_back)
+				begin
+					address <= (y * (IMAGE_WIDTH - 1)) + x;
+					outputData <= memory[address];
+					RVal <= outputData[23:16];
+					GVal <= outputData[15:8];
+					BVal <= outputData[7:0];
+				end
+			else if(x > hori_back + IMAGE_WIDTH*2 && x < IMAGE_WIDTH*3 + hori_back)
+				begin
+					address <= (y * (IMAGE_WIDTH - 1)) + x;
+					outputData <= memory[address];
+					RVal <= outputData[23:16];
+					GVal <= outputData[15:8];
+					BVal <= outputData[7:0];
+				end
+			else
+				begin
+					RVal <= 8'hFF;
+					GVal <= 8'hFF;
+					BVal <= 8'hFF;
+				end
+
 		end
           
 	parameter hori_back  = 144;
 	parameter vert_back  = 34;
-
-	assign VGA_R = ((x<(IMAGE_WIDTH + hori_back)) & (y< (IMAGE_HEIGHT + vert_back)))  ? RVal : 8'hFF;
-	assign VGA_G = ((x<(IMAGE_WIDTH + hori_back)) & (y< (IMAGE_HEIGHT + vert_back)))  ? GVal : 8'hFF;
-	assign VGA_B = ((x<(IMAGE_WIDTH + hori_back)) & (y< (IMAGE_HEIGHT + vert_back)))  ? BVal : 8'hFF;
+	
+	assign VGA_R = RVal;
+	assign VGA_G = GVal;
+	assign VGA_B = BVal;
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// color output assignments
