@@ -17,6 +17,8 @@ module vga_driver(
 	logic [9:0] y = 0;  // vertical counter
 	logic [9:0] x_max = 799;
 	logic [9:0] y_max = 524;
+	parameter hori_back  = 144;
+	parameter vert_back  = 34;
 	logic done;
 	
 	logic [7:0] r_red = 0;
@@ -57,29 +59,66 @@ module vga_driver(
 	
 	logic [23:0] outputData;
 	logic [7:0] RVal, BVal, GVal;
-	logic [$clog2(IMAGE_HEIGHT*IMAGE_WIDTH)-1:0] address;
+	logic [12:0] address;
+	integer offset_x = 10;
+	integer offset_y = 10;
 	
 	always @ (posedge clk25MHz)
 		begin
-			if(x > hori_back && x < IMAGE_WIDTH*1 + hori_back)
+			// First tile
+			if(x > (hori_back + offset_x) && x < (IMAGE_WIDTH*1 + hori_back + offset_x) && y > (vert_back + offset_y) && y < (IMAGE_HEIGHT*1 + vert_back + offset_y))
 				begin
-					address <= (y * (IMAGE_WIDTH - 1)) + x;
+					address <= ((y - vert_back - offset_y) * (IMAGE_WIDTH)) + (x - hori_back - offset_x);
 					outputData <= memory[address];
 					RVal <= outputData[23:16];
 					GVal <= outputData[15:8];
 					BVal <= outputData[7:0];
 				end
-			else if (x > hori_back + IMAGE_WIDTH*1 && x < IMAGE_WIDTH*2 + hori_back)
+			// Second tile
+			else if (x > (hori_back + offset_x + IMAGE_WIDTH*1) && x < (IMAGE_WIDTH*2 + hori_back + offset_x) && y > (vert_back + offset_y) && y < (IMAGE_HEIGHT*1 + vert_back + offset_y))
 				begin
-					address <= (y * (IMAGE_WIDTH - 1)) + x;
+					address <= ((y - vert_back - offset_y) * (IMAGE_WIDTH)) + (x - hori_back - offset_x);
 					outputData <= memory[address];
 					RVal <= outputData[23:16];
 					GVal <= outputData[15:8];
 					BVal <= outputData[7:0];
 				end
-			else if(x > hori_back + IMAGE_WIDTH*2 && x < IMAGE_WIDTH*3 + hori_back)
+			// Third tile
+			else if(x > (hori_back + offset_x + IMAGE_WIDTH*2) && x < (IMAGE_WIDTH*3 + hori_back + offset_x) && y > (vert_back + offset_y) && y < (IMAGE_HEIGHT*1 + vert_back + offset_y))
 				begin
-					address <= (y * (IMAGE_WIDTH - 1)) + x;
+					address <= ((y - vert_back - offset_y) * (IMAGE_WIDTH)) + (x - hori_back - offset_x);
+					outputData <= memory[address];
+					RVal <= outputData[23:16];
+					GVal <= outputData[15:8];
+					BVal <= outputData[7:0];
+				end
+			else if(x > (hori_back + offset_x + IMAGE_WIDTH*3) && x < (IMAGE_WIDTH*4 + hori_back + offset_x) && y > (vert_back + offset_y) && y < (IMAGE_HEIGHT*1 + vert_back + offset_y))
+				begin
+					address <= ((y - vert_back - offset_y) * (IMAGE_WIDTH)) + (x - hori_back - offset_x);
+					outputData <= memory[address];
+					RVal <= outputData[23:16];
+					GVal <= outputData[15:8];
+					BVal <= outputData[7:0];
+				end
+			else if(x > (hori_back + offset_x + IMAGE_WIDTH*4) && x < (IMAGE_WIDTH*5 + hori_back + offset_x) && y > (vert_back + offset_y) && y < (IMAGE_HEIGHT*1 + vert_back + offset_y))
+				begin
+					address <= ((y - vert_back - offset_y) * (IMAGE_WIDTH)) + (x - hori_back - offset_x);
+					outputData <= memory[address];
+					RVal <= outputData[23:16];
+					GVal <= outputData[15:8];
+					BVal <= outputData[7:0];
+				end
+			else if(x > (hori_back + offset_x + IMAGE_WIDTH*5) && x < (IMAGE_WIDTH*6 + hori_back + offset_x) && y > (vert_back + offset_y) && y < (IMAGE_HEIGHT*1 + vert_back + offset_y))
+				begin
+					address <= ((y - vert_back - offset_y) * (IMAGE_WIDTH)) + (x - hori_back - offset_x);
+					outputData <= memory[address];
+					RVal <= outputData[23:16];
+					GVal <= outputData[15:8];
+					BVal <= outputData[7:0];
+				end
+			else if(x > (hori_back + offset_x + IMAGE_WIDTH*6) && x < (IMAGE_WIDTH*7 + hori_back + offset_x) && y > (vert_back + offset_y) && y < (IMAGE_HEIGHT*1 + vert_back + offset_y))
+				begin
+					address <= ((y - vert_back - offset_y) * (IMAGE_WIDTH)) + (x - hori_back - offset_x);
 					outputData <= memory[address];
 					RVal <= outputData[23:16];
 					GVal <= outputData[15:8];
@@ -94,8 +133,7 @@ module vga_driver(
 
 		end
           
-	parameter hori_back  = 144;
-	parameter vert_back  = 34;
+
 	
 	assign VGA_R = RVal;
 	assign VGA_G = GVal;
