@@ -114,7 +114,7 @@ def MemoryFileToImg(fileName, WH={'W': 240, 'H': 120}, RGBMode=0):
 
 
 RGBFormat = 2
-WH = {'W': 90, 'H': 90}
+WH = {'W': 70, 'H': 70}
 imgToMemoryFile('tile.JPG', WH, RGBFormat=RGBFormat)
 MemoryFileToImg('./ImageMemoryFile/MemoryFile.coe', WH, RGBMode=RGBFormat)
 

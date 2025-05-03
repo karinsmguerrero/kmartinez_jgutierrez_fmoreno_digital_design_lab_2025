@@ -1,10 +1,8 @@
 module counter #(parameter N) (
-	input clk,
-	input enable,
-	input reset, 
-	input [N-1:0] max,
-	output done,
-	output reg [N-1:0] q
+	input logic clk, enable, reset, 
+	input logic [N-1:0] max,
+	output logic done,
+	output logic [N-1:0] q
 );
 
 assign done = (q == max);
