@@ -1,120 +1,94 @@
 module connect4_fsm (
-    input  logic clk,
-    input  logic reset,
-    input  logic move_made,           // Jugador solicita hacer movimiento
-    input  logic [2:0] col_input,     // Columna elegida por el jugador
-    input  logic win_detected,        // Desde el checker de victoria
-    output logic [2:0] state,
-    output logic player_turn,         // 0 = Jugador 1, 1 = Jugador 2
-    output logic [1:0] board[5:0][6:0] // Tablero actualizado
+    input  logic        clk,
+    input  logic        reset,
+    input  logic        move_made,
+    input  logic        move_left,
+    input  logic        move_right,
+    input  logic        win_detected,
+    output logic [2:0]  state,
+    output logic        player_turn,
+    output logic [2:0]  col_input,
+    output logic [1:0]  board [5:0][6:0]
 );
 
     typedef enum logic [2:0] {
-        IDLE,
-        PLAYER_TURN,
-        MAKE_MOVE,
-        CHECK_WIN,
-        SWITCH_PLAYER,
-        GAME_OVER
+        IDLE          = 3'd0,
+        PLAYER_TURN   = 3'd1,
+        MAKE_MOVE     = 3'd2,
+        CHECK_WIN     = 3'd3,
+        SWITCH_PLAYER = 3'd4,
+        GAME_OVER     = 3'd5
     } state_t;
 
     state_t current_state, next_state;
 
-    // Cambio de jugador
-    logic next_player;
-    player_switcher player_switch (
-        .current_player(player_turn),
-        .next_player(next_player)
-    );
+    logic [2:0] drop_row;
+    logic       valid_move;
 
-    // Señales para make_move
-    logic valid_move;
-    logic [2:0] row_output;
+    // Movimiento lateral: selector de columna
+    logic [2:0] current_col;
 
-    make_move mover (
+    column_selector selector (
         .clk(clk),
         .reset(reset),
-        .move_enable(current_state == MAKE_MOVE),
-        .col_input(col_input),
-        .player_turn(player_turn),
-        .valid_move(valid_move),
-        .row_output(row_output),
-        .board_out(board)
+        .move_left(move_left),
+        .move_right(move_right),
+        .col_pos(current_col)
     );
 
-    // Máquina de estados - transición
+    assign col_input = current_col;
+
+    // FSM: transición de estados
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             current_state <= IDLE;
-            player_turn <= 0;
         end else begin
             current_state <= next_state;
+        end
+    end
 
-            if (current_state == SWITCH_PLAYER) begin
-                player_turn <= next_player;
+    // Lógica combinacional para siguiente estado
+    always_comb begin
+        next_state = current_state;
+        case (current_state)
+            IDLE:          next_state = PLAYER_TURN;
+            PLAYER_TURN:   if (move_made) next_state = MAKE_MOVE;
+            MAKE_MOVE:     next_state = CHECK_WIN;
+            CHECK_WIN:     next_state = win_detected ? GAME_OVER : SWITCH_PLAYER;
+            SWITCH_PLAYER: next_state = PLAYER_TURN;
+            GAME_OVER:     next_state = GAME_OVER;
+        endcase
+    end
+
+    // Turno del jugador
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            player_turn <= 0;
+        end else if (current_state == SWITCH_PLAYER) begin
+            player_turn <= ~player_turn;
+        end
+    end
+
+    // Lógica para colocar ficha en columna válida
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            for (int r = 0; r < 6; r++) begin
+                for (int c = 0; c < 7; c++) begin
+                    board[r][c] <= 2'b00;
+                end
+            end
+        end else if (current_state == MAKE_MOVE) begin
+            valid_move = 0;
+            for (int r = 5; r >= 0; r--) begin
+                if (!valid_move && board[r][col_input] == 2'b00) begin
+                    board[r][col_input] <= (player_turn == 0) ? 2'b01 : 2'b10;
+                    drop_row = r;
+                    valid_move = 1;
+                end
             end
         end
     end
 
-    // Máquina de estados - lógica de transición
-    always_comb begin
-        next_state = current_state;
-
-        case (current_state)
-            IDLE: begin
-                next_state = PLAYER_TURN;
-            end
-
-            PLAYER_TURN: begin
-                if (move_made) begin
-                    next_state = MAKE_MOVE;
-                end
-            end
-
-            MAKE_MOVE: begin
-                if (valid_move)
-                    next_state = CHECK_WIN;
-                else
-                    next_state = PLAYER_TURN;  // Movimiento inválido
-            end
-
-            CHECK_WIN: begin
-                if (win_detected)
-                    next_state = GAME_OVER;
-                else
-                    next_state = SWITCH_PLAYER;
-            end
-
-            SWITCH_PLAYER: begin
-                next_state = PLAYER_TURN;
-            end
-
-            GAME_OVER: begin
-                next_state = GAME_OVER;
-            end
-
-            default: next_state = IDLE;
-        endcase
-    end
-
     assign state = current_state;
-
-    // Debug opcional
-    always_ff @(posedge clk) begin
-        case (current_state)
-            IDLE:
-                $display("[%0t ns] Estado = IDLE", $time);
-            PLAYER_TURN:
-                $display("[%0t ns] Estado = PLAYER_TURN | Turno del jugador %0d", $time, player_turn + 1);
-            MAKE_MOVE:
-                $display("[%0t ns] Estado = MAKE_MOVE | Columna seleccionada: %0d", $time, col_input);
-            CHECK_WIN:
-                $display("[%0t ns] Estado = CHECK_WIN", $time);
-            SWITCH_PLAYER:
-                $display("[%0t ns] Estado = SWITCH_PLAYER | Cambio a jugador %0d", $time, next_player + 1);
-            GAME_OVER:
-                $display("[%0t ns] Estado = GAME_OVER | Juego terminado", $time);
-        endcase
-    end
 
 endmodule
