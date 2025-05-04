@@ -1,8 +1,8 @@
 import re
 
 # Ruta de entrada y salida
-input_file = "MemoryFile.mem"
-output_file = "Memory.txt"
+input_file = "MemoryFile_yellow.mem"
+output_file = "Memory_yellow.txt"
 
 # Umbral de oscuridad (puedes ajustar este valor)
 DARK_THRESHOLD = 40  # valor entre 0 y 255

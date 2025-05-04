@@ -1,6 +1,6 @@
 
 
-// image generator of a road and a sky 640x480 @ 60 fps
+// image generator of a face 640x480 @ 60 fps
 
 ////////////////////////////////////////////////////////////////////////
 module smiley_test(

@@ -49,11 +49,22 @@ module vga_driver(
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// pattern generate
 	logic [23:0] rgb_color;
+	
+	logic [0:5][0:6][1:0] tiles;
+
+	// Holds the current state of the player´s tokens
+	assign tiles = {{2'd0,2'd2,2'd0,2'd1,2'd1,2'd0,2'd0},
+					 {2'd0,2'd2,2'd0,2'd1,2'd0,2'd1,2'd0},
+					 {2'd0,2'd2,2'd0,2'd1,2'd0,2'd2,2'd0},
+					 {2'd0,2'd2,2'd0,2'd2,2'd0,2'd1,2'd0},
+					 {2'd0,2'd1,2'd0,2'd2,2'd0,2'd1,2'd0},
+					 {2'd0,2'd1,2'd1,2'd2,2'd0,2'd1,2'd1}};
           
 	screen_drawer screen( 
 		.x(x), 
 		.y(y), 
-		.clk(VGA_CLK), 
+		.clk(VGA_CLK),
+		.tiles(tiles),
 		.rgb_color(rgb_color));
 	
 	assign VGA_R = rgb_color[23:16];
