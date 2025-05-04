@@ -1,7 +1,7 @@
 module screen_drawer(
 	input  logic [9:0] x,y,
 	input  logic clk,
-	input logic [0:5][0:6][1:0] tiles,
+	input  logic [0:5][0:6][1:0] tiles,
 	output logic [23:0] rgb_color
 );
 
