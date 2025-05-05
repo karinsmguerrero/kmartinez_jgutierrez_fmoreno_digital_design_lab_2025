@@ -35,10 +35,12 @@ clock_50_25 clk_divider(
 	.outclk_0(VGA_CLK),
 	.locked()
 	); 
+	
+	
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // FSM
-logic move_made, move_left, move_right, win_detected, player_turn;
+logic move_made = 0, move_left = 0, move_right = 0, win_detected = 0, player_turn = 0;
 logic [2:0]  state;
 logic [2:0]  col_input;	
 logic [1:0]  board [5:0][6:0];
@@ -88,14 +90,17 @@ vga_driver driver(
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // PLAYER CONTROLS					 
-logic drop_btn_prev;
+logic accept_btn_prev;
+logic left_btn_prev;
+logic right_btn_prev;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // SEVEN SEGMENT TIMER
 
-/*logic [3:0] seg_0, seg_1 = 0;
+logic [3:0] seg_0, seg_1 = 0;
 logic [3:0] tics;
 logic [3:0] max_time = 4'b1010;
+logic enable;
 seven_segment_driver seg0(seg_0, HEX0);
 seven_segment_driver seg1(seg_1, HEX1);
 logic [11:0] bcd_time;
@@ -103,19 +108,48 @@ BinToBCD res_converter(tics, bcd_time);
 seg_0 = bcd_time[7:4];
 seg_1 = bcd_time[11:8];
 
-counter #(4) timer(.clk(VGA_CLK), .enable(player_turn), .reset(SW[0]), .max(max_time), .done(done), .q(tics));*/                                                                                                                                     
+timer timer_count (
+	.clk(VGA_CLK), 
+	.reset(SW[9]),
+	.enable(enable),
+	.seconds(tics)
+);                                                                                                                                  
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // GAME LOOP				 
 always @ (posedge VGA_CLK)
 	begin
-	
-		if (drop_btn_prev && !KEY[0]) // Detecta flanco de bajada (1 → 0)
+		
+		if (left_btn_prev && !KEY[0]) // Detecta flanco de bajada (1 → 0)
 			begin
 				// Here change the state to confirm move
+				move_left <= 1;
 			end
-		drop_btn_prev <= KEY[0];
-		//move_made <= drop_btn_prev;
+		else
+			move_left <= 0;
+			
+		left_btn_prev <= KEY[0];
+		
+				if (right_btn_prev && !KEY[1]) // Detecta flanco de bajada (1 → 0)
+			begin
+				// Here change the state to confirm move
+				move_right <= 1;
+			end
+		else
+			move_right <= 0;
+			
+		right_btn_prev <= KEY[1];
+		
+				if (accept_btn_prev && !KEY[2]) // Detecta flanco de bajada (1 → 0)
+			begin
+				// Here change the state to confirm move
+				move_made <= 1;
+			end
+		else
+			move_made <= 0;
+			
+		accept_btn_prev <= KEY[2];
+
 		
 		for (int r = 0; r < 6; r++) begin
 			 for (int c = 0; c < 7; c++) begin
