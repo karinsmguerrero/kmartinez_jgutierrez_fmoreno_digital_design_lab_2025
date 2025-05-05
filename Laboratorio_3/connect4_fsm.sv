@@ -22,6 +22,9 @@ module connect4_fsm (
 
     state_t current_state, next_state;
 
+    // Interno: matriz del tablero
+    logic [1:0] board_reg [5:0][6:0];
+
     logic [2:0] drop_row;
     logic       valid_move;
 
@@ -37,6 +40,7 @@ module connect4_fsm (
     );
 
     assign col_input = current_col;
+    assign state = current_state;
 
     // FSM: transición de estados
     always_ff @(posedge clk or posedge reset) begin
@@ -69,19 +73,19 @@ module connect4_fsm (
         end
     end
 
-    // Lógica para colocar ficha en columna válida
+    // Inicializar y actualizar el tablero
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             for (int r = 0; r < 6; r++) begin
                 for (int c = 0; c < 7; c++) begin
-                    board[r][c] <= 2'b00;
+                    board_reg[r][c] <= 2'b00;
                 end
             end
         end else if (current_state == MAKE_MOVE) begin
             valid_move = 0;
             for (int r = 5; r >= 0; r--) begin
-                if (!valid_move && board[r][col_input] == 2'b00) begin
-                    board[r][col_input] <= (player_turn == 0) ? 2'b01 : 2'b10;
+                if (!valid_move && board_reg[r][col_input] == 2'b00) begin
+                    board_reg[r][col_input] <= (player_turn == 0) ? 2'b01 : 2'b10;
                     drop_row = r;
                     valid_move = 1;
                 end
@@ -89,6 +93,13 @@ module connect4_fsm (
         end
     end
 
-    assign state = current_state;
+    // Copiar la matriz interna al puerto de salida
+    always_ff @(posedge clk) begin
+        for (int r = 0; r < 6; r++) begin
+            for (int c = 0; c < 7; c++) begin
+                board[r][c] <= board_reg[r][c];
+            end
+        end
+    end
 
 endmodule
