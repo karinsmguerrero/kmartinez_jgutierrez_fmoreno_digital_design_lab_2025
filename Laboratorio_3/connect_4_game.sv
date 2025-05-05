@@ -35,8 +35,6 @@ clock_50_25 clk_divider(
 	.outclk_0(VGA_CLK),
 	.locked()
 	); 
-	
-	
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // FSM
@@ -96,14 +94,18 @@ logic right_btn_prev;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // SEVEN SEGMENT TIMER
-
-logic [3:0] seg_0, seg_1 = 0;
+logic [11:0] bcd_time;
+logic [3:0] seg_0, seg_1, seg_2, seg_3, seg_4, seg_5 = 0;
 logic [3:0] tics;
 logic [3:0] max_time = 4'b1010;
 logic enable;
 seven_segment_driver seg0(seg_0, HEX0);
 seven_segment_driver seg1(seg_1, HEX1);
-logic [11:0] bcd_time;
+seven_segment_driver seg2(seg_2, HEX2);
+seven_segment_driver seg3(seg_3, HEX3);
+seven_segment_driver seg4(seg_4, HEX4);
+seven_segment_driver seg5(seg_5, HEX5);
+
 BinToBCD res_converter(tics, bcd_time);
 assign seg_0 = bcd_time[7:4];
 assign seg_1 = bcd_time[11:8];
@@ -113,50 +115,64 @@ timer timer_count (
 	.reset(SW[9]),
 	.enable(enable),
 	.seconds(tics)
-);                                                                                                                                  
+);
+
+//--------- OTHERS -----------
+logic [3:0] pushes = 0;
+logic [11:0] bcd_pushes;
+logic sel_btn_prev;
+
+BinToBCD count(pushes, bcd_pushes);
+
+assign seg_4 = bcd_pushes[7:4];
+assign seg_5 = bcd_pushes[11:8];
+		
+assign enable = (state == 3'b001)? 1'b1:1'b0;                                                                                                                                  
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // GAME LOOP				 
 always @ (posedge VGA_CLK)
 	begin
+	
+		/*for (int r = 0; r < 6; r++) begin
+			for (int c = 0; c < 7; c++) begin
+				tile_value <= board[(r-5)*(-1)][(c-6)*(-1)];
+				tiles[r][c] <= tile_value;
+			end
+		end*/
+		
+		if (sel_btn_prev && !KEY[3]) // Detecta flanco de bajada (1 → 0)
+			 begin
+				pushes <= pushes + 1;
+				if(pushes > 15)
+					pushes <= 0;
+			 end
+		sel_btn_prev <= KEY[3];
+		
 		
 		if (left_btn_prev && !KEY[0]) // Detecta flanco de bajada (1 → 0)
-			begin
-				// Here change the state to confirm move
 				move_left <= 1;
-			end
 		else
 			move_left <= 0;
 			
 		left_btn_prev <= KEY[0];
 		
-				if (right_btn_prev && !KEY[1]) // Detecta flanco de bajada (1 → 0)
-			begin
-				// Here change the state to confirm move
+		if (right_btn_prev && !KEY[1]) // Detecta flanco de bajada (1 → 0)
 				move_right <= 1;
-			end
 		else
 			move_right <= 0;
 			
 		right_btn_prev <= KEY[1];
 		
-				if (accept_btn_prev && !KEY[2]) // Detecta flanco de bajada (1 → 0)
+		if (accept_btn_prev && !KEY[2]) // Detecta flanco de bajada (1 → 0)
 			begin
-				// Here change the state to confirm move
 				move_made <= 1;
+				tiles[2][2] <= 2'b10;
 			end
 		else
 			move_made <= 0;
 			
-		accept_btn_prev <= KEY[2];
-
-		
-		for (int r = 0; r < 6; r++) begin
-			 for (int c = 0; c < 7; c++) begin
-					tile_value <= board[(r-5)*(-1)][(c-6)*(-1)];
-				   tiles[r][c] <= tile_value;
-			 end
-		end
+		accept_btn_prev <= KEY[2];		
 		
 	end
 					 
