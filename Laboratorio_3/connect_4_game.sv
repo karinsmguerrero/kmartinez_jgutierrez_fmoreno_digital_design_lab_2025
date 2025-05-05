@@ -105,8 +105,8 @@ seven_segment_driver seg0(seg_0, HEX0);
 seven_segment_driver seg1(seg_1, HEX1);
 logic [11:0] bcd_time;
 BinToBCD res_converter(tics, bcd_time);
-seg_0 = bcd_time[7:4];
-seg_1 = bcd_time[11:8];
+assign seg_0 = bcd_time[7:4];
+assign seg_1 = bcd_time[11:8];
 
 timer timer_count (
 	.clk(VGA_CLK), 
