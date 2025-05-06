@@ -135,6 +135,11 @@ always_ff @(posedge VGA_CLK) begin
             tiles[r][c] <= board[r][(6 - c)];
         end
     end
+	 
+	 if(state == 3'd2)
+		pushes = 1;
+	 else
+		pushes = 0;
 end
 
 endmodule
