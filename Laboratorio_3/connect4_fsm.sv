@@ -4,7 +4,7 @@ module connect4_fsm (
     input  logic        move_made,
     input  logic        move_left,
     input  logic        move_right,
-    output logic        win_flag,  // Esta señal de victoria será salida de connect4_fsm
+    output logic        win_flag,
     output logic [2:0]  state,
     output logic        player_turn,
     output logic [2:0]  col_input,
@@ -25,8 +25,9 @@ module connect4_fsm (
     logic [2:0] drop_row;
     logic       valid_move;
     logic [2:0] current_col;
+    logic       is_column_full;
 
-    // Instanciar win_checker dentro de connect4_fsm
+    // Instancia del módulo win_checker
     logic win_detected;
     win_checker wc_inst (
         .clk(clk),
@@ -35,7 +36,6 @@ module connect4_fsm (
         .win_detected(win_detected)
     );
 
-    // Esta es la señal de victoria que se pasa a connect_4_game
     assign win_flag = win_detected;
 
     column_selector selector (
@@ -49,6 +49,17 @@ module connect4_fsm (
     assign col_input = current_col;
     assign state = current_state;
 
+    // Verifica si la columna seleccionada está llena
+    always_comb begin
+        is_column_full = 1'b1;
+        for (int r = 0; r < 6; r++) begin
+            if (board_reg[r][col_input] == 2'b00) begin
+                is_column_full = 1'b0;
+            end
+        end
+    end
+
+    // Lógica de transición de estados
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             current_state <= IDLE;
@@ -61,7 +72,7 @@ module connect4_fsm (
         next_state = current_state;
         case (current_state)
             IDLE:          next_state = PLAYER_TURN;
-            PLAYER_TURN:   if (move_made) next_state = MAKE_MOVE;
+            PLAYER_TURN:   if (move_made && !is_column_full) next_state = MAKE_MOVE;
             MAKE_MOVE:     next_state = CHECK_WIN;
             CHECK_WIN:     next_state = win_detected ? GAME_OVER : SWITCH_PLAYER;
             SWITCH_PLAYER: next_state = PLAYER_TURN;
@@ -69,6 +80,7 @@ module connect4_fsm (
         endcase
     end
 
+    // Alternancia de turno
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             player_turn <= 0;
@@ -77,6 +89,7 @@ module connect4_fsm (
         end
     end
 
+    // Inicialización del tablero y aplicación de jugada
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             for (int r = 0; r < 6; r++) begin
@@ -96,6 +109,7 @@ module connect4_fsm (
         end
     end
 
+    // Actualización de salida del tablero
     always_ff @(posedge clk) begin
         for (int r = 0; r < 6; r++) begin
             for (int c = 0; c < 7; c++) begin

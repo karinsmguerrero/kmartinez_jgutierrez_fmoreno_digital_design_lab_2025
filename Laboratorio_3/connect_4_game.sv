@@ -39,15 +39,13 @@ logic [2:0]  col_input;
 logic [1:0]  board [5:0][6:0];
 logic        global_reset;
 
-
-
 connect4_fsm fsm(
     .clk(VGA_CLK),
     .reset(global_reset),
     .move_made(move_made),
     .move_left(move_left),
     .move_right(move_right),
-    .win_flag(win_flag),  // La señal de victoria se pasa aquí
+    .win_flag(win_flag),
     .state(state),
     .player_turn(player_turn),
     .col_input(col_input),
@@ -99,12 +97,36 @@ assign seg_5 = bcd_pushes[11:8];
 assign enable = (state == 3'b001);
 
 logic accept_btn_prev, left_btn_prev, right_btn_prev, reset_btn_prev;
+logic [23:0] win_delay_counter = 0;
+logic win_flag_prev = 0;
+logic win_reset_pending = 0;
+
 always_ff @(posedge VGA_CLK) begin
-    // RESET MANUAL O POR VICTORIA
-    if ((reset_btn_prev && !btn3_clean) || win_flag)  // Ahora usa win_flag para el reset
+    // DETECCIÓN DE FLANCO DE SUBIDA EN win_flag
+    win_flag_prev <= win_flag;
+
+    if (win_flag && !win_flag_prev) begin
+        win_reset_pending <= 1;
+        win_delay_counter <= 0;
+    end
+
+    // RESET MANUAL O POR RETARDO POST-VICTORIA
+    if (win_reset_pending) begin
+        win_delay_counter <= win_delay_counter + 1;
+
+        if (win_delay_counter == 24'd12_500_000) begin // ~0.5s delay @25MHz
+            global_reset <= 1;
+            win_reset_pending <= 0;
+        end else begin
+            global_reset <= 0;
+        end
+    end
+    else if (reset_btn_prev && !btn3_clean) begin
         global_reset <= 1;
-    else
+    end
+    else begin
         global_reset <= 0;
+    end
     reset_btn_prev <= btn3_clean;
 
     if (left_btn_prev && !btn0_clean)
