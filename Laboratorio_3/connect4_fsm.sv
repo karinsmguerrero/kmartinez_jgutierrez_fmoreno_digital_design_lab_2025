@@ -1,3 +1,6 @@
+//===========================
+// Módulo FSM principal
+//===========================
 module connect4_fsm (
     input  logic        clk,
     input  logic        reset,
@@ -21,14 +24,9 @@ module connect4_fsm (
     } state_t;
 
     state_t current_state, next_state;
-
-    // Interno: matriz del tablero
     logic [1:0] board_reg [5:0][6:0];
-
     logic [2:0] drop_row;
     logic       valid_move;
-
-    // Movimiento lateral: selector de columna
     logic [2:0] current_col;
 
     column_selector selector (
@@ -42,7 +40,6 @@ module connect4_fsm (
     assign col_input = current_col;
     assign state = current_state;
 
-    // FSM: transición de estados
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             current_state <= IDLE;
@@ -51,7 +48,6 @@ module connect4_fsm (
         end
     end
 
-    // Lógica combinacional para siguiente estado
     always_comb begin
         next_state = current_state;
         case (current_state)
@@ -64,7 +60,6 @@ module connect4_fsm (
         endcase
     end
 
-    // Turno del jugador
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             player_turn <= 0;
@@ -73,7 +68,6 @@ module connect4_fsm (
         end
     end
 
-    // Inicializar y actualizar el tablero
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             for (int r = 0; r < 6; r++) begin
@@ -93,7 +87,6 @@ module connect4_fsm (
         end
     end
 
-    // Copiar la matriz interna al puerto de salida
     always_ff @(posedge clk) begin
         for (int r = 0; r < 6; r++) begin
             for (int c = 0; c < 7; c++) begin
