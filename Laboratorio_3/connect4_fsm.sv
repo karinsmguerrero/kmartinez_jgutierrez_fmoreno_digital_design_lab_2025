@@ -1,13 +1,10 @@
-//===========================
-// Módulo FSM principal
-//===========================
 module connect4_fsm (
     input  logic        clk,
     input  logic        reset,
     input  logic        move_made,
     input  logic        move_left,
     input  logic        move_right,
-    input  logic        win_detected,
+    output logic        win_flag,  // Esta señal de victoria será salida de connect4_fsm
     output logic [2:0]  state,
     output logic        player_turn,
     output logic [2:0]  col_input,
@@ -28,6 +25,18 @@ module connect4_fsm (
     logic [2:0] drop_row;
     logic       valid_move;
     logic [2:0] current_col;
+
+    // Instanciar win_checker dentro de connect4_fsm
+    logic win_detected;
+    win_checker wc_inst (
+        .clk(clk),
+        .reset(reset),
+        .board(board_reg),
+        .win_detected(win_detected)
+    );
+
+    // Esta es la señal de victoria que se pasa a connect_4_game
+    assign win_flag = win_detected;
 
     column_selector selector (
         .clk(clk),
