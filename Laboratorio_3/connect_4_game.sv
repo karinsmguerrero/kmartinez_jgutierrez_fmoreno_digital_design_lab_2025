@@ -39,12 +39,7 @@ logic [2:0]  col_input;
 logic [1:0]  board [5:0][6:0];
 logic        global_reset;
 
-win_checker wc_inst (
-    .clk(VGA_CLK),
-    .reset(global_reset),
-    .board(board),
-    .win_detected(win_detected)
-);
+
 
 connect4_fsm fsm(
     .clk(VGA_CLK),
@@ -52,7 +47,7 @@ connect4_fsm fsm(
     .move_made(move_made),
     .move_left(move_left),
     .move_right(move_right),
-    .win_detected(win_flag),
+    .win_flag(win_flag),  // La señal de victoria se pasa aquí
     .state(state),
     .player_turn(player_turn),
     .col_input(col_input),
@@ -106,7 +101,7 @@ assign enable = (state == 3'b001);
 logic accept_btn_prev, left_btn_prev, right_btn_prev, reset_btn_prev;
 always_ff @(posedge VGA_CLK) begin
     // RESET MANUAL O POR VICTORIA
-    if ((reset_btn_prev && !btn3_clean) || win_detected)
+    if ((reset_btn_prev && !btn3_clean) || win_flag)  // Ahora usa win_flag para el reset
         global_reset <= 1;
     else
         global_reset <= 0;
