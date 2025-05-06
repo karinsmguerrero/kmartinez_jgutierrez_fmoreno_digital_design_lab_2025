@@ -49,7 +49,8 @@ connect4_fsm fsm(
     .state(state),
     .player_turn(player_turn),
     .col_input(col_input),
-    .board(board)
+    .board(board),
+    .seconds(tics) // <--- NUEVO
 );
 
 logic [0:5][0:6][1:0] tiles;
