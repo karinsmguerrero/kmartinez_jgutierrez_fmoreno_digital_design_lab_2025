@@ -3,6 +3,7 @@ module vga_driver(
 	input  logic reset,
 	input  [0:5][0:6][1:0] tiles,
 	input  logic win,
+	input  logic [3:0][1:0] win_tiles,
 	output logic VGA_HS,      // horizontal sync
 	output logic VGA_VS,	     // vertical sync
 	output logic [7:0] VGA_R,

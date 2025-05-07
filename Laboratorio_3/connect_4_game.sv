@@ -58,10 +58,13 @@ connect4_fsm fsm(
 );
 
 logic [0:5][0:6][1:0] tiles;
+logic [3:0][1:0] win_tiles;
+
 vga_driver driver(
     .reset(global_reset),
     .tiles(tiles),
 	 .win(win_flag),
+	 .win_tiles(win_tiles),
     .VGA_HS(VGA_HS),
     .VGA_VS(VGA_VS),
     .VGA_R(VGA_R),

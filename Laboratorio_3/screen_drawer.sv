@@ -3,6 +3,7 @@ module screen_drawer(
 	input  logic clk,
 	input  logic [0:5][0:6][1:0] tiles,
 	input  logic win,
+	input  logic [3:0][1:0] win_tiles,
 	output logic [23:0] rgb_color
 );
 
@@ -18,7 +19,8 @@ logic [23:0] memory_red [0:4899];    //Player 1
 logic [23:0] memory_yellow [0:4899]; //Player 2
 logic [23:0] memory_green [0:4899];
 logic [12:0] address;
-
+logic [1:0] win_index;
+logic win_col, win_row;
 //image pixel colors				 
 sprite_tile tile(
 	.mem(memory),
@@ -28,6 +30,15 @@ sprite_tile tile(
 
 always @ (posedge clk)
 		begin
+			if(win)
+				begin
+					for(int t = 0; t < 4; t++) begin
+							win_index <= win_tiles[t];
+							win_row <= win_index[0];
+							win_col <= win_index[1];
+							//tiles[win_row][win_col] <= 2'b00;
+					end
+				end
 			// First row
 			if(y > 54 && y <= 124)
 				begin
@@ -39,7 +50,7 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[0][0] == 2'b10)
 							rgb_color <= memory_yellow[address];
-						else if(win)
+						else if(tiles[0][0] == 2'b11)
 							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
@@ -51,6 +62,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[0][1] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[0][1] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -61,6 +74,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[0][2] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[0][2] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -71,6 +86,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[0][3] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[0][3] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -80,6 +97,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[0][4] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[0][4] == 2'b11)
+							rgb_color <= memory_green[address];
 						else
 						   rgb_color <= memory[address];
 					end
@@ -89,6 +108,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[0][5] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[0][5] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -98,6 +119,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[0][6] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[0][6] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -113,6 +136,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[1][0] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[1][0] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -122,6 +147,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[1][1] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[1][1] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -131,6 +158,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[1][2] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[1][2] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -140,6 +169,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[1][3] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[1][3] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -149,6 +180,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[1][4] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[1][4] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -158,6 +191,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[1][5] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[1][5] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -167,6 +202,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[1][6] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[1][6] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -182,6 +219,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[2][0] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[2][0] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -191,6 +230,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[2][1] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[2][1] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -200,6 +241,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[2][2] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[2][2] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -209,6 +252,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[2][3] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[2][3] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -218,6 +263,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[2][4] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[2][4] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -227,6 +274,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[2][5] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[2][5] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -236,6 +285,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[2][6] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[2][6] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -251,6 +302,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[3][0] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[3][0] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -260,6 +313,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[3][1] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[3][1] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -269,6 +324,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[3][2] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[3][2] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -278,6 +335,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[3][3] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[3][3] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -287,6 +346,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[3][4] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[3][4] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -296,6 +357,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[3][5] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[3][5] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -305,6 +368,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[3][6] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[3][6] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -320,6 +385,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[4][0] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[4][0] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -329,6 +396,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[4][1] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[4][1] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -338,6 +407,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[4][2] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[4][2] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -347,6 +418,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[4][3] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[4][3] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -356,6 +429,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[4][4] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[4][4] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -365,6 +440,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[4][5] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[4][5] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -374,6 +451,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[4][6] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[4][6] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -389,6 +468,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[5][0] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[5][0] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -398,6 +479,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[5][1] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[5][1] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -407,6 +490,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[5][2] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[5][2] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -416,6 +501,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[5][3] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[5][3] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -425,6 +512,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[5][4] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[5][4] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -434,6 +523,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[5][5] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[5][5] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
@@ -443,6 +534,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[5][6] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(tiles[5][6] == 2'b11)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
