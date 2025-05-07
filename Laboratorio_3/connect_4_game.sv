@@ -20,12 +20,16 @@ module connect_4_game(
     output logic VGA_BLANK_N
 );
 
-clock_50_25 clk_divider(
+/*clock_50_25 clk_divider(
     .rst(SW[9]),
     .refclk(clk),
     .outclk_0(VGA_CLK),
     .locked()
-);
+);*/
+
+clock_div clock_divider(
+	.clk_in(clk),
+	.clk_out(VGA_CLK));
 
 logic btn0_clean, btn1_clean, btn2_clean, btn3_clean;
 debounce db0(.clk(clk), .btn_in(KEY[0]), .btn_out(btn0_clean));
@@ -131,7 +135,7 @@ always_ff @(posedge VGA_CLK) begin
         end
     end
 	 
-	 if(state == 3'd2)
+	 if(state == 3'b001)
 		pushes = 1;
 	 else
 		pushes = 0;
