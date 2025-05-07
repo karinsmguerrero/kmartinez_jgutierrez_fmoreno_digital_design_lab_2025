@@ -4,6 +4,8 @@ module connect4_fsm (
     input  logic        move_made,
     input  logic        move_left,
     input  logic        move_right,
+	 input  logic        times_up,
+
     output logic        win_flag,
     output logic [2:0]  state,
     output logic        player_turn,

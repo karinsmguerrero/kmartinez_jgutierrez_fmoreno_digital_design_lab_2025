@@ -33,7 +33,7 @@ debounce db1(.clk(clk), .btn_in(KEY[1]), .btn_out(btn1_clean));
 debounce db2(.clk(clk), .btn_in(KEY[2]), .btn_out(btn2_clean));
 debounce db3(.clk(clk), .btn_in(KEY[3]), .btn_out(btn3_clean));
 
-logic move_made = 0, move_left = 0, move_right = 0, win_flag = 0, player_turn = 0;
+logic move_made = 0,times_up = 0, move_left = 0, move_right = 0, win_flag = 0, player_turn = 0;
 logic [2:0]  state;
 logic [2:0]  col_input;
 logic [1:0]  board [5:0][6:0];
@@ -45,6 +45,8 @@ connect4_fsm fsm(
     .move_made(move_made),
     .move_left(move_left),
     .move_right(move_right),
+	 .times_up(times_up),
+
     .win_flag(win_flag),
     .state(state),
     .player_turn(player_turn),
@@ -159,10 +161,13 @@ always_ff @(posedge VGA_CLK) begin
         move_made <= 1;
     else
         move_made <= 0;
-    if (auto_move_pulse)
+    if (auto_move_pulse) begin
         move_made <= 1;
-    else
-        move_made <= 0;
+        times_up <= 1;
+    end else begin
+        times_up <= 0;
+    end
+
     accept_btn_prev <= btn2_clean;
 
     for (int r = 0; r < 6; r++) begin
