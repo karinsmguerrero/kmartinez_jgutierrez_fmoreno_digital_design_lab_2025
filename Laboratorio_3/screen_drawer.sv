@@ -2,8 +2,6 @@ module screen_drawer(
 	input  logic [9:0] x,y,
 	input  logic clk,
 	input  logic [0:5][0:6][1:0] tiles,
-	input  logic win,
-	input  logic [3:0][1:0] win_tiles,
 	output logic [23:0] rgb_color
 );
 
@@ -30,15 +28,6 @@ sprite_tile tile(
 
 always @ (posedge clk)
 		begin
-			if(win)
-				begin
-					for(int t = 0; t < 4; t++) begin
-							win_index <= win_tiles[t];
-							win_row <= win_index[0];
-							win_col <= win_index[1];
-							//tiles[win_row][win_col] <= 2'b00;
-					end
-				end
 			// First row
 			if(y > 54 && y <= 124)
 				begin

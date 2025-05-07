@@ -68,8 +68,6 @@ logic [3:0][1:0] win_tiles;
 vga_driver driver(
     .reset(global_reset),
     .tiles(tiles),
-	 .win(win_flag),
-	 .win_tiles(win_tiles),
     .VGA_HS(VGA_HS),
     .VGA_VS(VGA_VS),
     .VGA_R(VGA_R),
@@ -186,6 +184,14 @@ always_ff @(posedge VGA_CLK) begin
             tiles[r][c] <= board[r][(6 - c)];
         end
     end
+	 
+	 if(win_flag)
+		begin
+			tiles[win_coords_row[0]][6 - win_coords_col[0]] <= 2'b11;
+			tiles[win_coords_row[1]][6 - win_coords_col[1]] <= 2'b11;
+			tiles[win_coords_row[2]][6 - win_coords_col[2]] <= 2'b11;
+			tiles[win_coords_row[3]][6 - win_coords_col[3]] <= 2'b11;
+		end
 
 		/*if(serial_data == 3'd1)
 			move_right <= 1;

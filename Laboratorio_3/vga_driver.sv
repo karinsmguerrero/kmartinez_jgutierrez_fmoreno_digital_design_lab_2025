@@ -2,8 +2,6 @@ module vga_driver(
 	input  logic VGA_CLK, 
 	input  logic reset,
 	input  [0:5][0:6][1:0] tiles,
-	input  logic win,
-	input  logic [3:0][1:0] win_tiles,
 	output logic VGA_HS,      // horizontal sync
 	output logic VGA_VS,	     // vertical sync
 	output logic [7:0] VGA_R,
@@ -41,7 +39,6 @@ screen_drawer screen(
 	.y(y), 
 	.clk(VGA_CLK),
 	.tiles(tiles),
-	.win(win),
 	.rgb_color(rgb_color));
 
 assign VGA_R = rgb_color[23:16];
