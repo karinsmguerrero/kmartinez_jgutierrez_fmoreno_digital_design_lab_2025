@@ -32,6 +32,8 @@ logic [2:0]  state;
 logic [2:0]  col_input;
 logic [1:0]  board [5:0][6:0];
 logic        global_reset;
+logic [2:0] win_coords_row [3:0];
+logic [2:0] win_coords_col [3:0];
 
 logic [7:0] data_out;
 
@@ -48,13 +50,16 @@ connect4_fsm fsm(
     .move_made(move_made),
     .move_left(move_left),
     .move_right(move_right),
-	 .times_up(times_up),
+    .times_up(times_up),
 
     .win_flag(win_flag),
     .state(state),
     .player_turn(player_turn),
     .col_input(col_input),
-    .board(board)
+    .board(board),
+
+    .win_coords_row(win_coords_row),
+    .win_coords_col(win_coords_col)
 );
 
 logic [0:5][0:6][1:0] tiles;
