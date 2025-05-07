@@ -49,8 +49,7 @@ connect4_fsm fsm(
     .state(state),
     .player_turn(player_turn),
     .col_input(col_input),
-    .board(board),
-    .seconds(tics) // <--- NUEVO
+    .board(board)
 );
 
 logic [0:5][0:6][1:0] tiles;
@@ -90,6 +89,10 @@ timer timer_count (
     .seconds(tics)
 );
 
+logic auto_move_triggered = 0;
+logic auto_move_pulse = 0;
+
+
 logic [3:0] pushes = 0;
 logic [11:0] bcd_pushes;
 BinToBCD count(pushes, bcd_pushes);
@@ -109,7 +112,18 @@ always_ff @(posedge VGA_CLK) begin
     if (win_flag && !win_flag_prev) begin
         win_reset_pending <= 1;
         win_delay_counter <= 0;
-    end
+    end// Generar jugada automática cuando el tiempo llegue a 10
+	if (state == 3'b001 && tics == 4'd10 && !auto_move_triggered) begin
+		 auto_move_pulse <= 1;
+		 auto_move_triggered <= 1;
+	end else begin
+		 auto_move_pulse <= 0;
+	end
+
+	// Resetear trigger si se resetea el temporizador
+	if (tics < 4'd10) begin
+		 auto_move_triggered <= 0;
+	end
 
     // RESET MANUAL O POR RETARDO POST-VICTORIA
     if (win_reset_pending) begin
@@ -141,8 +155,11 @@ always_ff @(posedge VGA_CLK) begin
     else
         move_right <= 0;
     right_btn_prev <= btn1_clean;
-
     if (accept_btn_prev && !btn2_clean)
+        move_made <= 1;
+    else
+        move_made <= 0;
+    if (auto_move_pulse)
         move_made <= 1;
     else
         move_made <= 0;

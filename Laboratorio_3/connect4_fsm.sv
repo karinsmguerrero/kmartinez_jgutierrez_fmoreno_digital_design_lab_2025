@@ -4,9 +4,6 @@ module connect4_fsm (
     input  logic        move_made,
     input  logic        move_left,
     input  logic        move_right,
-    input  logic [3:0]  seconds,         // segundos desde el timer
-    input  logic [2:0]  random_column,   // columna aleatoria
-
     output logic        win_flag,
     output logic [2:0]  state,
     output logic        player_turn,
@@ -30,10 +27,7 @@ module connect4_fsm (
     logic [2:0] current_col;
     logic       is_column_full;
 
-    logic [3:0] seconds_prev;
-    logic       force_random;
-
-    // Win checker
+    // Instancia del módulo win_checker
     logic win_detected;
     win_checker wc_inst (
         .clk(clk),
@@ -44,7 +38,6 @@ module connect4_fsm (
 
     assign win_flag = win_detected;
 
-    // Column selector
     column_selector selector (
         .clk(clk),
         .reset(reset),
@@ -56,22 +49,7 @@ module connect4_fsm (
     assign col_input = current_col;
     assign state = current_state;
 
-    // Flanco de subida de segundos == 10 para activar jugada aleatoria solo una vez
-    always_ff @(posedge clk or posedge reset) begin
-        if (reset) begin
-            seconds_prev <= 0;
-            force_random <= 0;
-        end else begin
-            if (seconds == 4'd10 && seconds_prev < 4'd10)
-                force_random <= 1;
-            else
-                force_random <= 0;
-
-            seconds_prev <= seconds;
-        end
-    end
-
-    // Verificar si columna está llena
+    // Verifica si la columna seleccionada está llena
     always_comb begin
         is_column_full = 1'b1;
         for (int r = 0; r < 6; r++) begin
@@ -81,7 +59,7 @@ module connect4_fsm (
         end
     end
 
-    // FSM - transición de estados
+    // Lógica de transición de estados
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             current_state <= IDLE;
@@ -94,7 +72,7 @@ module connect4_fsm (
         next_state = current_state;
         case (current_state)
             IDLE:          next_state = PLAYER_TURN;
-            PLAYER_TURN:   if ((move_made && !is_column_full) || force_random) next_state = MAKE_MOVE;
+            PLAYER_TURN:   if (move_made && !is_column_full) next_state = MAKE_MOVE;
             MAKE_MOVE:     next_state = CHECK_WIN;
             CHECK_WIN:     next_state = win_detected ? GAME_OVER : SWITCH_PLAYER;
             SWITCH_PLAYER: next_state = PLAYER_TURN;
@@ -120,12 +98,10 @@ module connect4_fsm (
                 end
             end
         end else if (current_state == MAKE_MOVE) begin
-            logic [2:0] effective_col;
-            effective_col = (force_random) ? random_column : col_input;
             valid_move = 0;
             for (int r = 5; r >= 0; r--) begin
-                if (!valid_move && board_reg[r][effective_col] == 2'b00) begin
-                    board_reg[r][effective_col] <= (player_turn == 0) ? 2'b01 : 2'b10;
+                if (!valid_move && board_reg[r][col_input] == 2'b00) begin
+                    board_reg[r][col_input] <= (player_turn == 0) ? 2'b01 : 2'b10;
                     drop_row = r;
                     valid_move = 1;
                 end
