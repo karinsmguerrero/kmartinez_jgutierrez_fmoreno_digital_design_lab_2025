@@ -16,7 +16,7 @@ module connect_4_game(
     output logic [7:0] VGA_B,
     output logic VGA_BLANK_N
 );
-
+ 
 clock_div clock_divider(
 	.clk_in(clk),
 	.clk_out(VGA_CLK));
@@ -27,7 +27,7 @@ debounce db1(.clk(clk), .btn_in(KEY[1]), .btn_out(btn1_clean));
 debounce db2(.clk(clk), .btn_in(KEY[2]), .btn_out(btn2_clean));
 debounce db3(.clk(clk), .btn_in(KEY[3]), .btn_out(btn3_clean));
 
-logic move_made = 0, move_left = 0, move_right = 0, win_flag = 0, player_turn = 0;
+logic move_made = 0,times_up = 0, move_left = 0, move_right = 0, win_flag = 0, player_turn = 0;
 logic [2:0]  state;
 logic [2:0]  col_input;
 logic [1:0]  board [5:0][6:0];
@@ -48,7 +48,9 @@ connect4_fsm fsm(
     .move_made(move_made),
     .move_left(move_left),
     .move_right(move_right),
-    .win_flag(win_flag),  // La señal de victoria se pasa aquí
+	 .times_up(times_up),
+
+    .win_flag(win_flag),
     .state(state),
     .player_turn(player_turn),
     .col_input(col_input),
@@ -91,15 +93,59 @@ timer timer_count (
     .seconds(tics)
 );
 
+logic auto_move_triggered = 0;
+logic auto_move_pulse = 0;
+
+
+logic [3:0] pushes = 0;
+logic [11:0] bcd_pushes;
+BinToBCD count(pushes, bcd_pushes);
+assign seg_4 = bcd_pushes[7:4];
+assign seg_5 = bcd_pushes[11:8];
 assign enable = (state == 3'b001);
 
 logic accept_btn_prev, left_btn_prev, right_btn_prev, reset_btn_prev;
+logic [23:0] win_delay_counter = 0;
+logic win_flag_prev = 0;
+logic win_reset_pending = 0;
+
 always_ff @(posedge VGA_CLK) begin
-    // RESET MANUAL O POR VICTORIA
-    if ((reset_btn_prev && !btn3_clean) || win_flag)  // Ahora usa win_flag para el reset
+    // DETECCIÓN DE FLANCO DE SUBIDA EN win_flag
+    win_flag_prev <= win_flag;
+
+    if (win_flag && !win_flag_prev) begin
+        win_reset_pending <= 1;
+        win_delay_counter <= 0;
+    end// Generar jugada automática cuando el tiempo llegue a 10
+	if (state == 3'b001 && tics == 4'd10 && !auto_move_triggered) begin
+		 auto_move_pulse <= 1;
+		 auto_move_triggered <= 1;
+	end else begin
+		 auto_move_pulse <= 0;
+	end
+
+	// Resetear trigger si se resetea el temporizador
+	if (tics < 4'd10) begin
+		 auto_move_triggered <= 0;
+	end
+
+    // RESET MANUAL O POR RETARDO POST-VICTORIA
+    if (win_reset_pending) begin
+        win_delay_counter <= win_delay_counter + 1;
+
+        if (win_delay_counter == 24'd12_500_000) begin // ~0.5s delay @25MHz
+            global_reset <= 1;
+            win_reset_pending <= 0;
+        end else begin
+            global_reset <= 0;
+        end
+    end
+    else if (reset_btn_prev && !btn3_clean) begin
         global_reset <= 1;
-    else
+    end
+    else begin
         global_reset <= 0;
+    end
     reset_btn_prev <= btn3_clean;
 
     if (left_btn_prev && !btn0_clean)
@@ -113,11 +159,17 @@ always_ff @(posedge VGA_CLK) begin
     else
         move_right <= 0;
     right_btn_prev <= btn1_clean;
-
     if (accept_btn_prev && !btn2_clean)
         move_made <= 1;
     else
         move_made <= 0;
+    if (auto_move_pulse) begin
+        move_made <= 1;
+        times_up <= 1;
+    end else begin
+        times_up <= 0;
+    end
+
     accept_btn_prev <= btn2_clean;
 
     for (int r = 0; r < 6; r++) begin
