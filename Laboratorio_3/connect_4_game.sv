@@ -61,6 +61,7 @@ logic [0:5][0:6][1:0] tiles;
 vga_driver driver(
     .reset(global_reset),
     .tiles(tiles),
+	 .win(win_flag),
     .VGA_HS(VGA_HS),
     .VGA_VS(VGA_VS),
     .VGA_R(VGA_R),
@@ -97,11 +98,6 @@ timer timer_count (
 logic auto_move_triggered = 0;
 logic auto_move_pulse = 0;
 
-logic [3:0] pushes = 0;
-logic [11:0] bcd_pushes;
-BinToBCD count(pushes, bcd_pushes);
-assign seg_4 = bcd_pushes[7:4];
-assign seg_5 = bcd_pushes[11:8];
 assign enable = (state == 3'b001);
 
 logic accept_btn_prev, left_btn_prev, right_btn_prev, reset_btn_prev;

@@ -268,8 +268,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE connect_4_game.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sprite_tile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE counter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE smiley_test.sv
-set_global_assignment -name QIP_FILE clock_50_25.qip
-set_global_assignment -name SIP_FILE clock_50_25.sip
 set_global_assignment -name SYSTEMVERILOG_FILE vga_driver.sv
 set_global_assignment -name SYSTEMVERILOG_FILE video_sync_generator.sv
 set_global_assignment -name SYSTEMVERILOG_FILE screen_drawer.sv

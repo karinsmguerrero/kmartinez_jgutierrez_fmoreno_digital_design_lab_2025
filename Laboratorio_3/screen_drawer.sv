@@ -2,6 +2,7 @@ module screen_drawer(
 	input  logic [9:0] x,y,
 	input  logic clk,
 	input  logic [0:5][0:6][1:0] tiles,
+	input  logic win,
 	output logic [23:0] rgb_color
 );
 
@@ -38,6 +39,8 @@ always @ (posedge clk)
 							rgb_color <= memory_red[address];
 						else if(tiles[0][0] == 2'b10)
 							rgb_color <= memory_yellow[address];
+						else if(win)
+							rgb_color <= memory_green[address];
 						else 
 						   rgb_color <= memory[address];
 					end
