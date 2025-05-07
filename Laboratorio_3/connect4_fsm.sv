@@ -10,6 +10,9 @@ module connect4_fsm (
     output logic [2:0]  state,
     output logic        player_turn,
     output logic [2:0]  col_input,
+	 output logic [2:0] win_coords_row [3:0],
+	 output logic [2:0] win_coords_col [3:0],
+
     output logic [1:0]  board [5:0][6:0]
 );
 
@@ -30,6 +33,8 @@ module connect4_fsm (
     logic       is_column_full;
     logic       random_move_active;  // Indica si se está haciendo un movimiento aleatorio
     logic [2:0] selected_col;        // Columna seleccionada (manual o aleatoria)
+logic [2:0] wc_row [3:0];
+logic [2:0] wc_col [3:0];
 
     // Flanco de subida para move_made y times_up
     logic move_made_d, times_up_d;
@@ -50,14 +55,32 @@ module connect4_fsm (
 
     // Instancia del módulo win_checker
     logic win_detected;
-    win_checker wc_inst (
-        .clk(clk),
-        .reset(reset),
-        .board(board_reg),
-        .win_detected(win_detected)
-    );
+	win_checker wc (
+		.clk(clk),
+		.reset(reset),
+		.board(board_reg),
+		.win_detected(win_detected),
+		.win_coords_row(wc_row),
+		.win_coords_col(wc_col)
+	);
+
 
     assign win_flag = win_detected;
+
+	 
+	 always_ff @(posedge clk or posedge reset) begin
+    if (reset) begin
+        for (int i = 0; i < 4; i++) begin
+            win_coords_row[i] <= 3'd0;
+            win_coords_col[i] <= 3'd0;
+        end
+    end else if (win_detected) begin
+        for (int i = 0; i < 4; i++) begin
+            win_coords_row[i] <= wc_row[i];
+            win_coords_col[i] <= wc_col[i];
+        end
+    end
+end
 
     // Instancia del selector de columna manual
     column_selector manual_selector (
