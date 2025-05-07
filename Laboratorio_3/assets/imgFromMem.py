@@ -56,6 +56,6 @@ def hex_to_image(hex_data, width, height, output_path):
 image_width = 70
 image_height = 70
 output_file_path = "output_image.png"
-with open("ImageMemoryFile/MemoryFile_yellow.mem", "r") as f:
+with open("ImageMemoryFile/MemoryFileGreen.mem", "r") as f:
     mem_data = f.read()
 hex_to_image(mem_data, image_width, image_height, output_file_path)

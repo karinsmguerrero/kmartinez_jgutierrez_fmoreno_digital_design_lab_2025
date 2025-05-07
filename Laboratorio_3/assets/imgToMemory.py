@@ -49,11 +49,11 @@ def imgToMemoryFile(fileName='m2.jpg', WH={'W': 240, 'H': 120}, RGBFormat=0):
             st = st + hex(r[i][0])[2:].zfill(2)+hex(g[i][0])[2:].zfill(2)+hex(b[i][0])[2:].zfill(2) + ',\n'
             wt = wt + hex(r[i][0])[2:].zfill(2)+hex(g[i][0])[2:].zfill(2)+hex(b[i][0])[2:].zfill(2) + '\n'
 
-    with open('./ImageMemoryFile/MemoryFile.coe', 'w+') as f:
+    with open('./ImageMemoryFile/MemoryFileGreen.coe', 'w+') as f:
         f.write('memory_initialization_radix=16;\nmemory_initialization_vector=\n')
         f.write(st[:-2]+';')
         f.close()
-    with open('./ImageMemoryFile/MemoryFile.mem', 'w+') as f:
+    with open('./ImageMemoryFile/MemoryFileGreen.mem', 'w+') as f:
         f.write(wt[:-1])
         f.close()
         
@@ -115,8 +115,8 @@ def MemoryFileToImg(fileName, WH={'W': 240, 'H': 120}, RGBMode=0):
 
 RGBFormat = 2
 WH = {'W': 70, 'H': 70}
-imgToMemoryFile('tile.JPG', WH, RGBFormat=RGBFormat)
-MemoryFileToImg('./ImageMemoryFile/MemoryFile.coe', WH, RGBMode=RGBFormat)
+imgToMemoryFile('tile_green.JPG', WH, RGBFormat=RGBFormat)
+MemoryFileToImg('./ImageMemoryFile/MemoryFileGreen.coe', WH, RGBMode=RGBFormat)
 
 
 

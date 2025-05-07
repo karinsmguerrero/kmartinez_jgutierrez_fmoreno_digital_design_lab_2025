@@ -75,6 +75,7 @@ logic [3:0] seg_0, seg_1, seg_2, seg_3, seg_4, seg_5 = 0;
 logic [3:0] tics;
 logic [3:0] max_time = 4'b1010;
 logic enable;
+logic timer_reset; // NUEVO
 
 seven_segment_driver seg0(seg_0, HEX0);
 seven_segment_driver seg1(seg_1, HEX1);
@@ -88,14 +89,13 @@ assign seg_1 = bcd_time[11:8];
 
 timer timer_count (
     .clk(VGA_CLK), 
-    .reset(global_reset),
+    .reset(global_reset | timer_reset), // MODIFICADO
     .enable(enable),
     .seconds(tics)
 );
 
 logic auto_move_triggered = 0;
 logic auto_move_pulse = 0;
-
 
 logic [3:0] pushes = 0;
 logic [11:0] bcd_pushes;
@@ -105,45 +105,43 @@ assign seg_5 = bcd_pushes[11:8];
 assign enable = (state == 3'b001);
 
 logic accept_btn_prev, left_btn_prev, right_btn_prev, reset_btn_prev;
+logic move_made_prev = 0; // NUEVO
 logic [23:0] win_delay_counter = 0;
 logic win_flag_prev = 0;
 logic win_reset_pending = 0;
 
 always_ff @(posedge VGA_CLK) begin
-    // DETECCIÓN DE FLANCO DE SUBIDA EN win_flag
     win_flag_prev <= win_flag;
 
     if (win_flag && !win_flag_prev) begin
         win_reset_pending <= 1;
         win_delay_counter <= 0;
-    end// Generar jugada automática cuando el tiempo llegue a 10
-	if (state == 3'b001 && tics == 4'd10 && !auto_move_triggered) begin
+    end
+
+	 // Activar jugada automática cuando se agota el tiempo
+	 if (state == 3'b001 && tics == 4'd10 && !auto_move_triggered) begin
 		 auto_move_pulse <= 1;
 		 auto_move_triggered <= 1;
-	end else begin
+	 end else begin
 		 auto_move_pulse <= 0;
-	end
+	 end
 
-	// Resetear trigger si se resetea el temporizador
-	if (tics < 4'd10) begin
+	 if (tics < 4'd10) begin
 		 auto_move_triggered <= 0;
-	end
+	 end
 
-    // RESET MANUAL O POR RETARDO POST-VICTORIA
+    // RESET MANUAL O POST-VICTORIA
     if (win_reset_pending) begin
         win_delay_counter <= win_delay_counter + 1;
-
-        if (win_delay_counter == 24'd12_500_000) begin // ~0.5s delay @25MHz
+        if (win_delay_counter == 24'd12_500_000) begin
             global_reset <= 1;
             win_reset_pending <= 0;
         end else begin
             global_reset <= 0;
         end
-    end
-    else if (reset_btn_prev && !btn3_clean) begin
+    end else if (reset_btn_prev && !btn3_clean) begin
         global_reset <= 1;
-    end
-    else begin
+    end else begin
         global_reset <= 0;
     end
     reset_btn_prev <= btn3_clean;
@@ -159,19 +157,26 @@ always_ff @(posedge VGA_CLK) begin
     else
         move_right <= 0;
     right_btn_prev <= btn1_clean;
+
     if (accept_btn_prev && !btn2_clean)
         move_made <= 1;
     else
         move_made <= 0;
+
     if (auto_move_pulse) begin
+	     times_up <= 1;
         move_made <= 1;
-        times_up <= 1;
     end else begin
         times_up <= 0;
     end
 
+    // DETECTAR FLANCO PARA RESETEAR TIMER
+    move_made_prev <= move_made;
+    timer_reset <= move_made && !move_made_prev; // NUEVO
+
     accept_btn_prev <= btn2_clean;
 
+    // Actualizar tiles VGA
     for (int r = 0; r < 6; r++) begin
         for (int c = 0; c < 7; c++) begin
             tiles[r][c] <= board[r][(6 - c)];

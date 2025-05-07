@@ -15,13 +15,15 @@ parameter vert_back  = 34;
 logic [23:0] memory [0:4899];
 logic [23:0] memory_red [0:4899];    //Player 1
 logic [23:0] memory_yellow [0:4899]; //Player 2
+logic [23:0] memory_green [0:4899];
 logic [12:0] address;
 
 //image pixel colors				 
 sprite_tile tile(
 	.mem(memory),
 	.mem_red(memory_red),
-	.mem_yellow(memory_yellow));
+	.mem_yellow(memory_yellow),
+	.mem_green(memory_green));
 
 always @ (posedge clk)
 		begin
