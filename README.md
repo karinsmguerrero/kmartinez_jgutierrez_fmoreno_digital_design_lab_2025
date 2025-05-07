@@ -25,3 +25,10 @@
         Primero (HEX 0 y HEX 1): resultado de la operación
         Segundo (HEX 2 y HEX 3): separación o residuo en la división
         Tercero (HEX 4 y HEX 5): número de operación
+
+## Laboratorio 3 - Instrucciones de uso
+### 1. Selección de movimiento
+    Los botones 1 y 0 son los controles de movimiento, de izquierda a derecha y el botón 3 deja caer la ficha
+### 2. Indicadores de 7 segmentos
+    El primer par de indicadores de 7 segmentos representa el tiempo restante del jugador, 
+    cuando se hace la jugada, este automaticamente se reinicia y comienza a contar el tiempo del siguiente jugador
