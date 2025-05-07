@@ -162,8 +162,8 @@ always_ff @(posedge VGA_CLK) begin
     else
         move_made <= 0;
     if (auto_move_pulse) begin
+	     times_up <= 1;
         move_made <= 1;
-        times_up <= 1;
     end else begin
         times_up <= 0;
     end
