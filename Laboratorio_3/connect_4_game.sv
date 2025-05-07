@@ -1,13 +1,10 @@
 module connect_4_game(
     input  logic clk,
     input  logic [3:0] KEY,
-    input  logic [9:0] SW,
+	 input  logic serial_in,
 
-    output logic [9:0] LEDR,
     output logic [6:0] HEX0,
     output logic [6:0] HEX1,
-    output logic [6:0] HEX2,
-    output logic [6:0] HEX3,
     output logic [6:0] HEX4,
     output logic [6:0] HEX5,
 
@@ -19,13 +16,6 @@ module connect_4_game(
     output logic [7:0] VGA_B,
     output logic VGA_BLANK_N
 );
-
-/*clock_50_25 clk_divider(
-    .rst(SW[9]),
-    .refclk(clk),
-    .outclk_0(VGA_CLK),
-    .locked()
-);*/
 
 clock_div clock_divider(
 	.clk_in(clk),
@@ -43,8 +33,15 @@ logic [2:0]  col_input;
 logic [1:0]  board [5:0][6:0];
 logic        global_reset;
 
+logic [7:0] data_out;
 
-
+													
+UART_RX UART_Receiver (	
+	.clk(VGA_CLK),
+	.rstn(global_reset),
+	.serial_dat_in(serial_in), 
+	.data(data_out));
+	
 connect4_fsm fsm(
     .clk(VGA_CLK),
     .reset(global_reset),
@@ -79,10 +76,9 @@ logic enable;
 
 seven_segment_driver seg0(seg_0, HEX0);
 seven_segment_driver seg1(seg_1, HEX1);
-seven_segment_driver seg2(seg_2, HEX2);
-seven_segment_driver seg3(seg_3, HEX3);
-seven_segment_driver seg4(seg_4, HEX4);
-seven_segment_driver seg5(seg_5, HEX5);
+
+seven_segment_driver seg4(data_out[3:0], HEX4);
+seven_segment_driver seg5(data_out[7:4], HEX5);
 
 BinToBCD res_converter(tics, bcd_time);
 assign seg_0 = bcd_time[7:4];
@@ -95,11 +91,6 @@ timer timer_count (
     .seconds(tics)
 );
 
-logic [3:0] pushes = 0;
-logic [11:0] bcd_pushes;
-BinToBCD count(pushes, bcd_pushes);
-assign seg_4 = bcd_pushes[7:4];
-assign seg_5 = bcd_pushes[11:8];
 assign enable = (state == 3'b001);
 
 logic accept_btn_prev, left_btn_prev, right_btn_prev, reset_btn_prev;
@@ -134,11 +125,17 @@ always_ff @(posedge VGA_CLK) begin
             tiles[r][c] <= board[r][(6 - c)];
         end
     end
-	 
-	 if(state == 3'b001)
-		pushes = 1;
-	 else
-		pushes = 0;
+
+		/*if(serial_data == 3'd1)
+			move_right <= 1;
+		
+		if(serial_data == 3'd2)
+			move_left <= 1;
+			
+		if(serial_data == 3'd3)
+			move_made <= 1;
+		else 
+			move_made <= 0;*/
 end
 
 endmodule
